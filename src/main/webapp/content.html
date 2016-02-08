@@ -1,0 +1,9 @@
+<div class="section">
+    <div class="container">
+        <div ng-include="'categories.html'"></div>
+        <div class="col-sm-9 padding-right">
+            <h2 class="content-title" ng-bind-html="title | trusted"></h2>
+            <article ng-bind-html="content | trusted"></article>
+        </div>
+    </div>
+</div>

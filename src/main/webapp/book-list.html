@@ -1,0 +1,19 @@
+<div class="section">
+    <div class="container">
+        <div ng-include="'categories.html'"></div>
+        <div class="col-sm-9">
+            <h2 class="list-title" translate>Book offer</h2>
+        </div>
+        <div ng-repeat="doc in results" class="col-sm-4">
+            <div class="list-item">
+                <div class="image"  ng-bind-html="doc.image | trusted"></div>
+                <div class="text">
+                    <a href="#/b/{{doc.id}}/{{doc.slug}}">
+                        <h4 ng-bind-html="doc.title | trusted"></h4>
+                    </a>
+                    <p ng-bind-html="doc.abstract | trusted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

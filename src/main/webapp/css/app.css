@@ -1,0 +1,168 @@
+/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow&subset=latin,latin-ext)
+
+/* Global Styles */
+
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2';
+}
+
+.dropdown {
+    cursor:pointer;
+}
+
+.spaced {
+	margin-top: 80px;
+}
+
+.content-title {
+	margin-top: 8px;
+	margin-bottom: 25px;
+}
+
+.list-title {
+	margin-top: 8px;
+	margin-bottom: 25px;
+}
+
+/* Left menu items */
+
+.left-menu {
+	min-height: 400px;
+}
+
+.left-menu-section-title {
+    color: #696763;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.left-menu .logo {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+/* Service Page Styles */
+.service-icon {
+    font-size: 50px;
+}
+
+/* 404 Page Styles */
+.error-404 {
+    font-size: 8em;
+}
+
+/* Navigation */
+
+.navbar-header .navbar-brand {
+	font-weight: bold;
+	color: #F3791E;
+	padding-top: 18px;
+}
+
+.navbar-nav .dropdown {
+	margin-right: 25px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	padding-top: 17px;
+	padding-bottom: 13px;
+}
+
+/* List */
+
+.list-item .image {
+	width: 100px;
+	float: left;
+}
+
+.list-item .text {
+	margin-left: 120px;
+	font-size: 0.9em;
+}
+
+/* Footer Styles */
+
+#footer {
+	color: gray;
+	background: #F0F0E9;
+	margin-top: 25px;
+}
+
+.footer-widget {
+  margin-bottom: 25px;
+}
+
+.footer-widget .container {
+  border-top: 1px solid #FFFFFF;
+  padding-top: 15px;
+}
+
+.single-widget h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.single-widget h2 i{
+	margin-right:15px;
+}
+
+.single-widget ul li a{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 5px 0;
+}
+
+.single-widget ul li a i {
+  margin-right: 18px;
+}
+
+.single-widget ul li a:hover{
+	background:none;
+	color:#FE980F;
+}
+
+.footer-bottom {
+  background: #D6D6D0;
+  padding-top: 1px;
+}
+
+.footer-bottom p {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.footer-bottom p span a {
+  color: #FE980F;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+
+    .carousel {
+        height: 70%;
+        /* increases the carousel height so it looks good on phones */
+    }
+}
