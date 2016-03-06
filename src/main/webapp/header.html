@@ -1,8 +1,17 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
     <div class="navbar-header">
+
+        <!-- note the ng-init and ng-click here: -->
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
         <a class="navbar-brand" href="#/">Petr Chrdle, KAVA-PECH</a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+    <div class="collapse navbar-collapse" collapse="navCollapsed">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#/" translate>Home</a></li>
             <li><a href="#/c/publishing-on-demand" translate>Publishing on demand</a></li>
@@ -11,12 +20,13 @@
 
             <li class="dropdown" dropdown >
                 <a href="#" class="dropdown-toggle" dropdown-toggle role="button" aria-expanded="false">
-                    <img src="img/language-map.png"><span class="caret"></span>
+                    <i class="fa fa-language fa-lg"></i> <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
                     <li><a href="#/" ng-click="useLanguage('cz')">Česky</a></li>
-                    <li><a href="#/" ng-click="useLanguage('en')">English</a></li>
                     <li><a href="#/" ng-click="useLanguage('eo')">Esperanto</a></li>
+                    <li><a href="#/" ng-click="useLanguage('en')">English</a></li>
+                    <li><a href="#/" ng-click="useLanguage('de')">Deutsch</a></li>
                 </ul>
             </li>
         </ul>

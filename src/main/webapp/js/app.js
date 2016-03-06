@@ -72,8 +72,6 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 				$location.path('/');
 			} else {
 				$scope.documents = documents;
-				// Angular doesn't repeat over collections created on the fly, so we have to create it here
-				if (documents.total_pages > 1) $scope.paginationRange = _.range(1, documents.total_pages+1);
 			}
 		});
 	});
