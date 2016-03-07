@@ -29,9 +29,29 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 80px;
 }
 
+.left-spaced {
+	margin-left: 10px;
+}
+
+.centered {
+   text-align: center;
+   font-size: 0;
+}
+
 .content-title {
 	margin-top: 8px;
 	margin-bottom: 25px;
+}
+
+.content-image .spaced {
+	margin-top: 40px;
+}
+
+.content-text .info {
+	margin: 0px 0px 20px 0px;
+	padding: 20px 20px 5px 20px;
+	font-size: 0.9em;
+	background-color: #F0F0E9;
 }
 
 .list-title {
@@ -42,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Left menu items */
 
 .left-menu {
-	min-height: 400px;
+	min-height: 500px;
 }
 
 .left-menu-section-title {

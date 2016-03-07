@@ -1,0 +1,16 @@
+<div id="welcome-header" class="modal-header">
+    <h3 translate>Add to cart</h3>
+</div>
+<form name="form" class="form-horizontal" role="form" ng-submit="submit()">
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="count" translate>Number of books:</label>
+            <div class="col-sm-8">
+                <input type="number" class="form-control" id="count" ng-model="count" required>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" translate>Proceed</button>
+    </div>
+</form>

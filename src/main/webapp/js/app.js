@@ -117,12 +117,27 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 	});
 }])
 
-.controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
-	function($scope, $routeParams, $window, $location, $translate, Prismic) {
+.controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Prismic',
+	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic) {
 	Prismic.document($routeParams.id).then(function(response) {
 		$scope.title = response.getText('book.title');
 		$scope.image = response.getImage('book.image').asHtml();
 		$scope.text = response.getSliceZone('book.text').asHtml();
+		$scope.info = response.getStructuredText('book.info').asHtml();
 	});
+
+	$scope.buy = function() {
+		$modal.open({
+			templateUrl: 'add-to-cart.tpl.html',
+			controller: function ($scope, $modalInstance) {
+				$scope.count = 1;
+                $scope.submit = function () {
+                    $modalInstance.close($scope.count);
+                }
+			}
+		}).result.then(function(count) {
+		});
+	}
+
 }]);
 
