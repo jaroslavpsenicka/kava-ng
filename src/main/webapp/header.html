@@ -16,8 +16,9 @@
             <li><a href="#/" translate>Home</a></li>
             <li><a href="#/c/publishing-on-demand" translate>Publishing on demand</a></li>
             <li><a href="#/c/esperanto" translate>Esperanto</a></li>
-            <li><a href="#/cart" translate>Cart</a></li>
-
+            <li><a href="#/cart" class="wide" translate>Cart</a>
+                <span class="label label-warning cart-count" ng-show="cart.count > 0">{{cart.count}}</span>
+            </li>
             <li class="dropdown" dropdown >
                 <a href="#" class="dropdown-toggle" dropdown-toggle role="button" aria-expanded="false">
                     <i class="fa fa-language fa-lg"></i> <span class="caret"></span>

@@ -2,18 +2,23 @@
     <div class="container">
         <div ng-include="'categories.html'"></div>
         <div class="col-sm-9 padding-right">
-            <h2 class="content-title" ng-bind-html="title | trusted"></h2>
+            <h2 class="content-title" ng-bind-html="book.title | trusted"></h2>
             <div class="col-sm-4 centered content-image">
-                <div ng-bind-html="image | trusted"></div>
-                <a class="btn btn-success spaced" ng-click="buy()">
+                <div ng-bind-html="book.image | trusted"></div>
+                <a class="btn btn-success spaced" ng-click="buy(book)">
                     <i class="fa fa-shopping-cart"></i>
                     <span class="left-spaced" translate>Add to cart</span>
                 </a>
             </div>
             <div class="col-sm-8 content-text">
-                <div class="info" ng-show="info" ng-bind-html="info | trusted"></div>
-                <div ng-bind-html="text | trusted"></div>
-            </div>
+                <div class="info" ng-show="book.info">
+                    <div ng-bind-html="book.info | trusted"></div>
+                    <div class="price">
+                        <span class="amount">{{book.price}},-</span>
+                        <span class="currency">Kč</span>
+                    </div>
+                </div>
+                <div ng-bind-html="book.text | trusted"></div>
             </div>
         </div>
     </div>

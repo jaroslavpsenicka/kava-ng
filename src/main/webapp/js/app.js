@@ -52,13 +52,30 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
     }
 })
 
+.factory('Cart', function() {
+
+	var cart = {
+		count: 0,
+		items: []
+	};
+
+    return {
+    	cart: cart,
+        add: function(item) {
+        	cart.items.push(item);
+        	cart.count = cart.count + item.count;
+        }
+    };
+})
+
 .filter('trusted', ['$sce', function($sce) {
     return function(text) {
         return $sce.trustAsHtml(text);
     };
 }])
 
-.controller('HeaderCtrl', ['$scope', '$translate', function ($scope, $translate) {
+.controller('HeaderCtrl', ['$scope', '$translate', 'Cart', function ($scope, $translate, Cart) {
+	$scope.cart = Cart.cart;
 	$scope.useLanguage = function(lang) {
 		$translate.use(lang);
 	};
@@ -117,16 +134,21 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 	});
 }])
 
-.controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Prismic',
-	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic) {
+.controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Prismic', 'Cart',
+	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
 	Prismic.document($routeParams.id).then(function(response) {
-		$scope.title = response.getText('book.title');
-		$scope.image = response.getImage('book.image').asHtml();
-		$scope.text = response.getSliceZone('book.text').asHtml();
-		$scope.info = response.getStructuredText('book.info').asHtml();
+		$scope.book = {
+			id: response.id,
+			slug: response.slug,
+			title: response.getText('book.title'),
+			image: response.getImage('book.image').asHtml(),
+			text: response.getSliceZone('book.text').asHtml(),
+			info: response.getStructuredText('book.info').asHtml(),
+			price: response.getText('book.priceCZK'),
+		};
 	});
 
-	$scope.buy = function() {
+	$scope.buy = function(book) {
 		$modal.open({
 			templateUrl: 'add-to-cart.tpl.html',
 			controller: function ($scope, $modalInstance) {
@@ -136,6 +158,12 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
                 }
 			}
 		}).result.then(function(count) {
+			Cart.add({
+				id: book.id,
+				slug: book.slug,
+				title: book.title,
+				count: count
+			});
 		});
 	}
 

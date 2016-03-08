@@ -52,6 +52,30 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px 20px 5px 20px;
 	font-size: 0.9em;
 	background-color: #F0F0E9;
+	position: relative;
+}
+
+.content-text .price {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 30px;
+	background-color: #F0F0E9;
+	color: #666;
+	height: 100%;
+	border-left: 2px white solid;
+	text-align: center;
+}
+
+.content-text .amount {
+	font-size: 2em;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.content-text .currency {
+	font-size: 1.2em;
+	display: block;
 }
 
 .list-title {
@@ -91,7 +115,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-header .navbar-brand {
 	font-weight: bold;
-	color: #F3791E;
 	padding-top: 18px;
 }
 
@@ -102,6 +125,18 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-nav>li>a {
 	padding-top: 17px;
 	padding-bottom: 13px;
+}
+
+.navbar-default .navbar-nav>li>a.wide {
+	padding-top: 17px;
+	padding-bottom: 13px;
+	padding-right: 40px;
+}
+
+.navbar-default .cart-count {
+	position: absolute;
+	top: 15px;
+	right: 12px;
 }
 
 /* List */
