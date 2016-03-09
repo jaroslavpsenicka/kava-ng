@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .cart-count {
 	position: absolute;
 	top: 15px;
-	right: 12px;
+	right: 15px;
 }
 
 /* List */
@@ -149,6 +149,16 @@ h1, h2, h3, h4, h5, h6 {
 .list-item .text {
 	margin-left: 120px;
 	font-size: 0.9em;
+}
+
+/* Cart */
+
+.right-align {
+	text-align: right;
+}
+
+.clickable {
+	cursor: pointer;
 }
 
 /* Footer Styles */

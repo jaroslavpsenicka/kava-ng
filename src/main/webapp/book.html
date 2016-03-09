@@ -15,7 +15,7 @@
                     <div ng-bind-html="book.info | trusted"></div>
                     <div class="price">
                         <span class="amount">{{book.price}},-</span>
-                        <span class="currency">Kč</span>
+                        <span class="currency">{{book.currency}}</span>
                     </div>
                 </div>
                 <div ng-bind-html="book.text | trusted"></div>

@@ -22,6 +22,15 @@
 
   "Add to cart": "Přidat do košíku",
   "Number of books:": "Počet knih:",
+  "Thank you for purchasing this book. Please note - the book could be removed from the cart anytime later, if needed.":
+    "Děkujeme za váš zájem o tuto knihu. Knihy můžete kdykoliv později z košíku odstranit, pokud se tak rozhodnete.",
+  "Proceed": "Do košíku",
+  "Shopping Cart": "Nákupní košík",
+  "The cart is empty, add one or more books by pressing the button 'Add to Cart' in the book detail page.":
+      "Košík je prázdný, přidat položky můžete pomocí tlačítka 'Přidat do košíku' v detailu knihy.",
+  "Item": "Položka",
+  "Count": "Kusů",
+  "Price": "Cena",
 
   "Services": "Služby",
   "About": "O firmě",
