@@ -27,10 +27,20 @@
   "Proceed": "Do košíku",
   "Shopping Cart": "Nákupní košík",
   "The cart is empty, add one or more books by pressing the button 'Add to Cart' in the book detail page.":
-      "Košík je prázdný, přidat položky můžete pomocí tlačítka 'Přidat do košíku' v detailu knihy.",
+    "Košík je prázdný, přidat položky můžete pomocí tlačítka 'Přidat do košíku' v detailu knihy.",
   "Item": "Položka",
   "Count": "Kusů",
   "Price": "Cena",
+  "Remove": "Odebrat",
+  "CART-AGREEMENT": "Souhlasím s <a href=\"#/c/terms-and-conditions\">obchodními podmínkami</a> - <b>povinné, prosím zaškrtněte</b>",
+  "CES-MEMBER": "Prohlašuji, že jsem <a href=\"#/c/ces-membership\">členem organizace ČES</a> (prosím zvolte jen pokud jste členy této organizace)",
+  "NEWSLETTER-SUBSCRIBE": "Souhlasím se zasíláním <a href=\"#/c/newsletter\">informačního občasníku</a>",
+  "Submit the order": "Odeslat objednávku",
+  "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
+    "Objednávku dokončete klepnutím na tlačítko Odeslat. Potvrzení objednávky vám brzy zašleme emailem.",
+  "Submit": "Odeslat objednávku",
+  "Your email:": "Vaše emailová adresa:",
+  "REQUIRED": "povinné, prosím vyplňte",
 
   "Services": "Služby",
   "About": "O firmě",

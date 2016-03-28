@@ -1,5 +1,5 @@
 
-angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'prismic.io'])
+angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.translate', 'prismic.io'])
 
 .config(['$routeProvider', '$controllerProvider', '$translateProvider', 'PrismicProvider',
 	function ($routeProvider, $controllerProvider, $translateProvider, PrismicProvider) {
@@ -71,6 +71,19 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
         	cart.count = cart.count + item.count;
         }
     };
+})
+
+.factory('Order', function($resource) {
+    return $resource('', {}, {
+        submit: {
+            method: 'JSONP',
+            callback: 'JSON_CALLBACK',
+            url: 'https://script.google.com/macros/s/AKfycbwsvEtKuVb6_u5SQgYv3YoHu5Ly05LzMgCVrrtVL_AZ/dev?callback=JSON_CALLBACK',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+        }
+    });
 })
 
 .filter('trusted', ['$sce', function($sce) {
@@ -161,10 +174,13 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 			id: response.id,
 			slug: response.slug,
 			title: response.getText('book.title'),
-			image: response.getImage('book.image').asHtml(),
-			text: response.getSliceZone('book.text').asHtml(),
-			info: response.getStructuredText('book.info').asHtml(),
-			price: $translate.use() == 'cz' ? response.getText('book.priceCZK') : response.getText('book.priceEUR'),
+			image: response.getImage('book.image') ? response.getImage('book.image').asHtml() : 'No image.',
+			text: response.getSliceZone('book.text') ? response.getSliceZone('book.text').asHtml() : 'No text.',
+			info: response.getStructuredText('book.info') ? response.getStructuredText('book.info').asHtml() : 'No info.',
+			priceCZK: response.getText('book.priceCZK'),
+			priceEUR: response.getText('book.priceEUR'),
+			priceCES: response.getText('book.priceCES'),
+			price: response.getText($translate.use() == 'cz' ? 'book.priceCZK': 'book.priceEUR'),
 			currency: $translate.use() == 'cz' ? 'Kč' : 'EUR'
 		};
 	});
@@ -185,7 +201,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 				title: book.title,
 				priceCZK: book.priceCZK,
 				priceEUR: book.priceEUR,
-				price: book.price,
+				priceCES: book.priceCES,
 				currency: book.currency,
 				count: count
 			});
@@ -194,18 +210,44 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'pascalprecht.translate', 'pr
 
 }])
 
-.controller('CartCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Cart',
-	function($scope, $routeParams, $window, $location, $translate, $modal, Cart) {
+.controller('CartCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Cart', 'Order',
+	function($scope, $routeParams, $window, $location, $translate, $modal, Cart, Order) {
 
 	$scope.items = Cart.cart.items;
+	$scope.lang = $translate.use();
+	$scope.options = {};
 
-	$scope.price = function(item) {
-		return (item.price * item.count) + ',- ' + item.currency;
+	$scope.price = function(book) {
+		var price = $scope.lang == 'cz' ? book.priceCZK : book.priceEUR;
+		return (price * book.count) + ' ' + ($scope.lang == 'cz' ? 'Kč' : 'EUR');
 	}
 
 	$scope.remove = function(item) {
 		Cart.cart.count -= item.count;
 		$scope.items.splice($scope.items.indexOf(item), 1);
+	}
+
+	$scope.submit = function(options) {
+		$modal.open({
+			templateUrl: 'submit-cart.tpl.html',
+			controller: function ($scope, $modalInstance) {
+                $scope.submit = function () {
+                    $modalInstance.close();
+                }
+			}
+		}).result.then(function() {
+			var items = [];
+			angular.forEach(Cart.cart.items, function(item) {
+				items.push({
+					count: item.count,
+					title: item.title,
+					price: $translate.use() == 'cz' ? item.priceCZK + ' Kč' : item.priceEUR + ' EUR'
+				});
+			});
+			Order.submit({items: JSON.stringify(items), options: options}, {}, function(response) {
+				alert(response);
+			});
+		});
 	}
 
 }]);

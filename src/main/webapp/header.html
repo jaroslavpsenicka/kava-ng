@@ -1,7 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
     <div class="navbar-header">
 
-        <!-- note the ng-init and ng-click here: -->
         <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -21,7 +20,7 @@
             </li>
             <li class="dropdown" dropdown >
                 <a href="#" class="dropdown-toggle" dropdown-toggle role="button" aria-expanded="false">
-                    <i class="fa fa-language fa-lg"></i> <span class="caret"></span>
+                    <img src="img/language-flags.png"> <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
                     <li><a href="#/" ng-click="useLanguage('cz')">Česky</a></li>

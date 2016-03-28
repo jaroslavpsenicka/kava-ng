@@ -1,0 +1,11 @@
+<div id="welcome-header" class="modal-header">
+    <h3 translate>Submit the order</h3>
+</div>
+<form name="form" class="form-horizontal" role="form" ng-submit="submit()">
+    <div class="modal-body">
+        <p translate>Complete the order by clicking the Submit button. You will receive email confirmation soon.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" translate>Submit</button>
+    </div>
+</form>
