@@ -69,16 +69,21 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
         	if (i) i.count++;
         	else cart.items.push(item);
         	cart.count = cart.count + item.count;
+        },
+        removeAll: function() {
+        	cart.items = [];
+        	cart.count = 0;
         }
     };
 })
 
 .factory('Order', function($resource) {
-    return $resource('', {}, {
+    return $resource('https://script.google.com/macros/s/AKfycbwsvEtKuVb6_u5SQgYv3YoHu5Ly05LzMgCVrrtVL_AZ/dev', {
+    	'callback': 'JSON_CALLBACK'
+    }, {
         submit: {
             method: 'JSONP',
             callback: 'JSON_CALLBACK',
-            url: 'https://script.google.com/macros/s/AKfycbwsvEtKuVb6_u5SQgYv3YoHu5Ly05LzMgCVrrtVL_AZ/dev?callback=JSON_CALLBACK',
 			headers: {
 				'Content-Type': 'application/json'
 			}
@@ -190,7 +195,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			templateUrl: 'add-to-cart.tpl.html',
 			controller: function ($scope, $modalInstance) {
 				$scope.count = 1;
-                $scope.submit = function () {
+                $scope.submit = function() {
                     $modalInstance.close($scope.count);
                 }
 			}
@@ -210,15 +215,17 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 }])
 
-.controller('CartCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Cart', 'Order',
-	function($scope, $routeParams, $window, $location, $translate, $modal, Cart, Order) {
+.controller('CartCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', '$location', 'Cart', 'Order',
+	function($scope, $routeParams, $window, $location, $translate, $modal, $location, Cart, Order) {
+
+	var chunkSize = 10;
 
 	$scope.items = Cart.cart.items;
 	$scope.lang = $translate.use();
 	$scope.options = {};
 
 	$scope.price = function(book) {
-		var price = $scope.lang == 'cz' ? book.priceCZK : book.priceEUR;
+		var price = $scope.lang == 'cz' ? $scope.options.ces ? book.priceCES ? book.priceCES : book.priceCZK : book.priceCZK : book.priceEUR;
 		return (price * book.count) + ' ' + ($scope.lang == 'cz' ? 'Kč' : 'EUR');
 	}
 
@@ -231,7 +238,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 		$modal.open({
 			templateUrl: 'submit-cart.tpl.html',
 			controller: function ($scope, $modalInstance) {
-                $scope.submit = function () {
+                $scope.submit = function() {
                     $modalInstance.close();
                 }
 			}
@@ -244,9 +251,31 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 					price: $translate.use() == 'cz' ? item.priceCZK + ' Kč' : item.priceEUR + ' EUR'
 				});
 			});
-			Order.submit({items: JSON.stringify(items), options: options}, {}, function(response) {
-				alert(response);
-			});
+			for (var i = 0; i < items.length; i += chunkSize) {
+				var chunk = items.slice(i, i + chunkSize);
+				Order.submit({items: JSON.stringify(chunk), options: JSON.stringify(options)}, {}, function() {
+					Cart.removeAll();
+					$location.path('/c/order');
+				}, function(error) {
+					$scope.handleError(error, items);
+				});
+			}
+		});
+	}
+
+	$scope.handleError = function(error, items) {
+		var options = $scope.options;
+		$modal.open({
+			templateUrl: 'error.tpl.html',
+			controller: function ($scope, $modalInstance) {
+				$scope.error = error;
+				$scope.items = items;
+				$scope.options = options;
+                $scope.submit = function() {
+                    $modalInstance.close();
+                }
+			}
+		}).result.then(function(result) {
 		});
 	}
 

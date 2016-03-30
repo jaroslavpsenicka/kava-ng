@@ -41,6 +41,10 @@
   "Submit": "Odeslat objednávku",
   "Your email:": "Vaše emailová adresa:",
   "REQUIRED": "povinné, prosím vyplňte",
+  "Error submitting the order": "Chyba odesílání objdnávky",
+  "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
+    "Objednávku nelze odeslat, zkuste ji odeslat znovu, případně použijte email. Omlouváme se za potíže.",
+  "Retry": "Zkusit znovu",
 
   "Services": "Služby",
   "About": "O firmě",
