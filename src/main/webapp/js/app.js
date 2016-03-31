@@ -4,7 +4,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 .config(['$routeProvider', '$controllerProvider', '$translateProvider', 'PrismicProvider',
 	function ($routeProvider, $controllerProvider, $translateProvider, PrismicProvider) {
 	$routeProvider.when("/", {
-		templateUrl: "/home.html",
+		templateUrl: "home.html",
 		controller: "HomeCtrl"
 	}).when("/b/:id/:slug", {
 		templateUrl: "book.html",
