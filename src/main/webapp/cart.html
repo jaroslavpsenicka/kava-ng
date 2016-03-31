@@ -1,6 +1,6 @@
 <div class="section">
     <div class="container">
-        <div ng-include="'categories.html'"class="col-sm-3"></div>
+        <categories class="col-sm-3"></categories>
         <div class="col-sm-9 padding-right">
             <h2 class="content-title" translate>Shopping Cart</h2>
             <div ng-if="!items.length" translate>The cart is empty, add one or more books by pressing the button 'Add to Cart' in the book detail page.</div>
@@ -31,7 +31,7 @@
                                 <span translate>CART-AGREEMENT</span>
                             </label>
                         </div>
-                        <div class="checkbox">
+                        <div class="checkbox" ng-show="lang == 'cz'">
                             <label>
                                 <input type="checkbox" ng-model="options.ces" ng-change="cesCheck()">
                                 <span translate>CES-MEMBER</span>
@@ -52,9 +52,16 @@
                                    placeholder="{{ 'REQUIRED' | translate }}" required>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="address" translate>Your address:</label>
+                            <div class="col-sm-8">
+                                <textarea name="address" id="address" class="form-control" ng-model="options.address"
+                                    placeholder="{{ 'REQUIRED' | translate }}" rows="4" required></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="spaced text-center">
-                        <button class="btn btn-success" ng-disabled="!options.tac || !options.email"
+                    <div class="bit-spaced text-center">
+                        <button class="btn btn-success" ng-disabled="!options.tac || !options.email || !options.address"
                             ng-click="submit(options)" translate>Submit the order</button>
                     </div>
                 </form>

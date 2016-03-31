@@ -19,6 +19,7 @@
   "New Books": "Nové knihy",
 
   "Book offer": "Nabídka knih",
+  "Load more..": "Načíst více...",
 
   "Add to cart": "Přidat do košíku",
   "Number of books:": "Počet knih:",
@@ -40,6 +41,7 @@
     "Objednávku dokončete klepnutím na tlačítko Odeslat. Potvrzení objednávky vám brzy zašleme emailem.",
   "Submit": "Odeslat objednávku",
   "Your email:": "Vaše emailová adresa:",
+  "Your address:":"Vaše poštovní adresa:",
   "REQUIRED": "povinné, prosím vyplňte",
   "Error submitting the order": "Chyba odesílání objdnávky",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
