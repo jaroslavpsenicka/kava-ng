@@ -117,8 +117,12 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	};
 }])
 
-.controller('HomeCtrl', ['$scope', '$routeParams', '$window', 'Prismic', function($scope, $routeParams, $window, Prismic) {
-	Prismic.query('[[:d = at(document.type, "slide")]]').then(function(response) {
+.controller('HomeCtrl', ['$scope', '$routeParams', '$window', '$translate', 'Prismic',
+function($scope, $routeParams, $window, $translate, Prismic) {
+
+	var type = '[:d = at(document.type, "slide")]';
+	var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
+	Prismic.query('[' + type + tags + ']').then(function(response) {
 		if (response.results_size > 0) {
 			$scope.slides = [];
 			angular.forEach(response.results, function(value) {
@@ -134,7 +138,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 		}
 	});
 
-	Prismic.query('[[:d = at(document.type, "book")]]').then(function(response) {
+	var type = '[:d = at(document.type, "book")]';
+	var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
+	Prismic.query('[' + type + tags + ']').then(function(response) {
 		if (response.results_size > 0) {
 			$scope.results = [];
 			angular.forEach(response.results, function(value) {
