@@ -15,6 +15,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}).when("/t/:lang/:type", {
 		templateUrl: "books.html",
 		controller: "BookListCtrl"
+	}).when("/blog", {
+		templateUrl: "blog.html",
+		controller: "BlogCtrl"
 	}).when("/cart", {
 		templateUrl: "cart.html",
 		controller: "CartCtrl"
@@ -78,7 +81,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 })
 
 .factory('Order', function($resource) {
-    return $resource('https://script.google.com/macros/s/AKfycbwsvEtKuVb6_u5SQgYv3YoHu5Ly05LzMgCVrrtVL_AZ/dev', {
+    return $resource('https://script.google.com/macros/s/AKfycbw96LknIA9mVLAh0lnSXU9ViXhjm4Ea3DTI2oEyS2lTocQqhWDa/exec', {
     	'callback': 'JSON_CALLBACK'
     }, {
         submit: {
@@ -112,7 +115,6 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 .directive('bookList', function() {
 	"use strict";
-
 	return {
 		restrict: 'E',
 		templateUrl: 'comp/book-list.html',
@@ -122,10 +124,18 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 .directive('categories', function() {
 	"use strict";
-
 	return {
 		restrict: 'E',
 		templateUrl: 'comp/categories.html',
+		link: function(scope, element, attrs) {}
+	}
+})
+
+.directive('blogList', function() {
+	"use strict";
+	return {
+		restrict: 'E',
+		templateUrl: 'comp/blog-list.html',
 		link: function(scope, element, attrs) {}
 	}
 })
@@ -273,6 +283,32 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 			});
 		});
 	}
+}])
+
+.controller('BlogCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
+	function($scope, $routeParams, $window, $location, $translate, Prismic) {
+
+	$scope.loadPage = function(page) {
+		var type = '[:d = at(document.type, "article")]';
+		var tags = '[:d = at(document.tags, ["' + $translate.use() + '","blog"])]';
+		Prismic.query('[' + type + tags + ']', function(search) {
+			return search.page(page);
+		}).then(function(response) {
+			if (response.results_size > 0) {
+				$scope.results = [];
+				$scope.nextPage = response.next_page;
+				angular.forEach(response.results, function(value) {
+					$scope.results.push({
+						uid: value.uid,
+						title: value.getText('article.title'),
+						abstract: value.getStructuredText('article.abstract').asHtml()
+					});
+				});
+			}
+		});
+	}
+
+	$scope.loadPage(0);
 
 }])
 
@@ -339,7 +375,6 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 		}).result.then(function(result) {
 		});
 	}
-
 }]);
 
 

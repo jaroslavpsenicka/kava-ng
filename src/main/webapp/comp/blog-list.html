@@ -1,0 +1,15 @@
+<div class="row">
+    <div>
+        <h2 class="list-title" translate>Blog</h2>
+    </div>
+    <div ng-repeat="doc in results">
+        <a href="#/c/{{doc.uid}}">
+            <h4 ng-bind-html="doc.title | trusted"></h4>
+        </a>
+        <p ng-bind-html="doc.abstract | trusted"></p>
+        <hr/>
+    </div>
+    <div class="bit-spaced col-sm-12" ng-show="nextPage">
+        <button class="btn btn-default center-block" ng-click="loadPage(nextPage)" translate>Load more...</button>
+    </div>
+</div>

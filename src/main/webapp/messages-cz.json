@@ -2,6 +2,7 @@
   "Home": "Nakladatelství",
   "Publishing on demand": "Tisk na přání",
   "Esperanto": "Esperanto",
+  "Blog": "Blog",
   "Cart": "Košík",
 
   "Czech Books": "Knihy v češtině",
@@ -9,12 +10,10 @@
   "Special Books": "Odborná literatura",
   "Belles Letres": "Krásná literatura",
   "Other languages": "Další jazyky",
-
   "English Books": "Knihy v angličtině",
   "French Books": "Knihy ve francouzštině",
   "German Books": "Knihy v němčině",
   "Italian Books": "Knihy v italštině",
-
   "News": "Připravujeme",
   "New Books": "Nové knihy",
 
@@ -55,10 +54,7 @@
   "Payment options": "Možnosti platby",
   "Orders": "Objednávky",
   "Returns": "Reklamace",
-
   "Archive": "Archiv",
   "Events": "Tradiční akce",
-
   "Partners": "Partneři"
-  
 }
