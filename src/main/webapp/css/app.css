@@ -144,7 +144,32 @@ h1, h2, h3, h4, h5, h6 {
 	right: 15px;
 }
 
+/* Slides */
+
+.carousel-caption {
+	top: 0px;
+	left: 0px;
+	padding: 0px 0px 0px 15px;
+	text-align: left;
+	text-shadow: none;
+	color: black;
+	height: 150px;
+	overflow: hidden;
+}
+
+.carousel-caption h3 {
+	color: #696763;
+    font-size: 30px;
+    text-decoration: none;
+}
+
 /* List */
+
+.list-item {
+	display: block;
+	height: 150px;
+	overflow: hidden;
+}
 
 .list-item .image {
 	width: 100px;
@@ -154,6 +179,12 @@ h1, h2, h3, h4, h5, h6 {
 .list-item .text {
 	margin-left: 120px;
 	font-size: 0.9em;
+	height: 130px;
+	overflow: hidden;
+}
+
+.list-item h4 {
+	margin-top: 0px;
 }
 
 /* Cart */

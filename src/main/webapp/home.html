@@ -1,13 +1,31 @@
 <div class="section">
     <div class="container">
 
-        <div ng-include="'categories.html'"></div>
+        <div ng-include="'categories.html'" class="col-sm-3"></div>
 
         <div class="col-sm-9 padding-right">
 
+            <uib-carousel id="slides" interval="5000">
+                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <a href="{{slide.url}}">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h3>{{slide.title}}</h3>
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </a>
+                </uib-slide>
+            </uib-carousel>
+
+            <div ng-include="'book-list.html'"></div>
+
+        </div>
+
+
+<!--
             <ul id="list">
                 <li ng-repeat=" document in documents.results">
-                    <a href="#/document/{{document.id}}/{{document.slug}}">
+                    <a href="#/c/{{document.uid}}">
                         {{document.slug}}
                     </a>
                 </li>
@@ -24,6 +42,7 @@
                 </li>
                 <li ng-if="documents.next_page"><a href="#/{{documents.page+1}}">Next</a></li>
             </ul>
+-->
 
 
         </div>

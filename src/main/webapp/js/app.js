@@ -13,7 +13,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 		templateUrl: "content.html",
 		controller: "ContentCtrl"
 	}).when("/t/:lang/:type", {
-		templateUrl: "book-list.html",
+		templateUrl: "books.html",
 		controller: "BookListCtrl"
 	}).when("/cart", {
 		templateUrl: "cart.html",
@@ -118,6 +118,38 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 }])
 
 .controller('HomeCtrl', ['$scope', '$routeParams', '$window', 'Prismic', function($scope, $routeParams, $window, Prismic) {
+	Prismic.query('[[:d = at(document.type, "slide")]]').then(function(response) {
+		if (response.results_size > 0) {
+			$scope.slides = [];
+			angular.forEach(response.results, function(value) {
+				$scope.slides.push({
+					id: value.id,
+					slug: value.slug,
+					title: value.getText('slide.title'),
+					url: value.getText('slide.url'),
+					image: value.getImage('slide.image').url,
+					text: value.getText('slide.text')
+				});
+			});
+		}
+	});
+
+	Prismic.query('[[:d = at(document.type, "book")]]').then(function(response) {
+		if (response.results_size > 0) {
+			$scope.results = [];
+			angular.forEach(response.results, function(value) {
+				$scope.results.push({
+					id: value.id,
+					slug: value.slug,
+					title: value.getText('book.title'),
+					image: value.getImage('book.image').views.thumbnail.asHtml(),
+					abstract: value.getStructuredText('book.abstract').asHtml()
+				});
+			});
+		}
+	});
+
+/*
 	var page = parseInt($routeParams.page) || "1";
 	Prismic.ctx().then(function(ctx){
 		ctx.api.form('everything').page(page).ref(ctx.ref).submit(function(err, documents) {
@@ -128,6 +160,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			}
 		});
 	});
+*/
+
 }])
 
 .controller('ContentCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
