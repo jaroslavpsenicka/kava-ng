@@ -253,7 +253,7 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 
 	$scope.buy = function(book) {
 		$modal.open({
-			templateUrl: 'add-to-cart.tpl.html',
+			templateUrl: 'comp/add-to-cart.tpl.html',
 			controller: function ($scope, $modalInstance) {
 				$scope.count = 1;
                 $scope.submit = function() {
@@ -297,7 +297,7 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 
 	$scope.submit = function(options) {
 		$modal.open({
-			templateUrl: 'submit-cart.tpl.html',
+			templateUrl: 'comp/submit-cart.tpl.html',
 			controller: function ($scope, $modalInstance) {
                 $scope.submit = function() {
                     $modalInstance.close();
@@ -327,7 +327,7 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 	$scope.handleError = function(error, items) {
 		var options = $scope.options;
 		$modal.open({
-			templateUrl: 'error.tpl.html',
+			templateUrl: 'comp/error.tpl.html',
 			controller: function ($scope, $modalInstance) {
 				$scope.error = error;
 				$scope.items = items;
