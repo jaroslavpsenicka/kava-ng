@@ -1,4 +1,60 @@
 {
-  "Home": "Zuhause",
-  "Publishing on demand": "Druck auf Wunsch"
+  "Home": "Verlag",
+  "Publishing on demand": "Abrufbuch",
+  "Esperanto": "Esperanto",
+  "Blog": "Blog",
+  "Cart": "Warenkorb",
+
+  "Czech Books": "Bücher in Tschechisch",
+  "Language Books": "Sprachbücher",
+  "Special Books": "Fachbücher",
+  "Belles Letres": "Belletristik",
+  "Other languages": "Andere Sprachen",
+  "English Books": "Bücher in Englisch",
+  "French Books": "Bücher in Französisch",
+  "German Books": "Bücher in Deutsch",
+  "Italian Books": "Bücher in Italienisch",
+  "News": "Vorschau",
+  "New Books": "Neue Bücher",
+
+  "Book offer": "Angebote",
+  "Load more..": "Mehr...",
+
+  "Add to cart": "In den Warenkorb",
+  "Number of books:": "Anzahl der Bücher:",
+  "Thank you for purchasing this book. Please note - the book could be removed from the cart anytime later, if needed.":
+  "Danke für Ihre Bestellung. Sie können das Buch später wieder aus dem Warenkorb entfernen.",
+  "Proceed": "In den Warenkorb",
+  "Shopping Cart": "Warenkorb",
+  "The cart is empty, add one or more books by pressing the button 'Add to Cart' in the book detail page.":
+  "Ihr Warenkorb ist leer, Sie können Bücher hinzufügen, indem Sie auf 'In den Warenkorb' klicken.",
+  "Item": "Artikel",
+  "Count": "Anzahl",
+  "Price": "Preis",
+  "Remove": "Entfernen",
+  "CART-AGREEMENT": "Ich erkläre mich mit den <a href=\"#/c/terms-and-conditions\">Allgemeinen Geschäftsbedingungen</a> einverstanden. <b>Verpflichtend – bitte anklicken</b>",
+  "CES-MEMBER": "Ich bestätige <a href=\"#/c/ces-membership\">meine Mitgliedschaft</a> (Bitte nur auswählen, wenn Sie Mitglied der Ĉeĥa Esperanto-Asocio sind)",
+  "NEWSLETTER-SUBSCRIBE": "Ich erkläre mich einverstanden mit dem Erhalt des <a href=\"#/c/newsletter\">Newsletters</a>",
+  "Submit the order": "Die Bestellung absenden",
+  "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
+  "Schließen Sie die Bestellung ab, indem Sie auf 'Senden' klicken. Sie erhalten in Kürze ein Bestätigungs-Mail.",
+  "Submit": "Senden",
+  "Your email:": "Ihre E-Mail-Adresse:",
+  "Your address:":"Ihre Zustelladresse:",
+  "REQUIRED": "Verpflichtendes Eingabefeld – bitte ausfüllen",
+  "Error submitting the order": "Fehler beim Versenden der Bestellung",
+  "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
+  "Die Bestellung kann nicht abgeschlossen werden. Bitte wiederholen Sie den Bestellvorgang oder schreiben Sie uns eine E-Mail. Wir bedauern die Unannehmlichkeiten.",
+  "Retry": "Erneut versuchen",
+
+  "Services": "Service",
+  "About": "Über den Verlag",
+  "Terms and Conditions": "Allgemeine Geschäftsbedingungen",
+  "Pricing": "Preise",
+  "Payment options": "Zahlungsmöglichkeiten",
+  "Orders": "Bestellungen",
+  "Returns": "Reklamationen",
+  "Archive": "Archiv",
+  "Events": "Veranstaltungen",
+  "Partners": "Partner"
 }
