@@ -15,9 +15,19 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}).when("/t/:lang/:type", {
 		templateUrl: "books.html",
 		controller: "BookListCtrl"
+	}).when("/t/:lang/", {
+		templateUrl: "books.html",
+		controller: "BookListCtrl"
 	}).when("/blog", {
 		templateUrl: "blog.html",
 		controller: "BlogCtrl"
+	}).when("/esperanto", {
+		redirectTo: '/t/eo',
+		resolve: {
+			esperanto: function($translate) {
+				$translate.use('eo');
+			}
+		}
 	}).when("/cart", {
 		templateUrl: "cart.html",
 		controller: "CartCtrl"
@@ -140,10 +150,11 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}
 })
 
-.controller('HeaderCtrl', ['$scope', '$translate', 'Cart', function ($scope, $translate, Cart) {
+.controller('HeaderCtrl', ['$scope', '$translate', '$route', 'Cart', function ($scope, $translate, $route, Cart) {
 	$scope.cart = Cart.cart;
 	$scope.useLanguage = function(lang) {
 		$translate.use(lang);
+		$route.reload();
 	};
 }])
 
@@ -170,9 +181,9 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
-		var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
+		var tags = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
 		Prismic.query('[' + type + tags + ']', function(search) {
-			return search.page(page);
+			return search.page(page).orderings('[my.book.index desc]');
 		}).then(function(response) {
 			if (response.results_size > 0) {
 				$scope.results = [];
@@ -219,9 +230,10 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
-		var tags = '[:d = at(document.tags, ["' + $routeParams.lang + '","' + $routeParams.type + '"])]';
-		Prismic.query('[' + type + tags + ']', function(search) {
-			return search.page(page);
+		var tags = '[:d = at(document.tags, ["' + $routeParams.lang + ($routeParams.type ? '","' + $routeParams.type : '') + '"])]';
+		var lang = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
+		Prismic.query('[' + type + tags + lang + ']', function(search) {
+			return search.page(page).orderings('[my.book.index desc]');
 		}).then(function(response) {
 			if (response.results_size > 0) {
 				$scope.results = [];
@@ -256,10 +268,19 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 			priceCZK: response.getText('book.priceCZK'),
 			priceEUR: response.getText('book.priceEUR'),
 			priceCES: response.getText('book.priceCES'),
-			price: response.getText($translate.use() == 'cz' ? 'book.priceCZK': 'book.priceEUR'),
+			price: $scope.getText(response),
 			currency: $translate.use() == 'cz' ? 'Kč' : 'EUR'
 		};
 	});
+
+	$scope.getText = function(response) {
+		if ($translate.use() != 'cz') {
+			var price = response.getText('book.priceEUR');
+			return (price.indexOf('.') > -1) ? price + '0' : price;
+		}
+
+		return response.getText('book.priceCZK') + ',-';
+	}
 
 	$scope.buy = function(book) {
 		$modal.open({
