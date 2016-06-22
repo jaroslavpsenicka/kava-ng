@@ -238,12 +238,14 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 			if (response.results_size > 0) {
 				$scope.results = [];
 				angular.forEach(response.results, function(value) {
+					var abstract = value.getStructuredText('book.abstract');
+					var image = value.getImage('book.image');
 					$scope.results.push({
 						id: value.id,
 						slug: value.slug,
 						title: value.getText('book.title'),
-						image: value.getImage('book.image').views.thumbnail.asHtml(),
-						abstract: value.getStructuredText('book.abstract').asHtml()
+						image: image ? image.views.thumbnail.asHtml() : '',
+						abstract: abstract ? abstract : ''
 					});
 				});
 			}
@@ -258,13 +260,16 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
 
 	Prismic.document($routeParams.id).then(function(response) {
+		var image = response.getImage('book.image');
+		var text = response.getSliceZone('book.text');
+		var info = response.getStructuredText('book.info');
 		$scope.book = {
 			id: response.id,
 			slug: response.slug,
 			title: response.getText('book.title'),
-			image: response.getImage('book.image') ? response.getImage('book.image').asHtml() : 'No image.',
-			text: response.getSliceZone('book.text') ? response.getSliceZone('book.text').asHtml() : 'No text.',
-			info: response.getStructuredText('book.info') ? response.getStructuredText('book.info').asHtml() : 'No info.',
+			image: image ? image.asHtml() : 'No image.',
+			text: text ? text.asHtml() : 'No text.',
+			info: info ? info.asHtml() : 'No info.',
 			priceCZK: response.getText('book.priceCZK'),
 			priceEUR: response.getText('book.priceEUR'),
 			priceCES: response.getText('book.priceCES'),
