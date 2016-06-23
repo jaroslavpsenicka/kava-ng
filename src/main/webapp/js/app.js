@@ -288,7 +288,7 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 	$scope.getText = function(response) {
 		if ($translate.use() != 'cz') {
 			var price = response.getText('book.priceEUR');
-			return (price.indexOf('.') > -1) ? price + '0' : price;
+			return (price && price.indexOf('.') > -1) ? price + '0' : price;
 		}
 
 		return response.getText('book.priceCZK') + ',-';
