@@ -12,6 +12,7 @@
             </div>
             <div class="col-sm-8 content-text">
                 <div class="info" ng-show="book.info">
+                    <div ng-bind-html="doc.authors | trusted" ng-if="doc.authors"></div>
                     <div ng-bind-html="book.info | trusted"></div>
                     <div class="price">
                         <span class="amount">{{book.price}}</span>

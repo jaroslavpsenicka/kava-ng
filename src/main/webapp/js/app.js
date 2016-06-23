@@ -244,8 +244,9 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 						id: value.id,
 						slug: value.slug,
 						title: value.getText('book.title'),
+						authors: value.getText('book.authors'),
 						image: image ? image.views.thumbnail.asHtml() : '',
-						abstract: abstract ? abstract : ''
+						abstract: abstract ? abstract.asHtml() : ''
 					});
 				});
 			}
@@ -267,8 +268,14 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 			id: response.id,
 			slug: response.slug,
 			title: response.getText('book.title'),
+			authors: response.getText('book.authors'),
 			image: image ? image.asHtml() : 'No image.',
-			text: text ? text.asHtml() : 'No text.',
+			text: text ? text.asHtml({
+				linkResolver: function (ctx, doc) {
+					var hash = (doc.type == 'book') ? 'b/' + doc.id + '/' + doc.slug : 'c/' + doc.uid;
+					return window.location.pathname + '#/' + hash;
+				}
+			}) : 'No text.',
 			info: info ? info.asHtml() : 'No info.',
 			priceCZK: response.getText('book.priceCZK'),
 			priceEUR: response.getText('book.priceEUR'),
@@ -286,6 +293,8 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 
 		return response.getText('book.priceCZK') + ',-';
 	}
+
+	$scope.linkResolver =
 
 	$scope.buy = function(book) {
 		$modal.open({
