@@ -4,6 +4,20 @@
   "Esperanto": "Esperanto",
   "Blog": "Blogo",
   "Cart": "Aĉetkorbo",
+
+  "subtitle-lang-cz": " - Lingva literaturo en la ĉeĥa",
+  "subtitle-belles-cz": " - Beletro en la ĉeĥa",
+  "subtitle-special-cz": " - Faka literaturo en la ĉeĥa",
+  "subtitle-lang-eo": " - Lingva literaturo en la Esperanto",
+  "subtitle-belles-eo": " - Beletro en la Esperanto",
+  "subtitle-special-eo": " - Faka literaturo en la Esperanto",
+  "subtitle-en": " - Libroj en la angla",
+  "subtitle-de": " - Libroj en la germana",
+  "subtitle-it": " - Libroj en la itala",
+  "subtitle-fr": " - Libroj en la franca",
+  "subtitle-cz": " - Libroj en la ĉeĥa",
+  "subtitle-eo": " - Libroj en la Esperanto",
+
   "Czech Books": "Libroj en la ĉeĥa",
   "Language Books": "Lingva literaturo",
   "Special Books": "Faka literaturo",
@@ -13,6 +27,12 @@
   "French Books": "Libroj en la franca",
   "German Books": "Libroj en la germana",
   "Italian Books": "Libroj en la itala",
+
+  "Search": "Serĉo...",
+  "Loading...": "Serĉo...",
+  "No results.": "Neniuj rezultoj trovitaj.",
+  "Load more...": "Montru pli...",
+
   "News": "Ni preparas",
   "New Books": "Novaĵoj",
   "Book offer": "Librooferto",

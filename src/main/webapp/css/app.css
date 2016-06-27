@@ -39,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .centered {
    text-align: center;
-   font-size: 0;
 }
 
 .content-title {
@@ -111,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Service Page Styles */
+
 .service-icon {
     font-size: 50px;
 }
@@ -188,6 +188,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .list-item h4 {
 	margin-top: 0px;
+}
+
+/* Search */
+
+.search-field {
+	width: 180px;
 }
 
 /* Cart */

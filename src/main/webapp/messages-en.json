@@ -1,4 +1,17 @@
 {
+  "subtitle-lang-cz": " - Czech Language Books",
+  "subtitle-belles-cz": " - Czech Belles Letres",
+  "subtitle-special-cz": " - Czech Special Books",
+  "subtitle-lang-eo": " - Language Books in Esperanto",
+  "subtitle-belles-eo": " - Belles Letres in Esperanto",
+  "subtitle-special-eo": " - Special Books in Esperanto",
+  "subtitle-en": " - English Books",
+  "subtitle-de": " - German Books",
+  "subtitle-it": " - Italian Books",
+  "subtitle-fr": " - French Books",
+  "subtitle-cz": " - Czech Books",
+  "subtitle-eo": " - Esperanto Books",
+
   "CART-AGREEMENT": "I do agree with <a href=\"#/c/terms-and-conditions\">terms and conditions</a> - <b>check to proceed</b>",
   "CES-MEMBER": "I am <a href=\"#/c/ces-membership\">registered member of ČES</a> (please choose only if you are a member)",
   "NEWSLETTER-SUBSCRIBE": "I want to <a href=\"#/c/newsletter\">subscribe a newsletter</a>",

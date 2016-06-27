@@ -104,6 +104,23 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
     });
 })
 
+.service('BookReader', function() {
+	return {
+		read: function(value, results) {
+			var abstract = value.getStructuredText('book.abstract');
+			var image = value.getImage('book.image');
+			results.push({
+				id: value.id,
+				slug: value.slug,
+				title: value.getText('book.title'),
+				authors: value.getText('book.authors'),
+				image: image ? image.views.thumbnail.asHtml() : '',
+				abstract: abstract ? abstract.asHtml() : ''
+			});
+		}
+	}
+})
+
 .filter('trusted', ['$sce', function($sce) {
     return function(text) {
         return $sce.trustAsHtml(text);
@@ -150,16 +167,48 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}
 })
 
-.controller('HeaderCtrl', ['$scope', '$translate', '$route', 'Cart', function ($scope, $translate, $route, Cart) {
+.directive('search', function(BookReader) {
+	"use strict";
+	return {
+		restrict: 'E',
+		replace: false,
+		templateUrl: 'comp/search.html',
+		controller: function($scope, $routeParams, $window, $translate, Prismic) {
+			$scope.search = function(query) {
+				$scope.results = [];
+				$scope.subtitle = ' - ' + query;
+				$scope.nextPage = false;
+				$scope.loading = true;
+				var type = '[:d = at(document.type, "book")]';
+				var tags = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
+				var search = '[:d = fulltext(document, "' + query + '")]';
+				Prismic.query('[' + type + search + tags + ']', function(search) {
+					return search.orderings('[my.book.index desc]');
+				}).then(function(response) {
+					$scope.nextPage = response.next_page ? response.page + 1 : undefined;
+					$scope.loading = false;
+					if (response.results_size > 0) {
+						angular.forEach(response.results, function(value) {
+							BookReader.read(value, $scope.results);
+						});
+					}
+				});
+
+				return false;
+			}
+		}
+	}
+})
+
+.controller('HeaderCtrl', function ($scope, $translate, $route, Cart) {
 	$scope.cart = Cart.cart;
 	$scope.useLanguage = function(lang) {
 		$translate.use(lang);
 		$route.reload();
 	};
-}])
+})
 
-.controller('HomeCtrl', ['$scope', '$routeParams', '$window', '$translate', 'Prismic',
-function($scope, $routeParams, $window, $translate, Prismic) {
+.controller('HomeCtrl', function($scope, $routeParams, $window, $translate, Prismic, BookReader) {
 
 	var type = '[:d = at(document.type, "slide")]';
 	var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
@@ -182,31 +231,24 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
 		var tags = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
+		if (page == 1) $scope.results = [];
 		Prismic.query('[' + type + tags + ']', function(search) {
 			return search.page(page).orderings('[my.book.index desc]');
 		}).then(function(response) {
+			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 			if (response.results_size > 0) {
-				$scope.results = [];
-				$scope.nextPage = response.next_page;
 				angular.forEach(response.results, function(value) {
-					$scope.results.push({
-						id: value.id,
-						slug: value.slug,
-						title: value.getText('book.title'),
-						image: value.getImage('book.image').views.thumbnail.asHtml(),
-						abstract: value.getStructuredText('book.abstract').asHtml()
-					});
+					BookReader.read(value, $scope.results);
 				});
 			}
 		});
 	}
 
-	$scope.loadPage(0);
+	$scope.loadPage(1);
 
-}])
+})
 
-.controller('ContentCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
-	function($scope, $routeParams, $window, $location, $translate, Prismic) {
+.controller('ContentCtrl', function($scope, $routeParams, $window, $location, $translate, Prismic) {
 	var key = $routeParams.uid + '-' + $translate.use();
 	Prismic.query('[[:d = at(my.article.uid, "' + key + '")]]').then(function(response) {
 		if (response.results_size > 0) {
@@ -223,39 +265,34 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 			});
 		}
 	});
-}])
+})
 
-.controller('BookListCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
-	function($scope, $routeParams, $window, $location, $translate, Prismic) {
+.controller('BookListCtrl', function($scope, $routeParams, $window, $location, $translate, Prismic, BookReader) {
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
 		var tags = '[:d = at(document.tags, ["' + $routeParams.lang + ($routeParams.type ? '","' + $routeParams.type : '') + '"])]';
 		var lang = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
+		var key = ($routeParams.type ? $routeParams.type + '-' : '') + $routeParams.lang;
+		$translate('subtitle-' + key).then(function(translation) {
+			$scope.subtitle = translation;
+		});
+		if (page == 1) $scope.results = [];
 		Prismic.query('[' + type + tags + lang + ']', function(search) {
 			return search.page(page).orderings('[my.book.index desc]');
 		}).then(function(response) {
+			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 			if (response.results_size > 0) {
-				$scope.results = [];
 				angular.forEach(response.results, function(value) {
-					var abstract = value.getStructuredText('book.abstract');
-					var image = value.getImage('book.image');
-					$scope.results.push({
-						id: value.id,
-						slug: value.slug,
-						title: value.getText('book.title'),
-						authors: value.getText('book.authors'),
-						image: image ? image.views.thumbnail.asHtml() : '',
-						abstract: abstract ? abstract.asHtml() : ''
-					});
+					BookReader.read(value, $scope.results);
 				});
 			}
 		});
 	}
 
-	$scope.loadPage(0);
+	$scope.loadPage(1);
 
-}])
+})
 
 .controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Prismic', 'Cart',
 	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
@@ -288,13 +325,11 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 	$scope.getText = function(response) {
 		if ($translate.use() != 'cz') {
 			var price = response.getText('book.priceEUR');
-			return (price && price.indexOf('.') > -1) ? price + '0' : price;
+			return (price && /^\d+\.\d$/.test(price)) ? price + '0' : price;
 		}
 
 		return response.getText('book.priceCZK') + ',-';
 	}
-
-	$scope.linkResolver =
 
 	$scope.buy = function(book) {
 		$modal.open({
@@ -331,7 +366,7 @@ function($scope, $routeParams, $window, $translate, Prismic) {
 		}).then(function(response) {
 			if (response.results_size > 0) {
 				$scope.results = [];
-				$scope.nextPage = response.next_page;
+				$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 				angular.forEach(response.results, function(value) {
 					$scope.results.push({
 						uid: value.uid,
