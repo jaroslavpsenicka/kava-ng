@@ -63,6 +63,8 @@
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
     "Objednávku nelze odeslat, zkuste ji odeslat znovu, případně použijte email. Omlouváme se za potíže.",
   "Retry": "Zkusit znovu",
+  "** CES members may save up to 70%, proceed to checkout for details.":
+    "** Členové ČES mohou ušetřit až 70 % ceny, vyznačte prosím členství v košíku během vyřizování objednávky.",
 
   "Services": "Služby",
   "About": "O firmě",

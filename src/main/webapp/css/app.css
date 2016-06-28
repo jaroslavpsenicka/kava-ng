@@ -51,12 +51,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-text .info {
-	margin: 0px 0px 20px 0px;
 	padding: 20px 20px 5px 20px;
 	font-size: 0.9em;
 	background-color: #F0F0E9;
 	position: relative;
 	min-height: 110px;
+}
+
+.content-text .text {
+	margin: 20px 0px 0px 0px;
+}
+
+.content-text .note {
+	margin: 5px 0px 0px 0px;
+	font-size: 0.9em;
+	position: relative;
 }
 
 .content-text .price {

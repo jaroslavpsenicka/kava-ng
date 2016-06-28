@@ -20,11 +20,12 @@
                     <div ng-bind-html="doc.authors | trusted" ng-if="doc.authors"></div>
                     <div ng-bind-html="book.info | trusted"></div>
                     <div class="price">
-                        <span class="amount">{{book.price}}</span>
+                        <span class="amount">{{book.price}}<sup ng-if="book.priceCES">**</sup></span>
                         <span class="currency">{{book.currency}}</span>
                     </div>
                 </div>
-                <div ng-bind-html="book.text | trusted"></div>
+                <div class="note" ng-if="book.priceCES" translate>** CES members may save up to 70%, proceed to checkout for details.</div>
+                <div class="text" ng-bind-html="book.text | trusted"></div>
             </div>
         </div>
     </div>
