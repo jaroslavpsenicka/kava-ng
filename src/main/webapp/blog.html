@@ -7,5 +7,17 @@
             <categories></categories>
         </div>
         <blog-list results="results" nextPage="nextPage" class="col-sm-9"></blog-list>
+        <div class="subscribe col-sm-9">
+            <h4 translate>Subscribe Newsletter</h4>
+            <p translate>The newsletter will be distributed occasionally, both in czech and esperanto (contains new books, discounts, invitations to events etc.). By entering your email address you agree with receiving the newsletter, this can be cancelled anytime.</p>
+            <form name="searchForm" ng-submit="subscribe(email)">
+                <div class="input-group email-field">
+                    <input ng-model="email" type="email" class="form-control" placeholder="{{'Email' | translate}}" required>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" translate>Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

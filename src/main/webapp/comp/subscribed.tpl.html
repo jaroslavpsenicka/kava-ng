@@ -1,0 +1,12 @@
+<div id="welcome-header" class="modal-header">
+    <h3 translate>Subscribe Newsletter</h3>
+</div>
+<form name="form" class="form-horizontal" role="form" ng-submit="submit()">
+    <div class="modal-body">
+        <p translate="NEWSLETTER-SUBSCRIBED" translate-value-email="{{email}}"></p>
+        <p translate>Thank you for subscribing the newsletter.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" translate>OK, got it</button>
+    </div>
+</form>

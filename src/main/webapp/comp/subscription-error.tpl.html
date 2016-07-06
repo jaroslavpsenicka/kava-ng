@@ -1,0 +1,11 @@
+<div id="welcome-header" class="modal-header">
+    <h3 translate>Error subscribing the newsletter</h3>
+</div>
+<form name="form" class="form-horizontal" role="form" ng-submit="submit()">
+    <div class="modal-body">
+        <p translate>The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" translate>OK, got it</button>
+    </div>
+</form>

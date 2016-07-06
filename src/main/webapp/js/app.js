@@ -104,6 +104,20 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
     });
 })
 
+.factory('Newsletter', function($resource) {
+    return $resource('https://script.google.com/macros/s/AKfycbz82DcyroSLRWBi0X22GZe9HEXMPEq6CI1GgvThO3tImDtI5qM/exec', {
+    	'callback': 'JSON_CALLBACK'
+    }, {
+        subscribe: {
+            method: 'JSONP',
+            callback: 'JSON_CALLBACK',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+        }
+    });
+})
+
 .service('BookReader', function() {
 	return {
 		read: function(value, results) {
@@ -294,8 +308,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 })
 
-.controller('BookCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', 'Prismic', 'Cart',
-	function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
+.controller('BookCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
 
 	Prismic.document($routeParams.id).then(function(response) {
 		var image = response.getImage('book.image');
@@ -353,10 +366,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			});
 		});
 	}
-}])
+})
 
-.controller('BlogCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', 'Prismic',
-	function($scope, $routeParams, $window, $location, $translate, Prismic) {
+.controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Newsletter) {
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "article")]';
@@ -376,14 +388,44 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 				});
 			}
 		});
-	}
+	};
+
+	$scope.subscribe = function(email) {
+		var options = { email: email };
+		Newsletter.subscribe({ options: options }, {}, function() {
+			$modal.open({
+				templateUrl: 'comp/subscribed.tpl.html',
+				controller: function ($scope, $modalInstance) {
+					$scope.email = email;
+					$scope.submit = function() {
+						$modalInstance.close();
+					}
+				}
+			}).result.then(function(result) {
+			});
+		}, function(error) {
+			$scope.handleError(error, items);
+		});
+	};
+
+	$scope.handleError = function(error, items) {
+		$modal.open({
+			templateUrl: 'comp/subscription-error.tpl.html',
+			controller: function ($scope, $modalInstance) {
+				$scope.error = error;
+                $scope.submit = function() {
+                    $modalInstance.close();
+                }
+			}
+		}).result.then(function(result) {
+		});
+	};
 
 	$scope.loadPage(0);
 
-}])
+})
 
-.controller('CartCtrl', ['$scope', '$routeParams', '$window', '$location', '$translate', '$modal', '$location', 'Cart', 'Order',
-	function($scope, $routeParams, $window, $location, $translate, $modal, $location, Cart, Order) {
+.controller('CartCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, $location, Cart, Order) {
 
 	var chunkSize = 10;
 
@@ -415,14 +457,14 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 				items.push({
 					count: item.count,
 					title: item.title,
-					price: $translate.use() == 'cz' ? item.priceCZK + ' Kč' : item.priceEUR + ' EUR'
+					price: $scope.price(item)
 				});
 			});
 			for (var i = 0; i < items.length; i += chunkSize) {
 				var chunk = items.slice(i, i + chunkSize);
 				Order.submit({items: JSON.stringify(chunk), options: JSON.stringify(options)}, {}, function() {
 					Cart.removeAll();
-					$location.path('/c/order');
+					$location.path('/c/order-' + $translate.use());
 				}, function(error) {
 					$scope.handleError(error, items);
 				});
@@ -445,6 +487,6 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 		}).result.then(function(result) {
 		});
 	}
-}]);
+});
 
 

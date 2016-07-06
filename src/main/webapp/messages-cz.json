@@ -1,6 +1,6 @@
 {
-  "Home": "Nakladatelství",
-  "Publishing on demand": "Tisk na přání",
+  "Home": "Nabídka knih",
+  "Publishing on demand": "Knihy na přání",
   "Esperanto": "Esperanto",
   "Blog": "Blog",
   "Cart": "Košík",
@@ -23,16 +23,18 @@
   "subtitle-eo": " - v esperantu",
 
   "Czech Books": "Knihy v češtině",
+  "Esperanto Books": "Knihy v esperantu",
   "Language Books": "Jazykové příručky",
   "Special Books": "Odborná literatura",
   "Belles Letres": "Krásná literatura",
-  "Other languages": "Další jazyky",
-  "English Books": "Knihy v angličtině",
-  "French Books": "Knihy ve francouzštině",
-  "German Books": "Knihy v němčině",
-  "Italian Books": "Knihy v italštině",
+  "Other languages": "Knihy v jazycích",
+  "English Books": "V angličtině",
+  "French Books": "Ve francouzštině",
+  "German Books": "V němčině",
+  "Italian Books": "V italštině",
   "News": "Připravujeme",
   "New Books": "Nové knihy",
+  "Events": "Zajímavé akce",
 
   "Book offer": "Nabídka knih",
   "Load more..": "Načíst více...",
@@ -65,6 +67,16 @@
   "Retry": "Zkusit znovu",
   "** CES members may save up to 70%, proceed to checkout for details.":
     "** Členové ČES mohou ušetřit až 70 % ceny, vyznačte prosím členství v košíku během vyřizování objednávky.",
+  "Subscribe Newsletter": "Přihlášení odběru novinek",
+  "Subscribe": "Přihlásit",
+  "The newsletter will be distributed occasionally, both in czech and esperanto (contains new books, discounts, invitations to events etc.). By entering your email address you agree with receiving the newsletter, this can be cancelled anytime.":
+    "Přihlášeným zájemcům budeme posílat nepravidelně novinky z našeho nakladatelství, a to volitelně česky nebo v esperantu (informace o nově vydaných knihách, dočasném zlevnění některých titulů, pozvání na křty knih a podobné akce a pod.) Vyplněním své e-mailové adresy dáváite souhlas k posílání uvedených informací. Toto můžete kdykoliv ukončit.",
+  "OK, got it": "Rozumím",
+  "NEWSLETTER-SUBSCRIBED": "Registrace Vaší adresy {{email}} byla úspěšná.",
+  "Thank you for subscribing the newsletter.": "Děkujeme, že jste se registrovali jako odběratelé občasníku.",
+  "Error subscribing the newsletter": "Chyba přihlášení odběru",
+  "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
+    "Odběr novinek nelze zaregistrovat, zkuste to později znovu, případně použijte email. Omlouváme se za potíže.",
 
   "Services": "Služby",
   "About": "O firmě",
@@ -74,6 +86,5 @@
   "Orders": "Objednávky",
   "Returns": "Reklamace",
   "Archive": "Archiv",
-  "Events": "Tradiční akce",
   "Partners": "Partneři"
 }

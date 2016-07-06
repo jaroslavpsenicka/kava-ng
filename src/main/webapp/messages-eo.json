@@ -19,6 +19,7 @@
   "subtitle-eo": " - Libroj en la Esperanto",
 
   "Czech Books": "Libroj en la ĉeĥa",
+  "Esperanto Books": "Libroj en la Esperanto",
   "Language Books": "Lingva literaturo",
   "Special Books": "Faka literaturo",
   "Belles Letres": "Beletro",
@@ -32,6 +33,15 @@
   "Loading...": "Serĉo...",
   "No results.": "Neniuj rezultoj trovitaj.",
   "Load more...": "Montru pli...",
+  "Subscribe Newsletter": "Abonu Informilo",
+  "Subscribe": "Aboni",
+  "The newsletter will be distributed occasionally, both in czech and esperanto (contains new books, discounts, invitations to events etc.). By entering your email address you agree with receiving the newsletter, this can be cancelled anytime.":
+  "La bulteno estos distribuitaj foje, Ambaŭ en ĉeĥa kaj esperanto (enhavas novajn librojn, rabatoj, invitoj al eventoj, ktp). Enmetante vian retadreson vi konsentas kun ricevi la bultenon, tiu povas esti nuligita anytime.",
+  "OK, got it": "OK",
+  "Error subscribing the newsletter": "Eraro abonanta la informilo",
+  "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
+  "La bulteno ne povas abonis. Vi povas reprovi poste aŭ uzi retpoŝton. Bedaŭras pri tio.",
+  "NEWSLETTER-SUBSCRIBED": "Enskribo de via retadreso {{email}} estis sukcesa.",
 
   "News": "Ni preparas",
   "New Books": "Novaĵoj",

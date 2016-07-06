@@ -15,5 +15,6 @@
   "CART-AGREEMENT": "I do agree with <a href=\"#/c/terms-and-conditions\">terms and conditions</a> - <b>check to proceed</b>",
   "CES-MEMBER": "I am <a href=\"#/c/ces-membership\">registered member of ČES</a> (please choose only if you are a member)",
   "NEWSLETTER-SUBSCRIBE": "I want to <a href=\"#/c/newsletter\">subscribe a newsletter</a>",
-  "REQUIRED": "required, please specify"
+  "REQUIRED": "required, please specify",
+  "NEWSLETTER-SUBSCRIBED": "Registration of your email address {{email}} was successful."
 }
