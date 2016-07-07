@@ -165,14 +165,21 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 	text-shadow: none;
 	color: black;
+	width: 550px;
 	height: 150px;
 	overflow: hidden;
+	padding-top: 0px;
 }
 
 .carousel-caption h3 {
 	color: #696763;
     font-size: 30px;
     text-decoration: none;
+	margin-top: 0px;
+}
+
+.carousel-caption p {
+	color: #696763;
 }
 
 /* List */
