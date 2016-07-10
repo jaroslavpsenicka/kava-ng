@@ -77,6 +77,11 @@
   "Error subscribing the newsletter": "Chyba přihlášení odběru",
   "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
     "Odběr novinek nelze zaregistrovat, zkuste to později znovu, případně použijte email. Omlouváme se za potíže.",
+  "I wish to receive news:": "Přeji si dostávat novinky:",
+  "in Czech": "v češtině",
+  "in Esperanto": "v esperantu",
+  "both Czech and Esperanto": "v češtině i esperantu",
+  "Email address": "Emailová adresa",
 
   "Services": "Služby",
   "About": "O firmě",

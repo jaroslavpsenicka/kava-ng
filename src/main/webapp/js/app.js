@@ -308,7 +308,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 })
 
-.controller('BookCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Cart) {
+.controller('BookCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Cart) {
 
 	Prismic.document($routeParams.id).then(function(response) {
 		var image = response.getImage('book.image');
@@ -345,12 +345,12 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}
 
 	$scope.buy = function(book) {
-		$modal.open({
+		$uibModal.open({
 			templateUrl: 'comp/add-to-cart.tpl.html',
-			controller: function ($scope, $modalInstance) {
+			controller: function ($scope, $uibModalInstance) {
 				$scope.count = 1;
                 $scope.submit = function() {
-                    $modalInstance.close($scope.count);
+                    $uibModalInstance.close($scope.count);
                 }
 			}
 		}).result.then(function(count) {
@@ -368,7 +368,13 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}
 })
 
-.controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, Prismic, Newsletter) {
+.controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Newsletter) {
+
+	var lang = $translate.use();
+	$scope.blogLang = (lang == 'cz' || lang == 'eo') ? lang : 'eo';
+	$scope.chooseBlogLang = function(lang) {
+		$scope.blogLang = lang;
+	};
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "article")]';
@@ -391,14 +397,14 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	};
 
 	$scope.subscribe = function(email) {
-		var options = { email: email };
+		var options = { email: email, lang: $scope.blogLang };
 		Newsletter.subscribe({ options: options }, {}, function() {
-			$modal.open({
+			$uibModal.open({
 				templateUrl: 'comp/subscribed.tpl.html',
-				controller: function ($scope, $modalInstance) {
+				controller: function ($scope, $uibModalInstance) {
 					$scope.email = email;
 					$scope.submit = function() {
-						$modalInstance.close();
+						$uibModalInstance.close();
 					}
 				}
 			}).result.then(function(result) {
@@ -409,12 +415,12 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	};
 
 	$scope.handleError = function(error, items) {
-		$modal.open({
+		$uibModal.open({
 			templateUrl: 'comp/subscription-error.tpl.html',
-			controller: function ($scope, $modalInstance) {
+			controller: function ($scope, $uibModalInstance) {
 				$scope.error = error;
                 $scope.submit = function() {
-                    $modalInstance.close();
+                    $uibModalInstance.close();
                 }
 			}
 		}).result.then(function(result) {
@@ -425,7 +431,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 })
 
-.controller('CartCtrl', function($scope, $routeParams, $window, $location, $translate, $modal, $location, Cart, Order) {
+.controller('CartCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, $location, Cart, Order) {
 
 	var chunkSize = 10;
 
@@ -444,11 +450,11 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	}
 
 	$scope.submit = function(options) {
-		$modal.open({
+		$uibModal.open({
 			templateUrl: 'comp/submit-cart.tpl.html',
-			controller: function ($scope, $modalInstance) {
+			controller: function ($scope, $uibModalInstance) {
                 $scope.submit = function() {
-                    $modalInstance.close();
+                    $uibModalInstance.close();
                 }
 			}
 		}).result.then(function() {
@@ -474,14 +480,14 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 
 	$scope.handleError = function(error, items) {
 		var options = $scope.options;
-		$modal.open({
+		$uibModal.open({
 			templateUrl: 'comp/error.tpl.html',
-			controller: function ($scope, $modalInstance) {
+			controller: function ($scope, $uibModalInstance) {
 				$scope.error = error;
 				$scope.items = items;
 				$scope.options = options;
                 $scope.submit = function() {
-                    $modalInstance.close();
+                    $uibModalInstance.close();
                 }
 			}
 		}).result.then(function(result) {

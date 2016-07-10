@@ -10,7 +10,7 @@
         <a class="navbar-brand" href="#/">Petr Chrdle, KAVA-PECH</a>
     </div>
 
-    <div class="collapse navbar-collapse" collapse="navCollapsed">
+    <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#/" translate>Home</a></li>
             <li><a href="#/c/publishing-on-demand" translate>Publishing on demand</a></li>
@@ -19,11 +19,11 @@
             <li><a href="#/cart" class="wide" translate>Cart</a>
                 <span class="label label-warning cart-count" ng-show="cart.count > 0">{{cart.count}}</span>
             </li>
-            <li class="dropdown" dropdown >
-                <a href="#" class="dropdown-toggle" dropdown-toggle role="button" aria-expanded="false">
+            <li class="dropdown" uib-dropdown>
+                <a href="#" uib-dropdown-toggle role="button" aria-expanded="false">
                     <img src="img/language-flags.png"> <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
                     <li><a href="#/" ng-click="useLanguage('cz')">Česky</a></li>
                     <li><a href="#/" ng-click="useLanguage('eo')">Esperanto</a></li>
                     <li><a href="#/" ng-click="useLanguage('en')">English</a></li>
