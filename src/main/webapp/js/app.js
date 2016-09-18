@@ -389,6 +389,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 					$scope.results.push({
 						uid: value.uid,
 						title: value.getText('article.title'),
+						published: $scope.formatDate(value.getDate('article.published')),
 						abstract: value.getStructuredText('article.abstract').asHtml()
 					});
 				});
@@ -413,6 +414,10 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			$scope.handleError(error, items);
 		});
 	};
+
+	$scope.formatDate = function(date) {
+		return date.getDay() + '.' + date.getMonth() + '. ' + date.getFullYear();
+	}
 
 	$scope.handleError = function(error, items) {
 		$uibModal.open({
