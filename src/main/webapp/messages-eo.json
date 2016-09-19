@@ -17,6 +17,9 @@
   "subtitle-fr": " - Libroj en la franca",
   "subtitle-cz": " - Libroj en la ĉeĥa",
   "subtitle-eo": " - Libroj en la Esperanto",
+  "notfound-eo-cz": "Klaku ĉi <a href=''>tie</a> por vidi la ĉeĥan version.",
+  "notfound-eo-en": "Klaku ĉi <a href=''>tie</a> por vidi la anglan version.",
+  "notfound-eo-de": "Klaku ĉi <a href=''>tie</a> por vidi la germanan version.",
 
   "Czech Books": "Libroj en la ĉeĥa",
   "Esperanto Books": "Libroj en la Esperanto",

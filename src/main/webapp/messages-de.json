@@ -17,6 +17,9 @@
   "subtitle-fr": " - in Französisch",
   "subtitle-cz": " - in Tschechisch",
   "subtitle-eo": " - in Esperanto",
+  "notfound-de-cz": "Klicken Sie <a href=''>hier</a>, um die tschechische Version zu sehen.",
+  "notfound-de-en": "Klicken Sie <a href=''>hier</a>, um die englische Version zu sehen.",
+  "notfound-de-eo": "Klicken Sie <a href=''>hier</a>, um die Esperanto Version zu sehen.",
 
   "Czech Books": "Bücher in Tschechisch",
   "Esperanto Books": "Bücher in Esperanto",

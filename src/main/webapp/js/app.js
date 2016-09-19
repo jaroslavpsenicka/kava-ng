@@ -292,13 +292,19 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			$scope.subtitle = translation;
 		});
 		if (page == 1) $scope.results = [];
+		$scope.loading = true;
 		Prismic.query('[' + type + tags + lang + ']', function(search) {
 			return search.page(page).orderings('[my.book.index desc]');
 		}).then(function(response) {
+			$scope.loading = false;
 			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 			if (response.results_size > 0) {
 				angular.forEach(response.results, function(value) {
 					BookReader.read(value, $scope.results);
+				});
+			} else {
+				$translate('notfound-' + $translate.use() + '-' + $routeParams.lang).then(function(message) {
+					$scope.message = message;
 				});
 			}
 		});

@@ -6,7 +6,10 @@
         </h2>
     </div>
     <div ng-if="results.length == 0 && loading" class="col-sm-12 centered spaced" translate>Loading...</div>
-    <div ng-if="results.length == 0 && !loading" class="col-sm-12 centered spaced" translate>No results.</div>
+    <div ng-if="results.length == 0 && !loading" class="col-sm-12 centered spaced">
+        <span translate>No results.</span><span>&nbsp;</span>
+        <span ng-bind-html="message | trusted"></span>
+    </div>
     <div ng-if="results.length > 0" ng-repeat="doc in results" class="col-sm-6 list-item">
         <a href="#/b/{{doc.id}}/{{doc.slug}}">
             <div class="image" ng-bind-html="doc.image | trusted"></div>
