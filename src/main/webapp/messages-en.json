@@ -11,9 +11,9 @@
   "subtitle-fr": " - French Books",
   "subtitle-cz": " - Czech Books",
   "subtitle-eo": " - Esperanto Books",
-  "notfound-en-cz": "Click <a href=''>here</a> to see the Czech version.",
-  "notfound-en-de": "Click <a href=''>here</a> to see the German version.",
-  "notfound-en-eo": "Click <a href=''>here</a> to see the Esperanto version.",
+  "notfound-en-cz": "Click here to see the Czech version.",
+  "notfound-en-de": "Click here to see the German version.",
+  "notfound-en-eo": "Click here to see the Esperanto version.",
 
   "CART-AGREEMENT": "I do agree with <a href=\"#/c/terms-and-conditions\">terms and conditions</a> - <b>check to proceed</b>",
   "CES-MEMBER": "I am <a href=\"#/c/ces-membership\">registered member of ČES</a> (please choose only if you are a member)",

@@ -281,7 +281,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	});
 })
 
-.controller('BookListCtrl', function($scope, $routeParams, $window, $location, $translate, Prismic, BookReader) {
+.controller('BookListCtrl', function($scope, $routeParams, $route, $window, $location, $translate, Prismic, BookReader) {
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
@@ -309,6 +309,11 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 			}
 		});
 	}
+
+	$scope.fallback = function() {
+		$translate.use($routeParams.lang);
+		$route.reload();
+		}
 
 	$scope.loadPage(1);
 
