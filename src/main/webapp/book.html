@@ -27,6 +27,7 @@
                 <div class="note" ng-if="book.currency == 'Kč' && book.priceCES">
                     <span translate>** CES members may shop for discounted price</span>
                     <span> {{book.priceCES}} {{book.currency}}.</span>
+                    <span translate>Please indicate your membership during the checkout.</span>
                 </div>
                 <div class="text" ng-bind-html="book.text | trusted"></div>
             </div>
