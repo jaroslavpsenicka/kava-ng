@@ -1,5 +1,5 @@
 
-angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.translate', 'prismic.io'])
+angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'pascalprecht.translate', 'prismic.io'])
 
 .config(['$routeProvider', '$controllerProvider', '$translateProvider', 'PrismicProvider',
 	function ($routeProvider, $controllerProvider, $translateProvider, PrismicProvider) {
@@ -222,7 +222,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	};
 })
 
-.controller('HomeCtrl', function($scope, $routeParams, $window, $translate, Prismic, BookReader) {
+.controller('HomeCtrl', function($scope, $routeParams, $window, $translate, $cookies, $uibModal, Prismic, BookReader) {
 
 	var type = '[:d = at(document.type, "slide")]';
 	var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
@@ -256,9 +256,25 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 				});
 			}
 		});
-	}
+	};
+
+	$scope.showWelcome = function() {
+		$uibModal.open({
+			templateUrl: 'comp/welcome.tpl.html',
+			controller: function ($scope, $uibModalInstance) {
+                $scope.submit = function() {
+                    $uibModalInstance.close();
+                }
+			}
+		}).result.then(function(count) {
+			$cookies.put('welcome', true);
+		});
+	};
 
 	$scope.loadPage(1);
+	if (!$cookies.get('welcome')) {
+		$scope.showWelcome();
+	}
 
 })
 
@@ -313,7 +329,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'pascalprecht.t
 	$scope.fallback = function() {
 		$translate.use($routeParams.lang);
 		$route.reload();
-		}
+	}
 
 	$scope.loadPage(1);
 
