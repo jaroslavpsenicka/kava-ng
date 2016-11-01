@@ -10,7 +10,7 @@
             <h2 class="content-title" ng-bind-html="book.title | trusted"></h2>
             <div class="col-sm-4 centered content-image">
                 <div ng-bind-html="book.image | trusted"></div>
-                <a class="btn btn-success spaced" ng-click="buy(book)">
+                <a class="btn btn-success spaced" ng-show="book.available" ng-click="buy(book)">
                     <i class="fa fa-shopping-cart"></i>
                     <span class="left-spaced" translate>Add to cart</span>
                 </a>

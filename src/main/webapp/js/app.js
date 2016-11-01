@@ -358,7 +358,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 			priceEUR: response.getText('book.priceEUR'),
 			priceCES: response.getText('book.priceCES'),
 			price: $scope.getText(response),
-			currency: $translate.use() == 'cz' ? 'Kč' : 'EUR'
+			currency: $translate.use() == 'cz' ? 'Kč' : 'EUR',
+			available: response.tags.indexOf('new') == -1
 		};
 	});
 
