@@ -8,6 +8,9 @@
   "Loading...": "Nahrává se...",
   "No results.": "Žádné výsledky.",
   "Load more...": "Zobrazit více...",
+  "Welcome to this new version of the website. We hope you'll like it, but you can to navigate to the old version anytime (find the link on the footer).":
+      "Toto je nová verze webu. Doufáme, že se vám bude líbit, každopádně k původní verzi se můžete kdykoliv vrátit (odkaz je na konci stránky).",
+  "Enjoy!": "Dobře!",
 
   "subtitle-lang-cz": " - jazykové příručky v češtině",
   "subtitle-belles-cz": " - krásná literatura v češtině",
@@ -53,14 +56,14 @@
   "Price": "Cena",
   "Remove": "Odebrat",
   "CART-AGREEMENT": "Souhlasím s <a href=\"#/c/terms-and-conditions\">obchodními podmínkami</a> - <b>povinné, prosím zaškrtněte</b>",
-  "CES-MEMBER": "Prohlašuji, že jsem <a href=\"#/c/ces-membership\">členem organizace ČES</a> (prosím zvolte jen pokud jste členy této organizace)",
+  "CES-MEMBER": "Prohlašuji, že jsem <a href=\"#/c/ces-membership\">členem organizace ČEA</a> (prosím zvolte jen pokud jste členy této organizace)",
   "NEWSLETTER-SUBSCRIBE": "Souhlasím se zasíláním <a href=\"#/c/newsletter\">informačního občasníku</a>",
   "Submit the order": "Odeslat objednávku",
   "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
     "Objednávku dokončete klepnutím na tlačítko Odeslat. Potvrzení objednávky vám brzy zašleme emailem.",
   "Submit": "Odeslat objednávku",
   "Your email:": "Vaše emailová adresa:",
-  "Your address:":"Vaše poštovní adresa:",
+  "Your mail address:":"Vaše poštovní adresa:",
   "REQUIRED": "povinné, prosím vyplňte",
   "Error submitting the order": "Chyba odesílání objdnávky",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
@@ -79,7 +82,7 @@
   "Error subscribing the newsletter": "Chyba přihlášení odběru",
   "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
     "Odběr novinek nelze zaregistrovat, zkuste to později znovu, případně použijte email. Omlouváme se za potíže.",
-  "I wish to receive news:": "Přeji si dostávat novinky:",
+  "I would like to receive email news from time to time:": "Přeji si dostávat novinky:",
   "in Czech": "v češtině",
   "in Esperanto": "v esperantu",
   "both Czech and Esperanto": "v češtině i esperantu",

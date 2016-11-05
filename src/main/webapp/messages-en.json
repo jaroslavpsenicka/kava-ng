@@ -17,8 +17,8 @@
   "notfound-en-eo": "Click here to see the Esperanto version.",
 
   "CART-AGREEMENT": "I do agree with <a href=\"#/c/terms-and-conditions\">terms and conditions</a> - <b>check to proceed</b>",
-  "CES-MEMBER": "I am <a href=\"#/c/ces-membership\">registered member of ČES</a> (please choose only if you are a member)",
+  "CES-MEMBER": "I confirm that I'm a <a href=\"#/c/ces-membership\">member of ČEA</a> (please choose only if you are a member)",
   "NEWSLETTER-SUBSCRIBE": "I want to <a href=\"#/c/newsletter\">subscribe a newsletter</a>",
-  "REQUIRED": "required, please specify",
+  "REQUIRED": "mandatory, please fill out",
   "NEWSLETTER-SUBSCRIBED": "Registration of your email address {{email}} was successful."
 }

@@ -4,6 +4,9 @@
   "Esperanto": "Esperanto",
   "Blog": "Blogo",
   "Cart": "Aĉetkorbo",
+  "Welcome to this new version of the website. We hope you'll like it, but you can to navigate to the old version anytime (find the link on the footer).":
+    "Ĉi tiu estas nova versio de la paĝaro. Ni esperas, ke ĝi plaĉos al vi, sed kaze de iu problemo vi povas transiri al la malnovan.",
+  "Enjoy!": "Starto!",
 
   "subtitle-lang-cz": " - Lingva literaturo en la ĉeĥa",
   "subtitle-belles-cz": " - Beletro en la ĉeĥa",
@@ -70,15 +73,15 @@
   "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
     "La mendon konfirmu per klako al Forseandi. La konfirmon de la mendo vi ricevos baldaŭ per retmesaĝo.",
   "Submit": "Forsendi",
-  "Your email:": "Via retadreso:",
-  "Your address:": "Via poŝta adreso:",
-  "REQUIRED": "deviga; bonvolu plenigi",
+  "Your email:": "Mia retadreso:",
+  "Your mail address:": "Mia poŝta adreso:",
+  "REQUIRED": "deviga, bonvolu akcepri ĝin",
   "Error submitting the order": "Eraro dum forsendo de la mendo",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
     "La mendon ne eblas forsendi, provu ĝin sendi denove aŭ uzu la retmesaĝon. Ni pardonpetas pri la komplikaĵoj.",
   "Retry": "Provu denove",
   "** CES members may shop for discounted price": "** CES membroj majo butiko por estimataj prezo",
-  "I wish to receive news:": "Mi deziras ricevi novaĵojn:",
+  "Mi deklaras, ke mi akceptas la komercajn kondiĉojn:": "Mi deziras ricevi novaĵojn:",
   "in Czech": "en la ĉeĥa",
   "in Esperanto": "en la Esperanto",
   "both Czech and Esperanto": "ambaŭ ĉeĥa kaj Esperanto",

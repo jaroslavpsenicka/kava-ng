@@ -4,6 +4,9 @@
   "Esperanto": "Esperanto",
   "Blog": "Blog",
   "Cart": "Warenkorb",
+  "Welcome to this new version of the website. We hope you'll like it, but you can to navigate to the old version anytime (find the link on the footer).":
+    "Das ist die neue Version unserer Website; wir hoffen, sie gefällt Ihnen. Sie können auch die gewohnte Version benutzen – den Link finden Sie ganz unten.",
+  "Enjoy!": "Gut!",
 
   "subtitle-lang-cz": " - Sprachbücher in Tschechisch",
   "subtitle-belles-cz": " - Belletristik in Tschechisch",
@@ -71,14 +74,14 @@
   "Schließen Sie die Bestellung ab, indem Sie auf 'Senden' klicken. Sie erhalten in Kürze ein Bestätigungs-Mail.",
   "Submit": "Senden",
   "Your email:": "Ihre E-Mail-Adresse:",
-  "Your address:":"Ihre Zustelladresse:",
-  "REQUIRED": "Verpflichtendes Eingabefeld – bitte ausfüllen",
+  "Your mail address:":"Ihre Postanschrift:",
+  "REQUIRED": "verpflichtende Angabe, bitte ausfüllen",
   "Error submitting the order": "Fehler beim Versenden der Bestellung",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
   "Die Bestellung kann nicht abgeschlossen werden. Bitte wiederholen Sie den Bestellvorgang oder schreiben Sie uns eine E-Mail. Wir bedauern die Unannehmlichkeiten.",
   "Retry": "Erneut versuchen",
   "** CES members may shop for discounted price": "** CES Mitglieder können für vergünstigten Preis einkaufen",
-  "I wish to receive news:": "Ich wünsche die Zusendung von News:",
+  "Ich erkläre mich einverstanden mit den allgemeinen Geschäftsbedingungen:": "Ich wünsche die Zusendung von News:",
   "in Czech": "in Tschechisch",
   "in Esperanto": "in Esperanto",
   "both Czech and Esperanto": "Sowohl Tschechisch und Esperanto",
