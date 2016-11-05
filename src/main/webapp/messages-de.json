@@ -67,8 +67,8 @@
   "Price": "Preis",
   "Remove": "Entfernen",
   "CART-AGREEMENT": "Ich erkläre mich mit den <a href=\"#/c/terms-and-conditions\">Allgemeinen Geschäftsbedingungen</a> einverstanden. <b>Verpflichtend – bitte anklicken</b>",
-  "CES-MEMBER": "Ich bestätige <a href=\"#/c/ces-membership\">meine Mitgliedschaft</a> (Bitte nur auswählen, wenn Sie Mitglied der Ĉeĥa Esperanto-Asocio sind)",
-  "NEWSLETTER-SUBSCRIBE": "Ich erkläre mich einverstanden mit dem Erhalt des <a href=\"#/c/newsletter\">Newsletters</a>",
+  "CES-MEMBER": "Ich bestätige <a href=\"http://www.esperanto.cz\">meine Mitgliedschaft</a> (Bitte nur auswählen, wenn Sie Mitglied der Ĉeĥa Esperanto-Asocio sind)",
+  "NEWSLETTER-SUBSCRIBE": "Ich erkläre mich einverstanden mit dem Erhalt des <a href=\"#/blog#subscribe\">Newsletters</a>",
   "Submit the order": "Die Bestellung absenden",
   "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
   "Schließen Sie die Bestellung ab, indem Sie auf 'Senden' klicken. Sie erhalten in Kürze ein Bestätigungs-Mail.",
@@ -84,7 +84,8 @@
   "Ich erkläre mich einverstanden mit den allgemeinen Geschäftsbedingungen:": "Ich wünsche die Zusendung von News:",
   "in Czech": "in Tschechisch",
   "in Esperanto": "in Esperanto",
-  "both Czech and Esperanto": "Sowohl Tschechisch und Esperanto",
+  "in English": "in Englisch",
+  "in Deutsch": "in Deutsch",
   "Email address": "E-Mail-Addresse",
 
   "Services": "Service",

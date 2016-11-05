@@ -18,6 +18,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	}).when("/t/:lang/", {
 		templateUrl: "books.html",
 		controller: "BookListCtrl"
+	}).when("/new", {
+		templateUrl: "books.html",
+		controller: "NewBookListCtrl"
 	}).when("/blog", {
 		templateUrl: "blog.html",
 		controller: "BlogCtrl"
@@ -120,10 +123,10 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 .service('BookReader', function() {
 	return {
-		read: function(value, results) {
+		read: function(value, results, includeNew) {
 			var abstract = value.getStructuredText('book.abstract');
 			var image = value.getImage('book.image');
-			results.push({
+			if (includeNew || (!includeNew && value.tags.indexOf("new") == -1)) results.push({
 				id: value.id,
 				slug: value.slug,
 				title: value.getText('book.title'),
@@ -203,7 +206,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					$scope.loading = false;
 					if (response.results_size > 0) {
 						angular.forEach(response.results, function(value) {
-							BookReader.read(value, $scope.results);
+							BookReader.read(value, $scope.results, true);
 						});
 					}
 				});
@@ -252,7 +255,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 			if (response.results_size > 0) {
 				angular.forEach(response.results, function(value) {
-					BookReader.read(value, $scope.results);
+					BookReader.read(value, $scope.results, false);
 				});
 			}
 		});
@@ -316,7 +319,44 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
 			if (response.results_size > 0) {
 				angular.forEach(response.results, function(value) {
-					BookReader.read(value, $scope.results);
+					BookReader.read(value, $scope.results, false);
+				});
+			} else {
+				$translate('notfound-' + $translate.use() + '-' + $routeParams.lang).then(function(message) {
+					$scope.message = message;
+				});
+			}
+		});
+	}
+
+	$scope.fallback = function() {
+		$translate.use($routeParams.lang);
+		$route.reload();
+	}
+
+	$scope.loadPage(1);
+
+})
+
+.controller('NewBookListCtrl', function($scope, $routeParams, $route, $window, $location, $translate, Prismic, BookReader) {
+
+	$scope.loadPage = function(page) {
+		var type = '[:d = at(document.type, "book")]';
+		var tags = '[:d = at(document.tags, ["new"])]';
+		var lang = '[:d = at(my.book.lang, "' + $translate.use() + '")]';
+		$translate('subtitle-new').then(function(translation) {
+			$scope.subtitle = translation;
+		});
+		if (page == 1) $scope.results = [];
+		$scope.loading = true;
+		Prismic.query('[' + type + tags + lang + ']', function(search) {
+			return search.page(page).orderings('[my.book.index desc]');
+		}).then(function(response) {
+			$scope.loading = false;
+			$scope.nextPage = response.next_page ? response.page + 1 : undefined;
+			if (response.results_size > 0) {
+				angular.forEach(response.results, function(value) {
+					BookReader.read(value, $scope.results, true);
 				});
 			} else {
 				$translate('notfound-' + $translate.use() + '-' + $routeParams.lang).then(function(message) {
@@ -398,8 +438,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 .controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Newsletter) {
 
-	var lang = $translate.use();
-	$scope.blogLang = (lang == 'cz' || lang == 'eo') ? lang : 'eo';
+	$scope.blogLang = $translate.use();
 	$scope.chooseBlogLang = function(lang) {
 		$scope.blogLang = lang;
 	};
@@ -526,6 +565,14 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 		}).result.then(function(result) {
 		});
 	}
+})
+
+.run(function($rootScope, $location, $anchorScroll) {
+
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    if($location.hash()) $anchorScroll();
+  });
+
 });
 
 

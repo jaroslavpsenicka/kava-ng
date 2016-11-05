@@ -13,7 +13,7 @@
         <div class="search"></div>
         <div translate>No results.</div>
         <a>
-            <div ng-bind-html="message | trusted"></div>
+            <h4 ng-bind-html="message | trusted"></h4>
         </a>
     </div>
     <div ng-if="results.length > 0" ng-repeat="doc in results" class="col-sm-6 list-item">
