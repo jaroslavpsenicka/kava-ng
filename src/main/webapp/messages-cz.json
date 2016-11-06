@@ -43,6 +43,7 @@
   "News": "Připravujeme",
   "New Books": "Nové knihy",
   "Events": "Zajímavé akce",
+  "Sold-out books": "Vyprodané tituly",
 
   "Book offer": "Nabídka knih",
   "Load more..": "Načíst více...",
@@ -60,7 +61,7 @@
   "Price": "Cena",
   "Remove": "Odebrat",
   "CART-AGREEMENT": "Souhlasím s <a href=\"#/c/terms-and-conditions\">obchodními podmínkami</a> - <b>povinné, prosím zaškrtněte</b>",
-  "CES-MEMBER": "Prohlašuji, že jsem <a href=\"http://www.esperanto.cz\">členem organizace ČEA</a> (prosím zvolte jen pokud jste členy této organizace)",
+  "CES-MEMBER": "Prohlašuji, že jsem <a href=\"http://www.esperanto.cz/cs/kontakty-a-organizace/cesky-esperantsky-svaz-z-s\">členem organizace ČEA</a> (prosím zvolte jen pokud jste členy této organizace)",
   "NEWSLETTER-SUBSCRIBE": "Souhlasím se zasíláním <a href=\"#/blog#subscribe\">informačního občasníku</a>",
   "Submit the order": "Odeslat objednávku",
   "Complete the order by clicking the Submit button. You will receive email confirmation soon.":

@@ -10,6 +10,7 @@
   "Welcome to this new version of the website. We hope you'll like it, but you can to navigate to the old version anytime (find the link on the footer).":
     "Ĉi tiu estas nova versio de la paĝaro. Ni esperas, ke ĝi plaĉos al vi, sed kaze de iu problemo vi povas transiri al la malnovan.",
   "Enjoy!": "Starto!",
+  "Sold-out books": "Ne plu haveblaj libroj",
 
   "subtitle-lang-cz": " - Lingva literaturo en la ĉeĥa",
   "subtitle-belles-cz": " - Beletro en la ĉeĥa",
@@ -70,7 +71,7 @@
   "Price": "Prezo",
   "Remove": "Depreni",
   "CART-AGREEMENT": "Mi konsentas kun <a href=\"#/c/terms-and-conditions\">komercaj kondiĉoj</a> - <b>devige, bonvolu signi</b>",
-  "CES-MEMBER": "Mi deklaras, ke mi estas <a href=\"http://www.esperanto.cz\">membro de Ĉeĥa Esperanto-Asocio</a> (Bonvolu elekti nur se vi estas membro de la asocio)",
+  "CES-MEMBER": "Mi deklaras, ke mi estas <a href=\"http://www.esperanto.cz/cs/kontakty-a-organizace/cesky-esperantsky-svaz-z-s\">membro de Ĉeĥa Esperanto-Asocio</a> (Bonvolu elekti nur se vi estas membro de la asocio)",
   "NEWSLETTER-SUBSCRIBE": "Mi konsentas kun la ricevado de <a href=\"#/blog#subscribe\">neregula informilo</a>",
   "Submit the order": "Forsendi la mendon",
   "Complete the order by clicking the Submit button. You will receive email confirmation soon.":
