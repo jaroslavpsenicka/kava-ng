@@ -1,6 +1,6 @@
 {
   "Publishing House of Petr Chrdle": "Nakladatelství Petra Chrdleho",
-  "VAT 1220501047, DIČ CZ430312104": "IČ 1220501047, DIČ CZ430312104",
+  "VAT CZ430312104": "IČ 1220501047, DIČ CZ430312104",
   "Czech Republic": "",
   "Home": "Nabídka knih",
   "Books on demand": "Knihy na přání",
@@ -77,10 +77,10 @@
   "** CES members may shop for discounted price":
     "** Členové ČES mohou nakupovat za zvýhodněnou cenu",
   "Please indicate your membership during the checkout.": "Prohlášení o členství v ČES se objeví při nákupu v košíku.",
-  "Subscribe Newsletter": "Přihlášení odběru novinek",
+  "Subscribe to the online newsletter": "Objednejte si informační občasník",
   "Subscribe": "Přihlásit",
-  "The newsletter will be distributed occasionally, both in czech and esperanto (contains new books, discounts, invitations to events etc.). By entering your email address you agree with receiving the newsletter, this can be cancelled anytime.":
-    "Přihlášeným zájemcům budeme posílat nepravidelně novinky z našeho nakladatelství, a to volitelně česky nebo v esperantu (informace o nově vydaných knihách, dočasném zlevnění některých titulů, pozvání na křty knih a podobné akce a pod.) Vyplněním své e-mailové adresy dáváite souhlas k posílání uvedených informací. Toto můžete kdykoliv ukončit.",
+  "This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.":
+    "Vychází nepravidelně (a nikdy neobsahuje přílohy). Přináší informace o nově vycházejících knihách, dočasných slevách, pozvání na křty novinek a podobně. Častěji vycházejí v češitě a esperantu, řídce i německy a anglicky, a jazykové verze nejsou identické, protože jsou určeny jiné cílové skupině. Pokud si přejete dostávat občasník ve více jazycích, přihlašte se, prosíme, opakovaně vždy pro daný jazyk.",
   "OK, got it": "Rozumím",
   "NEWSLETTER-SUBSCRIBED": "Registrace Vaší adresy {{email}} byla úspěšná.",
   "Thank you for subscribing the newsletter.": "Děkujeme, že jste se registrovali jako odběratelé občasníku.",

@@ -1,6 +1,6 @@
 {
   "Publishing House of Petr Chrdle": "Verlag Petr Chrdle",
-  "VAT 1220501047, DIČ CZ430312104": "VAT 1220501047, MWSt Nummer CZ430312104",
+  "VAT CZ430312104": "MWSt Nummer CZ430312104",
   "Czech Republic": "Tschechische Republik",
   "Home": "Verlag",
   "Books on demand": "Abrufbuch",
@@ -10,7 +10,7 @@
   "Welcome to this new version of the website. We hope you'll like it, but you can to navigate to the old version anytime (find the link on the footer).":
     "Das ist die neue Version unserer Website; wir hoffen, sie gefällt Ihnen. Sie können auch die gewohnte Version benutzen – den Link finden Sie ganz unten.",
   "Enjoy!": "Gut!",
-  "Sold-out books": "Ausverkauft Bücher",
+  "Sold-out books": "Nicht mehr lieferbare Bücher",
 
   "subtitle-lang-cz": " - Sprachbücher in Tschechisch",
   "subtitle-belles-cz": " - Belletristik in Tschechisch",
@@ -45,10 +45,10 @@
   "Loading...": "Suche...",
   "No results.": "keine Ergebnisse gefunden.",
   "Load more...": "Zeig mehr...",
-  "Subscribe Newsletter": "Newsletter abonnieren",
+  "Subscribe to the online newsletter": "Abonnieren Sie den Newsletter",
   "Subscribe": "Abonnieren",
-  "The newsletter will be distributed occasionally, both in czech and esperanto (contains new books, discounts, invitations to events etc.). By entering your email address you agree with receiving the newsletter, this can be cancelled anytime.":
-  "Der Newsletter wird gelegentlich verteilt werden, sowohl in der tschechischen und esperanto (enthält neue Bücher, Rabatte, Einladungen zu Veranstaltungen usw.). Mit der Eingabe Ihrer E-Mail-Adresse, die Sie mit dem Empfang des Newsletters einverstanden sind, können diese jederzeit abgebrochen werden.",
+  "This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.":
+    "Er erscheint unregelmäßig und ohne Anhänge. Er enthält Informationen über neu herausgegebene Bücher, temporäre Preisnachlässe bei ausgesuchten Büchern, Einladungen zu Präsentationen über Neuerscheinungen und anderes mehr. Meistens erscheint der Newsletter in Tschechisch oder Esperanto, seltener auf Deutsch oder Englisch. Die verschiedenen Sprachversionen sind nicht inhaltsgleich, da jede von ihnen eine andere Zielgruppe anspricht. Sollten Sie also Informationen in mehreren Sprachen wünschen, melden Sie sich bitte für jede Sprachversion getrennt an.",
   "OK, got it": "OK",
   "Error subscribing the newsletter": "Fehler abonnieren Sie den Newsletter",
   "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
