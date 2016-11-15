@@ -220,8 +220,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 .controller('HeaderCtrl', function ($scope, $translate, $route, Cart) {
 	$scope.cart = Cart.cart;
 	$scope.useLanguage = function(lang) {
-		$translate.use(lang);
-		$route.reload();
+		$translate.use(lang).then(function() {
+			$route.reload();
+		});
 	};
 })
 
@@ -275,9 +276,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	};
 
 	$scope.loadPage(1);
-	if (!$cookies.get('welcome')) {
-		$scope.showWelcome();
-	}
+//	if (!$cookies.get('welcome')) {
+//		$scope.showWelcome();
+//	}
 
 })
 
