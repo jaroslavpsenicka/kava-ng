@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 40px;
 }
 
+.content-image img {
+    border: 1px solid gray;
+}
+
 .content-text .info {
 	padding: 20px 20px 5px 20px;
 	font-size: 0.9em;
