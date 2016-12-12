@@ -78,7 +78,7 @@
   "Schließen Sie die Bestellung ab, indem Sie auf 'Senden' klicken. Sie erhalten in Kürze ein Bestätigungs-Mail.",
   "Submit": "Senden",
   "Your email:": "Ihre E-Mail-Adresse:",
-  "Your mail address:":"Ihre Postanschrift:",
+  "Your name and mail address:":"Ihre Name und Postanschrift:",
   "REQUIRED": "verpflichtende Angabe, bitte ausfüllen",
   "Error submitting the order": "Fehler beim Versenden der Bestellung",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
@@ -91,6 +91,7 @@
   "in English": "in Englisch",
   "in Deutsch": "in Deutsch",
   "Email address": "E-Mail-Addresse",
+  "Notes:": "Anmerkung:",
 
   "Services": "Service",
   "About": "Über den Verlag",

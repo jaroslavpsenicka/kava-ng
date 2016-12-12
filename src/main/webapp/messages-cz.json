@@ -68,7 +68,7 @@
     "Objednávku dokončete klepnutím na tlačítko Odeslat. Potvrzení objednávky vám brzy zašleme emailem.",
   "Submit": "Odeslat objednávku",
   "Your email:": "Vaše emailová adresa:",
-  "Your mail address:":"Vaše poštovní adresa:",
+  "Your name and mail address:":"Vaše jméno a poštovní adresa:",
   "REQUIRED": "povinné, prosím vyplňte",
   "Error submitting the order": "Chyba odesílání objdnávky",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
@@ -93,6 +93,7 @@
   "in English": "v angličtině",
   "in Deutsch": "v němčině",
   "Email address": "Emailová adresa",
+  "Notes:": "Poznámka:",
 
   "Services": "Služby",
   "About": "O firmě",

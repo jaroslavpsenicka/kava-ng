@@ -78,7 +78,7 @@
     "La mendon konfirmu per klako al Forseandi. La konfirmon de la mendo vi ricevos baldaŭ per retmesaĝo.",
   "Submit": "Forsendi",
   "Your email:": "Mia retadreso:",
-  "Your mail address:": "Mia poŝta adreso:",
+  "Your name and mail address:":"Mia nomo kaj poŝta adreso:",
   "REQUIRED": "deviga, bonvolu akcepri ĝin",
   "Error submitting the order": "Eraro dum forsendo de la mendo",
   "The order cannot be processed. You may try to re-submit the order or use email. Sorry about that.":
@@ -91,6 +91,7 @@
   "in English": "en la angla",
   "in Deutsch": "en la germana",
   "Email address": "Retpoŝta adreso",
+  "Notes:": "Rimarko:",
 
   "Services": "Servoj",
   "About": "Pri la eldonejo",

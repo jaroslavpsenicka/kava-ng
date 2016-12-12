@@ -510,7 +510,9 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 	$scope.items = Cart.cart.items;
 	$scope.lang = $translate.use();
-	$scope.options = {};
+	$scope.options = {
+		lang: $scope.lang
+	};
 
 	$scope.price = function(book) {
 		var price = $scope.lang == 'cz' ? $scope.options.ces ? book.priceCES ? book.priceCES : book.priceCZK : book.priceCZK : book.priceEUR;
