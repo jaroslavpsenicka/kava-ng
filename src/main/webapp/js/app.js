@@ -360,6 +360,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					BookReader.read(value, $scope.results, true);
 				});
 			} else {
+			    $scope.href = '#/' + $routeParams.lang + '/' + $routeParams.type + '?lang=' + $routeParams.lang;
 				$translate('notfound-' + $translate.use() + '-' + $routeParams.lang).then(function(message) {
 					$scope.message = message;
 				});
