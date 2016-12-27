@@ -458,7 +458,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					$scope.results.push({
 						uid: value.uid,
 						title: value.getText('article.title'),
-						published: $scope.formatDate(value.getDate('article.published')),
+						published: $scope.formatDate(value.getDate('article.published'), $scope.blogLang),
 						abstract: value.getStructuredText('article.abstract').asHtml()
 					});
 				});
@@ -484,8 +484,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 		});
 	};
 
-	$scope.formatDate = function(date) {
-		return date.getDay() + '.' + date.getMonth() + '. ' + date.getFullYear();
+	$scope.formatDate = function(date, lang) {
+	    return date ? date.toLocaleString((lang == 'cz') ? 'cs' : lang) : '';
 	}
 
 	$scope.handleError = function(error, items) {
