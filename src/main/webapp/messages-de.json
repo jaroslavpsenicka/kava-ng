@@ -54,6 +54,8 @@
   "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
   "Der Newsletter kann abonniert werden. Sie können erneut versuchen Sie es später oder E-Mail verwenden. Das tut mir leid.",
   "NEWSLETTER-SUBSCRIBED": "Registrierung Ihrer E-Mail-Adresse {{email}} war erfolgreich.",
+  "Subscribe Newsletter": "Newsletter-Registrierung",
+  "Thank you for subscribing the newsletter.": "Vielen Dank für die Registrierung des Newsletters.",
 
   "Book offer": "Angebote",
   "Load more..": "Mehr...",
