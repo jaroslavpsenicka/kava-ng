@@ -3,37 +3,60 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 .config(['$routeProvider', '$controllerProvider', '$translateProvider', 'PrismicProvider',
 	function ($routeProvider, $controllerProvider, $translateProvider, PrismicProvider) {
+
+	var translateFn = function($translate, $route) {
+        if ($route.current.params.translate) {
+            $translate.use($route.current.params.translate);
+        }
+    };
+
 	$routeProvider.when("/", {
 		templateUrl: "home.html",
 		controller: "HomeCtrl"
-	}).when("/b/:id/:slug", {
+	}).when("/:translate?/b/:id/:slug", {
 		templateUrl: "book.html",
-		controller: "BookCtrl"
-	}).when("/c/:uid", {
-		templateUrl: "content.html",
-		controller: "ContentCtrl"
-	}).when("/t/:lang/:type", {
-		templateUrl: "books.html",
-		controller: "BookListCtrl"
-	}).when("/t/:lang/", {
-		templateUrl: "books.html",
-		controller: "BookListCtrl"
-	}).when("/new", {
-		templateUrl: "books.html",
-		controller: "NewBookListCtrl"
-	}).when("/blog", {
-		templateUrl: "blog.html",
-		controller: "BlogCtrl"
-	}).when("/esperanto", {
-		redirectTo: '/t/eo',
+		controller: "BookCtrl",
 		resolve: {
-			esperanto: function($translate) {
-				$translate.use('eo');
-			}
+			translation: translateFn
 		}
-	}).when("/cart", {
+	}).when("/:translate?/c/:uid", {
+		templateUrl: "content.html",
+		controller: "ContentCtrl",
+		resolve: {
+			translation: translateFn
+		}
+	}).when("/:translate?/t/:lang/:type", {
+		templateUrl: "books.html",
+		controller: "BookListCtrl",
+		resolve: {
+			translation: translateFn
+		}
+	}).when("/:translate?/t/:lang/", {
+		templateUrl: "books.html",
+		controller: "BookListCtrl",
+		resolve: {
+			translation: translateFn
+		}
+	}).when("/:translate?/new", {
+		templateUrl: "books.html",
+		controller: "NewBookListCtrl",
+		resolve: {
+			translation: translateFn
+		}
+	}).when("/:translate?/blog", {
+		templateUrl: "blog.html",
+		controller: "BlogCtrl",
+		resolve: {
+			translation: translateFn
+		}
+	}).when("/esperanto", {
+		redirectTo: '/eo/t/eo'
+	}).when("/:translate?/cart", {
 		templateUrl: "cart.html",
-		controller: "CartCtrl"
+		controller: "CartCtrl",
+		resolve: {
+			translation: translateFn
+		}
 	}).when("/404", {
 		templateUrl: "404.html",
 		controller: "PageCtrl"
@@ -217,16 +240,19 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	}
 })
 
-.controller('HeaderCtrl', function ($scope, $translate, $route, Cart) {
+.controller('HeaderCtrl', function ($scope, $translate, $location, $route, Cart) {
+    $scope.tran = $translate.use();
 	$scope.cart = Cart.cart;
 	$scope.useLanguage = function(lang) {
 		$translate.use(lang).then(function() {
+			$location.path('/');
 			$route.reload();
 		});
 	};
 })
 
 .controller('HomeCtrl', function($scope, $routeParams, $window, $translate, $cookies, $uibModal, Prismic, BookReader) {
+    $scope.tran = $translate.use();
 
 	var type = '[:d = at(document.type, "slide")]';
 	var tags = '[:d = at(document.tags, ["' + $translate.use() + '"])]';
@@ -276,13 +302,10 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	};
 
 	$scope.loadPage(1);
-//	if (!$cookies.get('welcome')) {
-//		$scope.showWelcome();
-//	}
-
 })
 
 .controller('ContentCtrl', function($scope, $routeParams, $window, $location, $translate, Prismic) {
+    $scope.tran = $translate.use();
 	var key = $routeParams.uid + '-' + $translate.use();
 	Prismic.query('[[:d = at(my.article.uid, "' + key + '")]]').then(function(response) {
 		if (response.results_size > 0) {
@@ -302,6 +325,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 })
 
 .controller('BookListCtrl', function($scope, $routeParams, $route, $window, $location, $translate, Prismic, BookReader) {
+    $scope.tran = $translate.use();
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
@@ -331,15 +355,21 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	}
 
 	$scope.fallback = function() {
-		$translate.use($routeParams.lang);
-		$route.reload();
+        $translate.use($routeParams.lang).then(function() {
+            $scope.tran = $routeParams.lang;
+            if ($route.current.params.translate) {
+                $location.path('/' + $routeParams.lang + window.location.hash.substring(4));
+            }
+
+            $route.reload();
+        });
 	}
 
 	$scope.loadPage(1);
-
 })
 
 .controller('NewBookListCtrl', function($scope, $routeParams, $route, $window, $location, $translate, Prismic, BookReader) {
+    $scope.tran = $translate.use();
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "book")]';
@@ -374,10 +404,10 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	}
 
 	$scope.loadPage(1);
-
 })
 
 .controller('BookCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Cart) {
+    $scope.tran = $translate.use();
 
 	Prismic.document($routeParams.id).then(function(response) {
 		var image = response.getImage('book.image');

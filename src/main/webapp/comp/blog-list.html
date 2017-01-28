@@ -3,7 +3,7 @@
         <h2 class="list-title" translate>Blog</h2>
     </div>
     <div ng-repeat="doc in results">
-        <a href="#/c/{{doc.uid}}">
+        <a href="#/{{tran}}/c/{{doc.uid}}">
             <h4 class="blog-title" ng-bind-html="doc.title | trusted"></h4>
         </a>
         <p><small>{{doc.published}}</small></p>
