@@ -470,6 +470,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 .controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Newsletter) {
 
+    $scope.tran = $translate.use();
 	$scope.blogLang = $translate.use();
 	$scope.chooseBlogLang = function(lang) {
 		$scope.blogLang = lang;
@@ -539,6 +540,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 
 	var chunkSize = 10;
 
+    $scope.tran = $translate.use();
 	$scope.items = Cart.cart.items;
 	$scope.lang = $translate.use();
 	$scope.options = {

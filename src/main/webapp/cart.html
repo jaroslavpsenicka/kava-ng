@@ -22,7 +22,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in items">
-                                <td><a href="#/b/{{item.id}}/{{item.slug}}">{{item.title}}</a></td>
+                                <td><a href="#/{{tran}}/b/{{item.id}}/{{item.slug}}">{{item.title}}</a></td>
                                 <td class="right-align">{{item.count}}</td>
                                 <td class="right-align">{{price(item)}}</td>
                                 <td class="right-align"><a class="clickable" ng-click="remove(item)" translate>Remove</a></td>
