@@ -49,8 +49,6 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 		resolve: {
 			translation: translateFn
 		}
-	}).when("/esperanto", {
-		redirectTo: '/eo/t/eo'
 	}).when("/:translate?/cart", {
 		templateUrl: "cart.html",
 		controller: "CartCtrl",
@@ -60,6 +58,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 	}).when("/404", {
 		templateUrl: "404.html",
 		controller: "PageCtrl"
+	}).when("/esperanto", {
+		redirectTo: '/eo/t/eo'
 	}).otherwise({
 	   redirectTo: '/404'
 	});;
@@ -249,6 +249,10 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 			$route.reload();
 		});
 	};
+})
+
+.controller('FooterCtrl', function ($scope, $translate) {
+    $scope.tran = $translate.use();
 })
 
 .controller('HomeCtrl', function($scope, $routeParams, $window, $translate, $cookies, $uibModal, Prismic, BookReader) {
