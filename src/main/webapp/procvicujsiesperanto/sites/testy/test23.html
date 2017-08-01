@@ -1,0 +1,287 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 23 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Hieraŭ pluvis.",
+			["Vintre frostas.","En vintro frostas."],
+			"Hodiaŭ ni havas sunan tagon.",
+			"Kiel vi fartas?",
+			"Kiel fartas via patro?",
+			"Dankon, li fartas bone.",
+			"Mia onklo pravas.",
+			["Mi ŝatas aĉetadi.","Mi ŝatas aĉeti."],
+			["Mi ĝojas, ke vi estas sana.","Ĝojigas min, ke vi estas sana.", "Ĝojigas min, ke vi sanas.","Mi ĝojas, ke vi sanas."],
+			"Karlo devas lerni por ekzameno.",
+			"La kuracisto havas orajn manojn.",
+			["Ili estas pli stultaj ol mi pensis.","Ili estas pli stultaj ol mi opiniis."],
+			"3",
+			"1",
+			"2",
+			"4",
+			"7",
+			"5",
+			"6",
+		];
+		var odpovedeVyber = [
+			"ŝatas",
+			"havas",
+			"",
+			"pravas",
+			"",
+			["ŝatas","devas"],
+			["ŝatas","devas"],
+			"amas",
+			"ŝatas",
+			"havas",
+			"devas",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 23</h3>
+			<a href="../testy/test22.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test24.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Včera pršelo.</div> <div><input type="text"></div></div>
+					<div><div>V zimě mrzne.</div> <div><input type="text"></div></div>
+					<div><div>Dnes máme slunný den.</div> <div><input type="text"></div></div>
+					<div><div>Jak se máš?</div> <div><input type="text"></div></div>
+					<div><div>Jak se daří tvému otci?</div> <div><input type="text"></div></div>
+					<div><div>Děkuji, má se dobře.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Můj strýc má pravdu.</div> <div><input type="text"></div></div>
+					<div><div>Rád nakupuji.</div> <div><input type="text"></div></div>
+					<div><div>Těší mne, že jsi zdravý.</div> <div><input type="text"></div></div>
+					<div><div>Karel se má učit ke zkoušce.</div> <div><input type="text"></div></div>
+					<div><div>Ten lékař má zlaté ruce.</div> <div><input type="text"></div></div>
+					<div><div>Jsou hloupější, než jsem si myslel.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přiřaďte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div>A. mi havas</div>
+					<div>B. li portas</div>
+					<div>C. ŝi amas</div>
+					<div>D. vi konas</div>
+					<div>E. ili prizorgas</div>
+					<div>F. ŝi ŝatas</div>
+					<div>G. ni edukas</div>
+				</div>
+				<div class="stlpec">
+					<div>1. sian novan jakon</div>
+					<div>2. sian edzon</div>
+					<div>3. mian lernolibron</div>
+					<div>4. vian instruiston</div>
+					<div>5. sian laboron</div>
+					<div>6. niajn infanojn</div>
+					<div>7. siajn gefilojn</div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>A</div> <div><input type="text" class="maly"></div></div>
+					<div><div>B</div> <div><input type="text" class="maly"></div></div>
+					<div><div>C</div> <div><input type="text" class="maly"></div></div>
+					<div><div>D</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>E</div> <div><input type="text" class="maly"></div></div>
+					<div><div>F</div> <div><input type="text" class="maly"></div></div>
+					<div><div>G</div> <div><input type="text" class="maly"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vyberte vhodné slovo nebo ponechte pole prázdné.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec podsebou">
+					<div class="vyber">
+						Li
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> bonan manĝon.
+					</div>
+					<div class="vyber">
+						Ni
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> novan tablon.
+					</div>
+					<div class="vyber">
+						Mi
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> malsatas kaj soifas.
+					</div>
+					<div class="vyber">
+						Mia onklo ĉiam
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> kiam li ne mensogas.
+					</div>
+					<div class="vyber">
+						En montaroj hodiaŭ
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> neĝas.
+					</div>
+					<div class="vyber">
+						Mi
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> naĝi.
+					</div>
+				</div>
+				<div class="stlpec podsebou">
+					<div class="vyber">
+						Eva
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> zorgi pri infanoj.
+					</div>
+					<div class="vyber">
+						Edzo
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> sian edzinon.
+					</div>
+					<div class="vyber">
+						Karlo
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> matematikon.
+					</div>
+					<div class="vyber">
+						Ĉu vi
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> tempon?
+					</div>
+					<div class="vyber">
+						Kiu volas sukcesi en ekzameno, tiu
+						<select>
+						<option value=""></option>
+						<option value="ŝatas">ŝatas</option>
+						<option value="amas">amas</option>
+						<option value="devas">devas</option>
+						<option value="pravas">pravas</option>
+						<option value="havas">havas</option>
+						</select> diligente lerni.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

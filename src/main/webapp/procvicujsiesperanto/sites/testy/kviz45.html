@@ -1,0 +1,177 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 45 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeOption = [
+			"2",
+			"1",
+			"1",
+			"2",
+			"1",
+			"2",
+			"1",
+			"1",
+			"2",
+			"1",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 45</h3>
+			<a href="../testy/kviz44.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz46.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>1 Doplňte věty.</h4>
+				<div class="option">
+					En la praga Malnova Urbo troviĝas konata astronomia
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">observejo.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">horloĝo.</label>
+					</form>
+				</div>
+				<div class="option">
+					Grandaj stadionoj kutime troviĝas en
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">novaj kvartaloj.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">malnovaj historiaj centroj.</label>
+					</form>
+				</div>
+				<div class="option">
+					Trans la rivero Vltava en Prago estas
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">tridek pontoj kaj pontetoj.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">nur unu ponto, nome Karola ponto.</label>
+					</form>
+				</div>
+				<div class="option">
+					Plej bone estas ŝanĝi monon
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">ĉe kelnero en restoracio.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">en monŝanĝejo.</label>
+					</form>
+				</div>
+				<div class="option">
+					La tasko de ĉiĉeronoj estas gvidi turistojn kaj
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">informi pri vidindaĵoj.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">kanti popolkantojn.</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>2 Jsou následující věty pravdivé?</h4>
+				<div class="option">
+					La urbaj muregoj, eĉ malgrandaj restaĵoj, plu troviĝas en neniu ĉeĥa urbo.
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">vero</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">malvero</label>
+					</form>
+				</div>
+				<div class="option">
+					Dum someraj ferioj en Prago estas multe da turistoj kaj ekskursantoj.
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">vero</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">malvero</label>
+					</form>
+				</div>
+				<div class="option">
+					Se oni volas promeni en nekonata urbo sen ĉiĉerono, estas bone aĉeti bonan gvidlibron.
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">vero</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">malvero</label>
+					</form>
+				</div>
+				<div class="option">
+					En Prago estas nur unu muzeo, nome Nacia Muzeo sur Malnovurba Placo.
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">vero</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">malvero</label>
+					</form>
+				</div>
+				<div class="option">
+					Por rigardi la historian centron de Prago oni povas uzi ankaŭ ĉevalĉaron.
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">vero</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">malvero</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

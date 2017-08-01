@@ -1,0 +1,181 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 53 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeVyber = [
+			"2",
+			"2",
+			"3",
+			"2",
+			"1",
+		];
+		var odpovedeOption = [
+			"1",
+			"1",
+			"2",
+			"1",
+			"1",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 53</h3>
+			<a href="../testy/kviz52.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz54.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Vyberte správnou možnost.</h4>
+
+			<div class="zadanie">
+				<div class="podsebou">
+					<div class="vyber">
+						Sur la lernejan tabulon oni skribas per
+						<select>
+						<option value=""></option>
+						<option value="1">fontplumo</option>
+						<option value="2">kreto</option>
+						<option value="3">krajono</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Ripetado estas la plej bona
+						<select>
+						<option value=""></option>
+						<option value="1">kurado</option>
+						<option value="2">lernado</option>
+						<option value="3">ridado</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Lernolibrojn oni povas aĉeti en
+						<select>
+						<option value=""></option>
+						<option value="1">urba biblioteko</option>
+						<option value="2">apoteko</option>
+						<option value="3">librovendejo</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Dum la lecionoj en la lernejo la gelernantoj devas
+						<select>
+						<option value=""></option>
+						<option value="1">babili</option>
+						<option value="2">aŭskulti</option>
+						<option value="3">kriegi</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Bona instruisto devas veki
+						<select>
+						<option value=""></option>
+						<option value="1">intereson</option>
+						<option value="2">dormemon</option>
+						<option value="3">malsaton</option>
+						</select> ĉe la gelernantoj pri la temo.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>2 Která možnost je správná?</h4>
+				<div class="option">
+					Lernejo estas konstruaĵo,
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">kie instruistoj instruas gelernantojn, kaj tiuj lernas.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">kie lernantoj instruas geinstruistojn, kaj tiuj lernas.
+					</form>
+				</div>
+				<div class="option">
+					Klasĉambro estas ĉambro en lernejo,
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">kie lernantoj estas instruataj.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">kie instruistoj ripozas.</label>
+					</form>
+				</div>
+				<div class="option">
+					Ripetado estas prapatro de
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">stulteco.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">saĝeco.</label>
+					</form>
+				</div>
+				<div class="option">
+					Parolante per fremda lingvo ni volas havi
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">senmankan prononcadon.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">laŭtegan prononcadon.</label>
+					</form>
+				</div>
+				<div class="option">
+					En la universitata biblioteko estas
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">diversaj fakaj libroj.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">nur libroj por infanoj.</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

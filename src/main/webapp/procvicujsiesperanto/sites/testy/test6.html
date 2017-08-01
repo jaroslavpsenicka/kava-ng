@@ -1,0 +1,131 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 6 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"per",
+			"en",
+			"per",
+			"sur",
+			"de",
+			["en","el"],
+			"de",
+			"al",
+			"kun",
+			"de",
+			"al",
+			"en",
+			"pri",
+			"kun",
+			"per",
+			"pri",
+			["La sesa tago en semajno estas sabato.", "La sesa tago de semajno estas sabato."],
+			["Li mallongigis al si la vojon.","Li mallongigis sian vojon."],
+			["Petro estas estro de la grupo.","Petro estas grupestro.","Petro estas gvidanto de la grupo.","Petr estas estro de la grupo.","Petr estas grupestro.","Petr estas gvidanto de la grupo."],
+			["Hundido ludas per pilko.","La hundido ludas per pilko."],
+			["La luno bele kaj hele brilas.","La luno bele kaj hele lumas."],
+			["La trajno forveturas.","Trajno forveturas."],
+			"Mi ricevis de ŝi nigran katidon.",
+			["La vojo kondukas al nia domo.","La vojo gvidas al nia domo."],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 6</h3>
+			<a href="../testy/kviz5.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test7.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte předložku.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety">
+					<div><div>Mi veturas <input type="text" class="maly"> buso.</div></div>
+					<div><div>Petro estas la kvara <input type="text" class="maly"> la vico.</div></div>
+					<div><div>Knaboj ludas <input type="text" class="maly"> pilko.</div></div>
+					<div><div>La libro estas <input type="text" class="maly"> la tablo.</div></div>
+					<div><div>Mi scias tion <input type="text" class="maly"> [od] Karlo.</div></div>
+					<div><div>Ili estas <input type="text" class="maly"> la nova parto</div></div>
+					<div><div><input type="text" class="maly"> la urbo.</div></div>
+					<div><div>Donu <input type="text" class="maly"> mi kafon.</div></div>
+					<div><div>Tie estas tablo <input type="text" class="maly"> kvar seĝoj.</div></div>
+					<div><div>Eva estas homo <input type="text" class="maly"> granda talento.</div></div>
+					<div><div>Li donis plumon <input type="text" class="maly"> mi.</div></div>
+					<div><div>Kioma tago <input type="text" class="maly"> semajno estas sabato?</div></div>
+					<div><div>Ni lernis <input type="text" class="maly"> steloj.</div></div>
+					<div><div>Mi foriris kune <input type="text" class="maly"> mia amiko.</div></div>
+					<div><div>Mi skribas <input type="text" class="maly"> plumo.</div></div>
+					<div><div>Mi jam legis <input type="text" class="maly"> tio.</div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Šestý den v týdnu je sobota.</div> <div><input type="text"></div></div>
+					<div><div>Zkrátil si cestu.</div> <div><input type="text"></div></div>
+					<div><div>Petr je vedoucím skupiny.</div> <div><input type="text"></div></div>
+					<div><div>Štěně si hraje s míčem.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Ten měsíc pěkně a jasně svítí.</div> <div><input type="text"></div></div>
+					<div><div>Vlak odjíždí.</div> <div><input type="text"></div></div>
+					<div><div>Dostal jsem od ní černé kotě.</div> <div><input type="text"></div></div>
+					<div><div>Ta cesta vede k našemu domu.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 19 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"",
+			"n",
+			"n",
+			"n",
+			"n",
+			"n",
+			"",
+			"",
+			"",
+			"",
+			"n",
+			"n",
+			"",
+			"n",
+			"n",
+			"n",
+			"",
+			"",
+			"legado",
+			"kalkulado",
+			"demandado",
+			"respondado",
+			"fotado",
+			"aĉetado",
+			"dormado",
+			"vojaĝado",
+			"skiado",
+			"ekdormi",
+			"eklabori",
+			"eklerni",
+			"dismeti",
+			"ekstari",
+			"disrompi",
+			"dispeli",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 19</h3>
+			<a href="../testy/test18.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test20.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přidejte koncovku <i>-n</i>, kde je třeba.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety">
+					<div><span>Hieraŭ mi estis en klubejo<input type="text" class="maly">.</span></div>
+					<div><span>Mi iris tie<input type="text" class="maly"> vespere.</span></div>
+					<div><span>Ni lernis nova<input type="text" class="maly"></span></div>
+					<div><span>leciono<input type="text" class="maly"> </span></div>
+					<div><span>kaj kantis nova<input type="text" class="maly"> </span></div>
+					<div><span>kanto<input type="text" class="maly">.</span></div>
+					<div><span>La kanto<input type="text" class="maly"> </span></div> 
+					<div><span>estis bela<input type="text" class="maly">.</span></div>
+					<div><span>Mia<input type="text" class="maly"> </span></div>
+					<div><span>amiko<input type="text" class="maly"> </span></div>
+					<div><span>konis la vojo<input type="text" class="maly"> bone.</span></div>
+					<div><span>Ni venos en fabriko<input type="text" class="maly">.</span></div>
+					<div><span>Kiel vi fartas, amiko<input type="text" class="maly">?</span></div>
+					<div><span>Mi iros en ilia<input type="text" class="maly"> </span></div>
+					<div><span>familio<input type="text" class="maly">.</span></span></div>
+					<div><span>Posttagmeze ni iros en lernejo<input type="text" class="maly">.</span></div>
+					<div><span>Ili laboras en Prago<input type="text" class="maly">.</span></div>
+					<div><span>Mi ne laboras en fabriko, sed en oficejo<input type="text" class="maly">.</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Vytvořte podstatná jména s příponou <i>-ad-o</i>.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>legi</div> <div><input type="text"></div></div>
+					<div><div>kalkuli</div> <div><input type="text"></div></div>
+					<div><div>demandi</div> <div><input type="text"></div></div>
+					<div><div>respondi</div> <div><input type="text"></div></div>
+					<div><div>foti</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>aĉeti</div> <div><input type="text"></div></div>
+					<div><div>dormi</div> <div><input type="text"></div></div>
+					<div><div>vojaĝi</div> <div><input type="text"></div></div>
+					<div><div>skii</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vytvořte slovesa v infinitivu s předponou <i>dis-</i>, kde to není možné, použijte <i>ek-</i>.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>dormi</div> <div><input type="text"></div></div>
+					<div><div>labori</div> <div><input type="text"></div></div>
+					<div><div>lerni</div> <div><input type="text"></div></div>
+					<div><div>meti</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>stari</div> <div><input type="text"></div></div>
+					<div><div>rompi</div> <div><input type="text"></div></div>
+					<div><div>peli</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

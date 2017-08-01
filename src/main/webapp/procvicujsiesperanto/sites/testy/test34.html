@@ -1,0 +1,262 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 34 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			["Ĉokolado estas bongustaĵo."],
+			"Infanoj ŝatas dolĉaĵojn.",
+			"Mi ricevis grandan sendaĵon.",
+			["Tio estas belaĵo!","Tio estas bela aĵo!"],
+			"Por iu tio estas malfacilaĵo.",
+			"Mi havas bonan novaĵon.",
+			["Mi forsendis la presaĵon perpoŝte.","Mi forsendis la presaĵon per poŝto."],
+			["La longeco de la nova vojo estas unu kilometro.","La longo de la nova vojo estas unu kilometro."],
+			["En muzeo estas malnovaj interesaĵoj.","En la muzeo estas malnovaj interesaĵoj."],
+			"La ofteco estas sufiĉa.",
+			"Ni iris sur altaĵon malantaŭ la domo.",
+			"En la urbo estas kelkaj vidindaĵoj.",
+			"leginda?",
+			"lerninda?",
+			"vidinda?",
+			"vizitinda?",
+			"manĝinda?",
+			"aboninda?",
+			"pruntepreninda?",
+			"rakontinda?",
+		];
+		var odpovedeVyber = [
+			"aĵ",
+			"ind",
+			"nur",
+			"ind",
+			"ec",
+			"ec",
+			"nur",
+			"ind",
+			"aĵ",
+			"ec",
+			"nur",
+			"aĵ",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 34</h3>
+			<a href="../testy/test33.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test35.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Čokoláda je dobrota.</div> <div><input type="text"></div></div>
+					<div><div>Děti mají rády sladkosti.</div> <div><input type="text"></div></div>
+					<div><div>Dostal jsem velkou zásilku.</div> <div><input type="text"></div></div>
+					<div><div>To je pěkná věc!</div> <div><input type="text"></div></div>
+					<div><div>Pro někoho to je obtížnost.</div> <div><input type="text"></div></div>
+					<div><div>Mám dobrou novinku.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Odeslal jsem tu tiskovinu poštou.</div> <div><input type="text"></div></div>
+					<div><div>Délka nové cesty je jeden kilometr.</div> <div><input type="text"></div></div>
+					<div><div>V muzeu jsou staré zajímavosti.</div> <div><input type="text"></div></div>
+					<div><div>Četnost je dostatečná.</div> <div><input type="text"></div></div>
+					<div><div>Šli jsme na výšinu za domem.</div> <div><input type="text"></div></div>
+					<div><div>Ve městě je několik pozoruhodností.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Ptejte se podle vzoru.</h4>
+
+			<div class="vzor">
+				<div>Mi volas aĉeti hundon.</div> <div>Ĉu ĝi estas aĉetinda?</div>
+			</div>
+
+			<div class="zadanie">
+				<div class="stlpec doplndovety podsebou">
+					<div><span>Mi volas legi romanon. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus lerni la kanton. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus vidi la urbon. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus viziti la teatron. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+				</div>
+				<div class="stlpec doplndovety podsebou">
+					<div><span>Mi volus manĝi ĉokoladon. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus aboni la gazeton. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus pruntepreni la revuon. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+					<div><span>Mi volus rakonti la fabelon. Ĉu ĝi estas <input type="text" class="stredny"></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vyberte pro doplnění.</h4>
+
+			<div class="zadanie">
+				<div class="vyber">
+					Petro faris kelkajn fuŝ<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>ojn.
+				</div>
+				<div class="vyber">
+					Lia aspekto estas rid<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>a.
+				</div>
+				<div class="vyber">
+					Mi petis
+					<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select> unu pecon.
+				</div>
+				<div class="vyber">
+					Bedaŭr<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>e, mi ne komprenis.
+				</div>
+				<div class="vyber">
+					Mi konas lian bon<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>on.
+				</div>
+				<div class="vyber">
+					Kontent<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>o de niaj gastoj estas grava.
+				</div>
+				<div class="vyber">
+					Ili revenos
+					<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select> post unu semajno.
+				</div>
+				<div class="vyber">
+					Tiu homo estas kompat<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>a malfeliĉulo.
+				</div>
+				<div class="vyber">
+					Tio estas interesa leg<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>o.
+				</div>
+				<div class="vyber">
+					Ŝi ne havis alian ebl<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>on.
+				</div>
+				<div class="vyber">
+					Li estas ne
+					<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select> diligenta, sed ankaŭ saĝa.
+				</div>
+				<div class="vyber">
+					Ĉu tio estas via hav<select>
+					<option value=""></option>
+					<option value="aĵ">aĵ</option>
+					<option value="ec">ec</option>
+					<option value="ind">ind</option>
+					<option value="nur">nur</option>
+					</select>o?
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

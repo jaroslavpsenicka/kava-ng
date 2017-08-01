@@ -1,0 +1,106 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 1 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"trinki blankan vinon",
+			"havi bonan humoron",
+			"mít červené víno",
+			"koupit mléko",
+			"nova tabulo",
+			"nigraj tabloj",
+			"instrui Esperanton",
+			["učit se cizí jazyky","učit se cizím jazykům"],
+			"manĝi unu bulkon",
+			"nigra nokto",
+			"saluti sinjoron Dvořák",
+			["vidět kluky","vidět chlapce"],
+			"aĉeti kolorajn bildkartojn",
+			["na shledanou","na viděnou"],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 1</h3>
+			<a href="testy.html"><button class="tlacidlo" id="predchadzajuci">« Seznam testů</button></a>
+			<a href="../testy/test2.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="vzor">
+				<div>Dobrý den, příteli.</div> <div>Bonan tagon, amiko.</div>
+			</div>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>pít bílé víno</div> <div> <input type="text"></div></div>
+					<div><div>mít dobrou náladu</div> <div> <input type="text"></div></div>
+					<div><div>havi ruĝan vinon</div> <div> <input type="text"></div></div>
+					<div><div>aĉeti lakton</div> <div> <input type="text"></div></div>
+					<div><div>nová tabule</div> <div> <input type="text"></div></div>
+					<div><div>černé stoly</div> <div> <input type="text"></div></div>
+					<div><div>vyučovat esperanto</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>lerni fremdajn lingvojn</div> <div> <input type="text"></div></div>
+					<div><div>jíst jednu housku</div> <div> <input type="text"></div></div>
+					<div><div>černá noc</div> <div> <input type="text"></div></div>
+					<div><div>zdravit pana Dvořáka</div> <div> <input type="text"></div></div>
+					<div><div>vidi knabojn</div> <div> <input type="text"></div></div>
+					<div><div>koupit barevné pohlednice</div> <div> <input type="text"></div></div>
+					<div><div>ĝis revido</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

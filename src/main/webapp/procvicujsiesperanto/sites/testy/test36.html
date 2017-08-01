@@ -1,0 +1,293 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 36 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"9",
+			"1",
+			"2",
+			"6",
+			"7",
+			"3",
+			"8",
+			"5",
+			"4",
+			"Právě to udělali.",
+			["Přijde za minutu, právě zamyká pokoj.","Přijde za minutu, už zamyká pokoj."],
+			["Když jsem vstal, umyl jsem se.","Když jsem vstala, umyla jsem se."],
+			["Když jsem přišel, právě zpívala.","Když jsem přišla, právě zpívala."],
+			"Chystají se jíst.",
+			["Zůstaň zde, Petře, přinesu kávu.", "Zůstaň tady, Petře, přinesu kávu.","Zůstaň tu, Petře, přinesu kávu."],
+			["Mají přivítat hosty.","Chystají se přivítat hosty."],
+			["Když jsem se vrátil, spal.","Když jsem se vrátila, spal."],
+			["Právě jsme skončili, když jste k nám přišli.","Právě jsme skončili, když jsi k nám přišel.","Právě jsme skončili, když jsi k nám přišla."],
+			"Když odešel, někdo ho hledal.",
+			["Právě jsem to napsal.","Právě jsem to napsala."],
+			["Co jste dělali, když jsem vám telefonoval?", "Co jste dělali, když jsem vám telefonovala?"],
+		];
+		var odpovedeVyber = [
+			"estis",
+			"estos",
+			"venus",
+			"estos",
+			"estis",
+			"estas",
+			"estas",
+			"estis",
+			"estas",
+			"estis",
+			"estas",
+			"estis",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 36</h3>
+			<a href="../testy/test35.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test37.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Najděte odpovídající výraz.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div>A. právě čte</div>
+					<div>B. má přijít</div>
+					<div>C. právě dočetl</div>
+					<div>D. chytá</div>
+					<div>E. chystá se číst</div>
+					<div>F. přichází</div>
+					<div>G. právě chytil</div>
+					<div>H. právě přišel</div>
+					<div>I. chystá se chytat</div>
+				</div>
+				<div class="stlpec">
+					<div>1. li estas venonta</div>
+					<div>2. li estas leginta</div>
+					<div>3. li estas venanta</div>
+					<div>4. li estas kaptonta</div>
+					<div>5. li estas veninta</div>
+					<div>6. li estas kaptanta</div>
+					<div>7. li estas legonta</div>
+					<div>8. li estas kaptinta</div>
+					<div>9. li estas leganta</div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>A</div> <div><input type="text" class="maly"></div></div>
+					<div><div>B</div> <div><input type="text" class="maly"></div></div>
+					<div><div>C</div> <div><input type="text" class="maly"></div></div>
+					<div><div>D</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>E</div> <div><input type="text" class="maly"></div></div>
+					<div><div>F</div> <div><input type="text" class="maly"></div></div>
+					<div><div>G</div> <div><input type="text" class="maly"></div></div>
+					<div><div>H</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>I</div> <div><input type="text" class="maly"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Ili estas farintaj tion.</div> <div><input type="text"></div></div>
+					<div><div>Ŝi venos post minuto, jam ŝi estas ŝlosanta la ĉambron.</div> <div><input type="text"></div></div>
+					<div><div>Kiam mi estis ellitiĝinta, mi lavis min.</div> <div><input type="text"></div></div>
+					<div><div>Kiam mi estis veninta, ŝi ĝuste kantis.</div> <div><input type="text"></div></div>
+					<div><div>Ili estas manĝontaj.</div> <div><input type="text"></div></div>
+					<div><div>Restu ĉi tie, Petro, mi estas alportonta kafon.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Ili estas bonvenigontaj gastojn.</div> <div><input type="text"></div></div>
+					<div><div>Kiam mi revenis, li estis dormanta.</div> <div><input type="text"></div></div>
+					<div><div>Ĵus ni estis finintaj, kiam vi venis al ni.</div> <div><input type="text"></div></div>
+					<div><div>Kiam li estis foririnta, iu serĉis lin.</div> <div><input type="text"></div></div>
+					<div><div>Ĵus mi estas skribinta tion.</div> <div><input type="text"></div></div>
+					<div><div>Kion vi estis farantaj, kiam mi telefonis al vi?</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vyberte vhodná slova.</h4>
+
+			<div class="zadanie">
+				<div class="vyber">
+					Pluvis, kiam ni
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> grimpontaj la monton.
+				</div>
+				<div class="vyber">
+					Kiam ni revenos, la suno
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> ankoraŭ brilanta.
+				</div>
+				<div class="vyber">
+					Se vi
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> sabate, vi estus loĝanta en tiu hotelo.
+				</div>
+				<div class="vyber">
+					Iru en la kabanon antaŭ ol
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> komenciĝanta la programo.
+				</div>
+				<div class="vyber">
+					Kiam ni eliris el la domo, la suno
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> eliranta.
+				</div>
+				<div class="vyber">
+					Oni ĝuste
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> fermontaj la vendejon, rapide aĉetu tion!
+				</div>
+				<div class="vyber">
+					Patro estas kontenta, li
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> ĵus manĝinta bonan vespermanĝon.
+				</div>
+				<div class="vyber">
+					Kiam Petro venis, Maria
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> legonta.
+				</div>
+				<div class="vyber">
+					Staru tie, Karlo
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> ĝuste fotografanta vin.
+				</div>
+				<div class="vyber">
+					Li diris al mi tion, ĝuste kiam mi
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> manĝonta.
+				</div>
+				<div class="vyber">
+					Mi rapidas al la stacidomo, mia trajno
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> venonta post du minutoj.
+				</div>
+				<div class="vyber">
+					Kiam li vizitis nin, ni
+					<select>
+					<option value=""></option>
+					<option value="estas">estas</option>
+					<option value="estis">estis</option>
+					<option value="estos">estos</option>
+					<option value="venus">venus</option>
+					</select> kantantaj.
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

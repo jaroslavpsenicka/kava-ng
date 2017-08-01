@@ -1,0 +1,237 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 16 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Mi aĉetis du kilogramojn da pomoj.",
+			"Sur la tablo restis botelo de lakto.",
+			"Mi petas glason da vino.",
+			"En ĝardeno de najbaro estas korbo da prunoj.",
+			"Kiom da pecoj vi prenis?",
+			"Mi prenis dek pecojn.",
+			"Aĉetu panon kaj ok citronojn!",
+			["Ĉu vi ŝatas iri en vendejon?","Ĉu vi ŝatas iradi en vendejon?"],
+			["Jes, sed mi ne ŝatas atendi en vico.","Jes, sed mi ne ŝatas vici."],
+			"Kiom da netralegitaj libroj restis?",
+			"Restis tri novaj libroj.",
+			["Kiom da lingvoj vi scias, tiomfoje vi estas homo.","Kiom da lingvoj vi scipovas, tiom da homoj vi valoras."],
+			"a",
+			"e",
+			"e",
+			"a",
+			"e",
+			"e",
+			"e",
+			"e",
+			"a",
+			"e",
+		];
+		var odpovedeVyber = [
+			"3",
+			"2",
+			"4",
+			"1",
+			"5",
+			"3",
+			"2",
+			"4",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 16</h3>
+			<a href="../testy/kviz15.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test17.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Koupil jsem dva kilogramy jablek.</div> <div><input type="text"></div></div>
+					<div><div>Na stole zůstala láhev od mléka.</div> <div><input type="text"></div></div>
+					<div><div>Prosím sklenici vína.</div> <div><input type="text"></div></div>
+					<div><div>V sousedově zahradě je koš švestek.</div> <div><input type="text"></div></div>
+					<div><div>Kolik kusů jsi vzala?</div> <div><input type="text"></div></div>
+					<div><div>Vzala jsem deset kusů.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Kup chleba a osm citronů!</div> <div><input type="text"></div></div>
+					<div><div>Chodíš rád do obchodu?</div> <div><input type="text"></div></div>
+					<div><div>Ano, ale nerad čekám ve frontě.</div> <div><input type="text"></div></div>
+					<div><div>Kolik nepřečtených knih zůstalo?</div> <div><input type="text"></div></div>
+					<div><div>Zůstaly tři nové knihy.</div> <div><input type="text"></div></div>
+					<div><div>Kolik jazyků znáš, tolikrát jsi člověkem.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přidejte koncovku příslovce nebo přídavného jména.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety">
+					<div><span>Eva estas pli aĝ<input type="text" class="maly"> ol Karlo.</span></div>
+					<div><span>Ŝi lernas pli bon<input type="text" class="maly"></span></div>
+					<div><span>kaj laboras pli diligent<input type="text" class="maly">.</span></div>
+					<div><span>Sed ŝi ne estas tiel saĝ<input type="text" class="maly"> kiel Karlo.</span></div>
+					<div><span>Li lernas malpli diligent<input type="text" class="maly"></span></div>
+					<div><span> sed pli facil<input type="text" class="maly"> ol Eva.</span></span></div>
+					<div><span>Li bel<input type="text" class="maly"> kantas.</span></div>
+					<div><span>Tion vi cert<input type="text" class="maly"> scias.</span></div>
+					<div><span>Kvankam li ne estas tiel diligent<input type="text" class="maly"> kiel Eva, mi ŝatas lin.</span></div>
+					<div><span>Ili mendis mult<input type="text" class="maly"> da kolbasoj.</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vyberte zájmeno.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec podsebou">
+					<div class="vyber">
+						Vidi knabinojn, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> legas librojn.
+					</div>
+					<div class="vyber">
+						Tio estas sinjoro, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> mi renkontis en la vendejo.
+					</div>
+					<div class="vyber">
+						Mi montros al vi litojn, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> ni hieraŭ aĉetis.
+					</div>
+					<div class="vyber">
+						Ĉu vi scias, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> tion faris?
+					</div>
+				</div>
+				<div class="stlpec podsebou">
+					<div class="vyber">
+						Mi ne scias, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> kostis mia pantalono.
+					</div>
+					<div class="vyber">
+						Tio estas vendistoj, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> laboras en la nova grandmagazeno.
+					</div>
+					<div class="vyber">
+						La pano, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> mi aĉetis, estas bongusta.
+					</div>
+					<div class="vyber">
+						El la lingvoj, 
+						<select>
+						<option value=""></option>
+						<option value="1">kiu</option>
+						<option value="2">kiun</option>
+						<option value="3">kiuj</option>
+						<option value="4">kiujn</option>
+						<option value="5">kiom</option>
+						</select> mi konas, mi tri ankaŭ scias.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 3 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Ŝi estas bela.",
+			"Li studas Esperanton.",
+			"Ili bele kantas.",
+			"Ĝi estas nigra.",
+			"Kočky se bojí psů.",
+			["La sepa tago en semajno estas dimanĉo.","La sepa tago de semajno estas dimanĉo."],
+			"Ĝi estas virkato de nia najbaro.",
+			"La hundo estas granda.",
+			"Ili trinkas blankan kaj ruĝan vinojn.",
+			"Estas bela sabata vespero.",
+			["La bestoj kuras al ĝardeno.","La bestoj kuras al la ĝardeno."],
+			"V sousední zahradě štěká pes.",
+			"Ĉu la lifto funkcias?",
+			["V tom domě žije mnoho lidí.","V tom domě žije hodně lidí.","V tom domě žijí mnozí lidé."],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 3</h3>
+			<a href="../testy/test2.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test4.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Nahraďte podstatné jméno osobním zájmenem podle vzoru.</h4>
+
+			<div class="vzor">
+				<div>Karlo estas forta.</div> <div>Li estas forta.</div>
+			</div>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Eva estas bela.</div> <div> <input type="text"></div></div>
+					<div><div>Petro studas Esperanton.</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>La studentoj bele kantas.</div> <div> <input type="text"></div></div>
+					<div><div>Tabulo estas nigra.</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Katoj timas hundojn.</div> <div> <input type="text"></div></div>
+					<div><div>Sedmý den v týdnu je neděle.</div> <div> <input type="text"></div></div>
+					<div><div>Je to kocour našeho souseda.</div> <div> <input type="text"></div></div>
+					<div><div>(Ten) pes je velký.</div> <div> <input type="text"></div></div>
+					<div><div>Pijí bílé a červené víno.</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Je pěkný sobotní večer.</div> <div> <input type="text"></div></div>
+					<div><div>(Ta) zvířata utíkají k zahradě.</div> <div> <input type="text"></div></div>
+					<div><div>En najbara ĝardeno bojas hundo.</div> <div> <input type="text"></div></div>
+					<div><div>Funguje ten výtah?</div> <div> <input type="text"></div></div>
+					<div><div>En la domo vivas multaj homoj.</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

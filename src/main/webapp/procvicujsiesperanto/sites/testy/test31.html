@@ -1,0 +1,447 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 31 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Eva ŝatas familianojn.",
+			["Klubanoj kaj klubaninoj ĥore kantis.","Klubanoj kaj klubaninoj kantis ĥore.","Geklubanoj ĥore kantis.","Geklubanoj kantis ĥore."],
+			"Gekursanoj lernis novan lecionon.",
+			["Husanoj batalis por vero.", "Husanoj batalis por la vero."],
+			"Mi vokis lin sed li ne aŭdis min.",
+			["Karlo estas pragano sed Petro estas vilaĝano.","Karel estas pragano sed Petr estas vilaĝano."],
+			["Eva estas nek komitatano nek komisionano.","Eva estas nek komitatanino nek komisionanino."],
+			"Eksterlande mi renkontis kelkajn samlandanojn.",
+		];
+		var odpovedeVyber = [
+			"kaj",
+			["kaj","sed","tamen"],
+			["kaj","aŭ"],
+			["sed","tamen"],
+			"tamen",
+			"do",
+			"sed",
+			"aŭ",
+			"kaj",
+			"aŭ",
+			"kaj",
+			"tamen",
+			"aŭ",
+			["do","tamen"],
+			["kaj","aŭ"],
+			"do",
+			"kaj",
+			["do","tamen"],
+			["sed","tamen"],
+			"kaj",
+			["aŭ","kaj"],
+			["sed","tamen"],
+			["kaj","sed","tamen"],
+			"sed",
+			["sed","tamen"],
+			["kaj","sed","tamen"],
+			["do","tamen"],
+			["do","tamen"],
+			["sed","tamen"],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 31</h3>
+			<a href="../testy/kviz30.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test32.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte. Nepoužívejte čárky.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Eva má ráda členy rodiny.</div> <div><input type="text"></div></div>
+					<div><div>Členové a členky klubu sborově zpívali.</div> <div><input type="text"></div></div>
+					<div><div>Kursisté (ženy i muži) se učili novou lekci.</div> <div><input type="text"></div></div>
+					<div><div>Husité bojovali za pravdu.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Volal jsem na něho, ale neslyšel mě.</div> <div><input type="text"></div></div>
+					<div><div>Karel je Pražan, ale Petr je vesničan.</div> <div><input type="text"></div></div>
+					<div><div>Eva není ani členkou výboru, ani členkou komise.</div> <div><input type="text"></div></div>
+					<div><div>V zahraničí jsem potkal několik krajanů.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Vyberte vhodnou spojku souřadící.</h4>
+
+			<div class="zadanie">
+					<div class="vyber">
+						Rano estas vivantaĵeto, kiu loĝas sambone sur tero
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> en akvo.
+					</div>
+					<div class="vyber">
+						Li rakontis eksterordinaran
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> freŝdatan fabelon.
+					</div>
+					<div class="vyber">
+						Krepusko estas duonlumo matena
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> vespera.
+					</div>
+					<div class="vyber">
+						Ŝi eksilentis,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> la bruo daŭris.
+					</div>
+					<div class="vyber">
+						Ilia intima amiko mi
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> ne estis.
+					</div>
+					<div class="vyber">
+						Kial
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> ni iros tien?
+					</div>
+					<div class="vyber">
+						Mi diris arboj, ĉar ne estis unu,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> du.
+					</div>
+					<div class="vyber">
+						Li estis en la vico la tria
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> la kvara.
+					</div>
+					<div class="vyber">
+						Ŝi prenis la libron
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> foriris.
+					</div>
+					<div class="vyber">
+						Onklo estas frato de la patro
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> de la patrino.
+					</div>
+					<div class="vyber">
+						Li prenis la horaron
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> komencis serĉi.
+					</div>
+					<div class="vyber">
+						Mi aŭskultis la historion malnovan, sed
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> belan por mi.
+					</div>
+					<div class="vyber">
+						Tie vi povos daŭrigi rekten
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> dekstren.
+					</div>
+					<div class="vyber">
+						Li
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> restis fraŭlo.
+					</div>
+					<div class="vyber">
+						Kuzo estas filo de onklo
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> de onklino.
+					</div>
+					<div class="vyber">
+						Ŝi ne aŭdis,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> ne povis respondi.
+					</div>
+					<div class="vyber">
+						La gasto petis manĝon
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> trinkaĵon.
+					</div>
+					<div class="vyber">
+						Oni
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> ne multe fidis ĝin.
+					</div>
+					<div class="vyber">
+						Mi helpos vin,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> pli poste.
+					</div>
+					<div class="vyber">
+						Li demetis sian jakon
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> eksidis.
+					</div>
+					<div class="vyber">
+						Ĉu vi scias, kiel
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> kial li verkis?
+					</div>
+					<div class="vyber">
+						Mi volis atendi,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> li rapidis.
+					</div>
+					<div class="vyber">
+						La antaŭtagmezo estis griza,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> senventa.
+					</div>
+					<div class="vyber">
+						Li proponis al ŝi oranĝon,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> ŝi malakceptis.
+					</div>
+					<div class="vyber">
+						Li estis surprize erudicia,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> modesta kaj ĝentila.
+					</div>
+					<div class="vyber">
+						Mi devas komenci,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> kiel?
+					</div>
+					<div class="vyber">
+						Vi
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> kredas, ke tio estas vero.
+					</div>
+					<div class="vyber">
+						Ili
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> havis neniun esperon.
+					</div>
+					<div class="vyber">
+						Li atendis ses gastojn,
+						<select>
+						<option value=""></option>
+						<option value="kaj">kaj</option>
+						<option value="aŭ">aŭ</option>
+						<option value="do">do</option>
+						<option value="sed">sed</option>
+						<option value="tamen">tamen</option>
+						</select> venis nur du.
+					</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

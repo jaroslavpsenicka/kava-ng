@@ -578,6 +578,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					price: $scope.price(item)
 				});
 			});
+			});
 			for (var i = 0; i < items.length; i += chunkSize) {
 				var chunk = items.slice(i, i + chunkSize);
 				Order.submit({items: JSON.stringify(chunk), options: JSON.stringify(options)}, {}, function() {

@@ -1,0 +1,157 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 51 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Oni sendas librojn remburse.",
+			"",
+			"Bonvolu enmeti respondkuponon.",
+			"Forsendu monon per pagilo.",
+			"Nuntempe poŝ-telefonoj anstataŭigas strat-telefonojn.",
+			"Pro nesufiĉa afranko oni devas punpagi.",
+			"Retpoŝto estas multe pli rapida.",
+			"",
+		];
+		var odpovedeOption = [
+			"1",
+			"2",
+			"1",
+			"3",
+			"2",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 51</h3>
+			<a href="../testy/kviz50.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz52.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>1 Se kterou možností souhlasíte?</h4>
+				<div class="option">
+					Registrita letero estas letero,
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">kiu plej rapide venas al la adresato.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">kiun oni pli zorgeme protektas kontraŭ perdo.</label><br />
+						<input type="radio" name="a" value="3">
+						<label for="3">kiu havas tre belan poŝtmarkon.</label>
+					</form>
+				</div>
+				<div class="option">
+					La legeble skribita adreso devas enhavi
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">nur la nomon de adresato.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">la nomon de adresato, straton, domnumeron kaj urbon (eventuale landon).</label><br />
+						<input type="radio" name="a" value="3">
+						<label for="3">nur la nomon de adresato kaj urbon.</label>
+					</form>
+				</div>
+				<div class="option">
+					Retpoŝto, kompare kun faksado, estas
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">pli moderna kaj kutime ankaŭ pli rapida.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">malpli facila kaj malpli rapida.</label><br />
+						<input type="radio" name="a" value="3">
+						<label for="3">malpli moderna</label>
+					</form>
+				</div>
+				<div class="option">
+					Poŝtmarko estas
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">nura eta aĵo por ornami poŝtkartojn.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">enirbileto por poŝtoficejo.</label><br />
+						<input type="radio" name="a" value="3" class="spravne">
+						<label for="3">eta konfirmilo, ke oni pagis por la sendo de poŝtaĵo.</label>
+					</form>
+				</div>
+				<div class="option">
+					Monon oni povas forsendi en poŝtoficejo	per pagilo
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">nur metita en la glufermitan leteron.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">nur pere de respondkuponoj.</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Jsou následující věty gramaticky správně? Jestli ne, opravte je. Jestli je věta podle vás správně, nechte pole prázdné.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Oni sendas libroj remburse.</div> <div><input type="text"></div></div>
+					<div><div>Aĉeti poŝtmarkojn por letero.</div> <div><input type="text"></div></div>
+					<div><div>Bonvolu enmeti respondkupono.</div> <div><input type="text"></div></div>
+					<div><div>Forsendu monon per pagilon.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Nuntempe poŝ-telefonoj anstataŭiĝas strat-telefonojn.</div> <div><input type="text"></div></div>
+					<div><div>Pro nesufiĉa afrankon oni devas punpagi.</div> <div><input type="text"></div></div>
+					<div><div>Retpoŝto estas multe da pli rapida.</div> <div><input type="text"></div></div>
+					<div><div>Afranku filatele la leteron por poŝtmarko-kolektanto.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

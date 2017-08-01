@@ -1,0 +1,145 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 10 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"6",
+			"9",
+			"8",
+			"13",
+			"11",
+			"3",
+			"16",
+			"2",
+			"14",
+			"4",
+			"15",
+			"1",
+			"10",
+			"7",
+			"5",
+			"12",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 10</h3>
+			<a href="../testy/test9.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz10.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přiřaďte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div>A. Mia instruistino</div>
+					<div>B. Ĉu vi jam aĉetis</div>
+					<div>C. Ni jam lernis</div>
+					<div>D. Ni iris</div>
+					<div>E. Anna skribas novajn</div>
+					<div>F. Hieraŭ mi legis</div>
+					<div>G. En nia ĝardeno kreskas</div>
+					<div>H. Li lasis lernolibron</div>
+					<div>I. Li trinkas vinon</div>
+					<div>J. En la unua vico</div>
+					<div>K. Ĉu vi veturos</div>
+					<div>L. Morgaŭ vespere</div>
+					<div>M. Lia domo</div>
+					<div>N. Hieraŭ mi revenis</div>
+					<div>O. Karlo forveturis hejmen</div>
+					<div>P. Petro atendas</div>
+				</div>
+				<div class="stlpec">
+					<div>1. ni iros en la teatron.</div>
+					<div>2. en la lernejo.</div>
+					<div>3. interesan artikolon.</div>
+					<div>4. sidas la plej belaj homoj.</div>
+					<div>5. hieraŭ vespere.</div>
+					<div>6. estas simpatia.</div>
+					<div>7. hejmen en ordo.</div>
+					<div>8. multajn Esperanto-vortojn.</div>
+					<div>9. novan lernolibron?</div>
+					<div>10. staras sur la deklivo.</div>
+					<div>11. vortojn sur la tabulon.</div>
+					<div>12. leteron de Marie.</div>
+					<div>13. ĝis la lernejo.</div>
+					<div>14. kaj ŝi kafon.</div>
+					<div>15. kun ni?</div>
+					<div>16. multaj belaj floroj.</div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>A</div> <div><input type="text" class="maly"></div></div>
+					<div><div>B</div> <div><input type="text" class="maly"></div></div>
+					<div><div>C</div> <div><input type="text" class="maly"></div></div>
+					<div><div>D</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>E</div> <div><input type="text" class="maly"></div></div>
+					<div><div>F</div> <div><input type="text" class="maly"></div></div>
+					<div><div>G</div> <div><input type="text" class="maly"></div></div>
+					<div><div>H</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>I</div> <div><input type="text" class="maly"></div></div>
+					<div><div>J</div> <div><input type="text" class="maly"></div></div>
+					<div><div>K</div> <div><input type="text" class="maly"></div></div>
+					<div><div>L</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>M</div> <div><input type="text" class="maly"></div></div>
+					<div><div>N</div> <div><input type="text" class="maly"></div></div>
+					<div><div>O</div> <div><input type="text" class="maly"></div></div>
+					<div><div>P</div> <div><input type="text" class="maly"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

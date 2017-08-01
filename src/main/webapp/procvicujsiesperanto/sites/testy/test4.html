@@ -1,0 +1,161 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 4 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Semajno havas sep tagojn.",
+			["Karlo estas malsata.","Karel estas malsata."],
+			"Estas favora vento.",
+			["Velký kámen je balvan.", "Veliký kámen je balvan."],
+			"před osmi dny",
+			"mil okcent sepdek ses",
+			"dek naŭ",
+			"tridek kvin",
+			"ducent dudek unu",
+			"kvardek tri mil tridek kvar",
+			"1300",
+			"2202",
+			"4910",
+			"1945",
+			"2100",
+			"6006",
+			"99",
+			"15",
+			"1012",
+			"29",
+			"90",
+			"999",
+			"313",
+			"88",
+			"717",
+			"44",
+			"4014",
+			"101",
+			"90000",
+			"1090",
+			"10010",
+			"40400",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 4</h3>
+			<a href="../testy/test3.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test5.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Týden má sedm dní.</div> <div> <input type="text"></div></div>
+					<div><div>Karel je hladový.</div> <div> <input type="text"></div></div>
+					<div><div>Je příznivý vítr.</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Granda ŝtono estas ŝtonego.</div> <div> <input type="text"></div></div>
+					<div><div>antaŭ ok tagoj</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Napište čísla slovy.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>1 876</div> <div> <input type="text"></div></div>
+					<div><div>19</div> <div> <input type="text"></div></div>
+					<div><div>35</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>221</div> <div> <input type="text"></div></div>
+					<div><div>43 034</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Napište číslicemi. Čísla pište bez mezer.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>mil tricent</div> <div> <input type="text"></div></div>
+					<div><div>du mil ducent du</div> <div> <input type="text"></div></div>
+					<div><div>kvar mil naŭcent dek</div> <div> <input type="text"></div></div>
+					<div><div>mil naŭcent kvardek kvin</div> <div> <input type="text"></div></div>
+					<div><div>du mil cent</div> <div> <input type="text"></div></div>
+					<div><div>ses mil ses</div> <div> <input type="text"></div></div>
+					<div><div>naŭdek naŭ</div> <div> <input type="text"></div></div>
+					<div><div>dek kvin</div> <div> <input type="text"></div></div>
+					<div><div>mil dek du</div> <div> <input type="text"></div></div>
+					<div><div>dudek naŭ</div> <div> <input type="text"></div></div>
+					<div><div>naŭdek</div> <div> <input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>naŭcent naŭdek naŭ</div> <div> <input type="text"></div></div>
+					<div><div>tricent dek tri</div> <div> <input type="text"></div></div>
+					<div><div>okdek ok</div> <div> <input type="text"></div></div>
+					<div><div>sepcent dek sep</div> <div> <input type="text"></div></div>
+					<div><div>kvardek kvar</div> <div> <input type="text"></div></div>
+					<div><div>kvar mil dek kvar</div> <div> <input type="text"></div></div>
+					<div><div>cent unu</div> <div> <input type="text"></div></div>
+					<div><div>naŭdek mil</div> <div> <input type="text"></div></div>
+					<div><div>mil naŭdek</div> <div> <input type="text"></div></div>
+					<div><div>dek mil dek</div> <div> <input type="text"></div></div>
+					<div><div>kvardek mil kvarcent</div> <div> <input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

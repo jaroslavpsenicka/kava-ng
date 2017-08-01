@@ -1,0 +1,151 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 11 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"la oka",
+			"post la deka",
+			"antaŭ la oka",
+			"la kvara",
+			"la kvina",
+			"post la naŭa",
+			"kvin minutoj antaŭ",
+			"dudek minutoj estos",
+			"ok minutoj post la",
+			"la oka",
+			"kvarono",
+			"Ĵaŭdo.",
+			"Vendredo.",
+			"Mardo.",
+			"Lundo.",
+			"Sabato kaj dimanĉo.",
+			"Januaro, februaro, marto.",
+			"Aprilo, majo, junio.",
+			"Julio, aŭgusto, septembro.",
+			"Oktobro, novembro, decembro.",
+			["En somero.","Somere."],
+			["En vintro.","Vintre."],
+			["En printempo.","Printempe."],
+			["En aŭtuno.","Aŭtune."],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 11</h3>
+			<a href="../testy/kviz10.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test12.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Kolik je hodin?</h4>
+
+			<div class="zadanie">
+				<div class="stlpec doplndovety podsebou">
+					<div><span>8:00 – Estas <input type="text" class="stredny"> (horo).</span></div>
+					<div><span>10:15 – Estas kvarono <input type="text" class="stredny">.</span></div>
+					<div><span>7:45 – Estas kvarono <input type="text" class="stredny">.</span></div>
+					<div><span>4:30 – Estas <input type="text" class="stredny"> tridek.</span></div>
+					<div><span>4:30 – Estas duono antaŭ <input type="text" class="stredny">.</span></div>
+					<div><span>9:10 – Estas dek minutoj <input type="text" class="stredny">.</span></div>
+				</div>
+				<div class="stlpec doplndovety podsebou">
+					<div><span>11:55 – Estas <input type="text" class="stredny"> la dek dua.</span></div>
+					<div><span>6:40 – Post <input type="text" class="stredny"> la sepa.</span></div>
+					<div><span>12:08 – Estas <input type="text" class="stredny"> dek dua.</span></div>
+					<div><span>8:45 – Estas <input type="text" class="stredny"> kvardek kvin.</span></div>
+					<div><span>8:45 – Estas <input type="text" class="stredny"> antaŭ la naŭa.</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Dnes je středa.</h4>
+
+			<div class="vzor">
+				<div>Kiu tago estas hodiaŭ?</div> <div>Merkredo.</div>
+			</div>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Kiu tago estos morgaŭ?</div> <div><input type="text"></div></div>
+					<div><div>Kiu tago estos postmorgaŭ?</div> <div><input type="text"></div></div>
+					<div><div>Kiu tago estis hieraŭ?</div> <div><input type="text"></div></div>
+					<div><div>Kiu tago estis antaŭhieraŭ?</div> <div><input type="text"></div></div>
+					<div><div>Kiuj tagoj estas semajnfine? (uzu kaj)</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Odpovězte.</h4>
+
+			<div class="vzor">
+				<div>Kiuj estas la du unuaj monatoj?</div> <div>Januaro, februaro.</div>
+			</div>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Kiuj monatoj estas en la unua kvaronjaro?</div> <div><input type="text"></div></div>
+					<div><div>Kiuj monatoj estas en la dua kvaronjaro?</div> <div><input type="text"></div></div>
+					<div><div>Kiuj monatoj estas en la tria kvaronjaro?</div> <div><input type="text"></div></div>
+					<div><div>Kiuj monatoj estas en la kvara kvaronjaro?</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>En kiu jarsezono estas plej varme?</div> <div><input type="text"></div></div>
+					<div><div>En kiu jarsezono estas plej malvarme?</div> <div><input type="text"></div></div>
+					<div><div>En kiu jarsezono estas monatoj marto, aprilo kaj majo?</div> <div><input type="text"></div></div>
+					<div><div>En kiu jarsezono estas monatoj septembro, oktobro kaj novembro?</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 9 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"la plej",
+			"pli",
+			"la plej",
+			"la malplej",
+			"plej",
+			"kuirejo",
+			"lernejo",
+			"kafejo",
+			"tombejo",
+			"loĝejo",
+			"pli bona io ol nenio",
+			"pli bela fabelo",
+			["Neniu tie estis.","Neniu estis tie."],
+			"Nikdo není dokonalý.",
+			"Kiu kantas plej bele?",
+			["la plej alta observejo","la plej alta rigardejo","la plej alta elvidejo"],
+			"Sub lampo estas la plej densa mallumo.",
+			"Ilia ĝardeno estas pli bela.",
+			"Petro estas pli inteligenta ol Karlo.",
+			"Eva preparis kafon en kuirejo.",
+			["Vlak jel rychleji než auto.","Vlak jel rychleji než automobil."],
+			["La pli granda ejo estas pli longa.","La pli granda ĉambro estas pli longa."],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 9</h3>
+			<a href="../testy/test8.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test10.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety podsebou">
+					<div><div>En Himalajo estas <input type="text" class="stredny"> altaj montoj en la mondo.</div></div>
+					<div><div>Kvin estas <input type="text" class="stredny"> multe ol tri.</div></div>
+					<div><div>En junio estas <input type="text" class="stredny"> longaj tagoj.</div></div>
+					<div><div>Vintraj monatoj estas <input type="text" class="stredny"> varmaj en la jaro.</div></div>
+					<div><div>Ĉie bone, hejme <input type="text" class="stredny"> bone.</div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Doplňte slova s příponou <i>-ejo</i>.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety podsebou">
+					<div><div>Patrino kuiras en <input type="text" class="stredny">.</div></div>
+					<div><div>Lernantoj lernas en <input type="text" class="stredny">.</div></div>
+					<div><div>Ni trinkos kafon en <input type="text" class="stredny">.</div></div>
+					<div><div>En <input type="text" class="stredny"> estas multe da tomboj.</div></div>
+					<div><div>En mia <input type="text" class="stredny"> estas tri ĉambroj.</div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>lepší něco než nic</div> <div><input type="text"></div></div>
+					<div><div>krásnější pohádka</div> <div><input type="text"></div></div>
+					<div><div>Nikdo tam nebyl.</div> <div><input type="text"></div></div>
+					<div><div>Neniu estas perfekta.</div> <div><input type="text"></div></div>
+					<div><div>Kdo zpívá nejkrásněji?</div> <div><input type="text"></div></div>
+					<div><div>nejvyšší pozorovatelna</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Pod lampou je nejhustší tma.</div> <div><input type="text"></div></div>
+					<div><div>Jejich zahrada je krásnější.</div> <div><input type="text"></div></div>
+					<div><div>Petr je inteligentnější než Karel.</div> <div><input type="text"></div></div>
+					<div><div>Eva připravila kávu v kuchyni.</div> <div><input type="text"></div></div>
+					<div><div>Trajno veturis pli rapide ol aŭtomobilo.</div> <div><input type="text"></div></div>
+					<div><div>Ta větší místnost je delší.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

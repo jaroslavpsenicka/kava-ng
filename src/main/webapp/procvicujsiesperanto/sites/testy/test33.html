@@ -1,0 +1,303 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 33 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Je kioma horo vi matenmanĝas?",
+			"Ĉu vi estas libera je la kvina horo?",
+			"Je kioma horo vi venos?",
+			"Mi kredas je mirakloj.",
+			"Sude estas varme.",
+			["Je kioma horo ĝi komenciĝas?", "Je kioma horo tio komenciĝas?"],
+			["Mi veturas 80 kilometrojn hore.","Mi veturas 80 kilometrojn en horo."],
+			["Li vekiĝis nur per la voĉo de alveninto.","Li vekiĝis nur per la voĉo de veninto."],
+			"3",
+			"5",
+			"8",
+			"1",
+			"12",
+			"11",
+			"10",
+			"4",
+			"2",
+			"7",
+			"9",
+			"6",
+		];
+		var odpovedeVyber = [
+			"je",
+			"e",
+			"je",
+			"sur",
+			"a",
+			"e",
+			"a",
+			"je",
+			"de",
+			"je",
+			"a",
+			"e",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 33</h3>
+			<a href="../testy/test32.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test34.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>V kolik hodin snídáte?</div> <div><input type="text"></div></div>
+					<div><div>Jsi volný v pět hodin?</div> <div><input type="text"></div></div>
+					<div><div>V kolik hodin přijdeš?</div> <div><input type="text"></div></div>
+					<div><div>Věřím na zázraky.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Na jihu je teplo.</div> <div><input type="text"></div></div>
+					<div><div>V kolik hodin to začíná?</div> <div><input type="text"></div></div>
+					<div><div>Jedu 80 kilometrů za hodinu.</div> <div><input type="text"></div></div>
+					<div><div>Vzbudil se až hlasem příchozího.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Vyberte odpovědi k otázkám.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div>A. Ĉu vi estas ĉi tie je la unua fojo?</div>
+					<div>B. Kiamaniere vi atingis la rezultojn?</div>
+					<div>C. Kiu kapablas je tio?</div>
+					<div>D. Je kioma horo vi iros en la klubejon?</div>
+					<div>E. Kie estas plej malvarme?</div>
+					<div>F. Ĉu tio estas interesa?</div>
+					<div>G. Kian libron vi volas?</div>
+					<div>H. Ĉu vi estas diligentaj?</div>
+					<div>I. Ĉu tio ĝojigas vin?</div>
+					<div>J. Ĉu vi amuziĝis?</div>
+					<div>K. Ĉu vi povas paroli pli laŭte?</div>
+					<div>L. Ĉu la muziko estas tro laŭta?</div>
+				</div>
+				<div class="stlpec">
+					<div>1. Je la sesa vespere.</div>
+					<div>2. Tio tre ĝojigas nin.</div>
+					<div>3. Ne, je la dua fojo.</div>
+					<div>4. Ni estas tre diligentaj.</div>
+					<div>5. Ni diligente laboris.</div>
+					<div>6. Jes, bonvolu mallaŭtigi ĝin.</div>
+					<div>7. Jes, ni interese amuziĝis.</div>
+					<div>8. Neniu kapablas je tio.</div>
+					<div>9. Jes, mi povas.</div>
+					<div>10. Mi volas modernan libron.</div>
+					<div>11. Jes, tio estas interesa kaj amuza.</div>
+					<div>12. Sur polusoj.</div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>A</div> <div><input type="text" class="maly"></div></div>
+					<div><div>B</div> <div><input type="text" class="maly"></div></div>
+					<div><div>C</div> <div><input type="text" class="maly"></div></div>
+					<div><div>D</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>E</div> <div><input type="text" class="maly"></div></div>
+					<div><div>F</div> <div><input type="text" class="maly"></div></div>
+					<div><div>G</div> <div><input type="text" class="maly"></div></div>
+					<div><div>H</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>I</div> <div><input type="text" class="maly"></div></div>
+					<div><div>J</div> <div><input type="text" class="maly"></div></div>
+					<div><div>K</div> <div><input type="text" class="maly"></div></div>
+					<div><div>L</div> <div><input type="text" class="maly"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>3 Vyberte vhodnou předložku nebo koncovku.</h4>
+
+			<div class="zadanie">
+				<div class="vyber">
+					Li tenis ŝin
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> mano.
+				</div>
+				<div class="vyber">
+					Hieraŭ estis varm<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select>.
+				</div>
+				<div class="vyber">
+					Karlo estas
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> kapo pli alta ol vi.
+				</div>
+				<div class="vyber">
+					La libro estas
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> la tablo.
+				</div>
+				<div class="vyber">
+					Somere estas varm<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> vetero.
+				</div>
+				<div class="vyber">
+					Infanoj interes<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> amuziĝis.
+				</div>
+				<div class="vyber">
+					Tio estas interes<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> prelego.
+				</div>
+				<div class="vyber">
+					Via ago estas inda
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> laŭdo.
+				</div>
+				<div class="vyber">
+					Mi lernis historion
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> Eŭropo.
+				</div>
+				<div class="vyber">
+					La trajno forveturas
+					<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> la tria horo.
+				</div>
+				<div class="vyber">
+					Tio estas bon<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> ideo!
+				</div>
+				<div class="vyber">
+					Mi bon<select>
+					<option value=""></option>
+					<option value="je">je</option>
+					<option value="sur">sur</option>
+					<option value="de">de</option>
+					<option value="a">a</option>
+					<option value="e">e</option>
+					</select> vidis ĉion.
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

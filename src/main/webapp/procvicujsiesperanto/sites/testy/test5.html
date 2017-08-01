@@ -1,0 +1,145 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 5 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"5",
+			"11",
+			"9",
+			"8",
+			"12",
+			"13",
+			"3",
+			"15",
+			"6",
+			"4",
+			"1",
+			"16",
+			"14",
+			"7",
+			"10",
+			"2",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 5</h3>
+			<a href="../testy/test4.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz5.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Vyberte odpovědi k otázkám.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div>A. Ĉu vi lernas Esperanton?</div>
+					<div>B. Ĉu la knabo salutas vin?</div>
+					<div>C. Ĉu Petro rigardas bildojn?</div>
+					<div>D. Ĉu Eva kantas?</div>
+					<div>E. Ĉu la hundo bojas?</div>
+					<div>F. Ĉu vi aĉetas lakton?</div>
+					<div>G. Ĉu vi havas novan aǔtomobilon?</div>
+					<div>H. Ĉu ili observas birdojn?</div>
+					<div>I. Ĉu ŝi malsategas?</div>
+					<div>J. Ĉu la suno estas nigra?</div>
+					<div>K. Ĉu la knabo estas malsana?</div>
+					<div>L. Ĉu vi havas en la domo lifton?</div>
+					<div>M. Ĉu vi aĉetas novan domon?</div>
+					<div>N. Ĉu ili estas ĉeĥoj?</div>
+					<div>O. Ĉu li estas via malamiko?</div>
+					<div>P. Ĉu vi trinkas kafon?</div>
+				</div>
+				<div class="stlpec">
+					<div>1. Ne, la knabo ne estas malsana.</div>
+					<div>2. Ne, mi trinkas bieron.</div>
+					<div>3. Ne, mi havas malnovan aǔtomobilon.</div>
+					<div>4. Ne, la suno ne estas nigra.</div>
+					<div>5. Jes, mi lernas Esperanton kun Karlo.</div>
+					<div>6. Ne, ŝi estas sata.</div>
+					<div>7. Ne, ili estas slovakoj.</div>
+					<div>8. Jes, ŝi kantas.</div>
+					<div>9. Ne, li rigardas librojn.</div>
+					<div>10. Ne, li estas mia amiko.</div>
+					<div>11. Jes, la knabo salutas min.</div>
+					<div>12. Ne, ĝi ne bojas.</div>
+					<div>13. Jes, mi aĉetas lakton.</div>
+					<div>14. Ne, mi ne aĉetas novan domon.</div>
+					<div>15. Ne, ili observas hundojn.</div>
+					<div>16. En nia domo ne estas lifto.</div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>A</div> <div><input type="text" class="maly"></div></div>
+					<div><div>B</div> <div><input type="text" class="maly"></div></div>
+					<div><div>C</div> <div><input type="text" class="maly"></div></div>
+					<div><div>D</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>E</div> <div><input type="text" class="maly"></div></div>
+					<div><div>F</div> <div><input type="text" class="maly"></div></div>
+					<div><div>G</div> <div><input type="text" class="maly"></div></div>
+					<div><div>H</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>I</div> <div><input type="text" class="maly"></div></div>
+					<div><div>J</div> <div><input type="text" class="maly"></div></div>
+					<div><div>K</div> <div><input type="text" class="maly"></div></div>
+					<div><div>L</div> <div><input type="text" class="maly"></div></div>
+				</div>
+				<div class="stlpec maly">
+					<div><div>M</div> <div><input type="text" class="maly"></div></div>
+					<div><div>N</div> <div><input type="text" class="maly"></div></div>
+					<div><div>O</div> <div><input type="text" class="maly"></div></div>
+					<div><div>P</div> <div><input type="text" class="maly"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

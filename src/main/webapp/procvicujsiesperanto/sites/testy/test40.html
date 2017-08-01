@@ -1,0 +1,247 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 40 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Ok semajnojn",
+			"januaro",
+			"Julio",
+			"Decembro",
+			"Merkredo",
+			["Fabrikestro","Estro de la fabriko"],
+			"Oficistoj",
+			"pesi",
+			"Katidoj",
+			["Vintre","En vintro"],
+			"Avo",
+			["En banĉambro","En banejo"],
+			["Kioma horo estas?","Ĉu estas la oka tridek?"],
+			"Ĉu li estas via frato?",
+			["Kio estas Eva?","Ĉu Eva estas instruistino?"],
+			["Ĉu mi helpu vin?","Ĉu mi helpu al vi?","Ĉu mi povas helpi vin?","Ĉu mi povas helpi al vi?"],
+			["Kion vi volas?","Kion vi volas fari?","Ĉu vi volas ekskursi?"],
+			["Kiam mi venu?","Je kioma mi venu?","Je kioma horo mi venu?"],
+			"Ĉu vi havas katon?",
+			["Kiu prizorgas infanojn?","Kion faras avino?","Kiun prizorgas avino?"],
+			"Kie laboras Petro?",
+			"Ĉu vi loĝas sola?",
+			["Kion vi faros vespere?","Kien vi iros vespere?","Ĉu vi vespere iros en teatron?"],
+			["Kiun jarsezonon vi ŝatas?","Ĉu vi ŝatas someron?"],
+		];
+		var odpovedeOption = [
+			"2",
+			"1",
+			"1",
+			"1",
+			"1",
+			"2",
+			"2",
+			"2",
+			"1",
+			"2",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 40</h3>
+			<a href="../testy/test39.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz40.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Odpovězte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec doplndovety podsebou">
+					<div><span>Kiom longe vi jam lernas Esperanton? <input type="text" class="stredny">.</span></div>
+					<div><span>Per kiu monato komenciĝas jaro? – Per <input type="text" class="stredny">.</span></div>
+					<div><span>Kiu monato estas post junio? <input type="text" class="stredny">.</span></div>
+					<div><span>Kiu estas la lasta monato en jaro? <input type="text" class="stredny">.</span></div>
+					<div><span>Kiu tago estas post mardo? <input type="text" class="stredny">.</span></div>
+					<div><span>Kiu gvidas la tutan fabrikon? <input type="text" class="stredny">.</span></div>
+				</div>
+				<div class="stlpec doplndovety podsebou">
+					<div><span>Kiu laboras en oficejoj? <input type="text" class="stredny">.</span></div>
+					<div><span>Por kio servas pesilo? – Por <input type="text" class="stredny">.</span></div>
+					<div><span>Kiun nomon havas idoj de kato? <input type="text" class="stredny">.</span></div>
+					<div><span>Kiam (en kiu jarsezono) frostas? <input type="text" class="stredny">.</span></div>
+					<div><span>Kiu estas patro de patrino? <input type="text" class="stredny">.</span></div>
+					<div><span>Kie oni lavas kaj banas sin? <input type="text" class="stredny">.</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Vytvořte otázky k odpovědím.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Estas la oka tridek.</div> <div><input type="text"></div></div>
+					<div><div>Jes, li estas mia frato.</div> <div><input type="text"></div></div>
+					<div><div>Eva estas instruistino.</div> <div><input type="text"></div></div>
+					<div><div>Jes, helpu min.</div> <div><input type="text"></div></div>
+					<div><div>Mi volas ekskursi.</div> <div><input type="text"></div></div>
+					<div><div>Venu je la sesa.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Jes, mi havas katon.</div> <div><input type="text"></div></div>
+					<div><div>Avino prizorgas infanojn.</div> <div><input type="text"></div></div>
+					<div><div>Petro laboras en fabriko.</div> <div><input type="text"></div></div>
+					<div><div>Ne, mi ne loĝas sola.</div> <div><input type="text"></div></div>
+					<div><div>Vespere mi iros en teatron.</div> <div><input type="text"></div></div>
+					<div><div>Mi ŝatas someron.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>3 Vyberte správné dokončení věty.</h4>
+				<div class="stlpec">
+					<div class="option">
+						La programo
+						<form>
+							<input type="radio" name="a" value="1">
+							<label for="1">komencis.</label><br />
+							<input type="radio" name="a" value="2" class="spravne">
+							<label for="2">komenciĝis.</label>
+						</form>
+					</div>
+					<div class="option">
+						Ili veturis
+						<form>
+							<input type="radio" name="a" value="1" class="spravne">
+							<label for="1">per trajno.</label><br />
+							<input type="radio" name="a" value="2">
+							<label for="2">kun trajno.</label>
+						</form>
+					</div>
+					<div class="option">
+						Tio estas
+						<form>
+							<input type="radio" name="a" value="1" class="spravne">
+							<label for="1">konstruata domo.</label><br />
+							<input type="radio" name="a" value="2">
+							<label for="2">konstruanta domo.</label>
+						</form>
+					</div>
+					<div class="option">
+						Karlo
+						<form>
+							<input type="radio" name="a" value="1" class="spravne">
+							<label for="1">komencis lerni.</label><br />
+							<input type="radio" name="a" value="2">
+							<label for="2">komenciĝis lerni.</label>
+						</form>
+					</div>
+					<div class="option">
+						Mi legas
+						<form>
+							<input type="radio" name="a" value="1" class="spravne">
+							<label for="1">novan libron.</label><br />
+							<input type="radio" name="a" value="2">
+							<label for="2">nova libro.</label>
+						</form>
+					</div>
+				</div>
+				<div class="stlpec">
+					<div class="option">
+						Libro estas
+						<form>
+							<input type="radio" name="a" value="1">
+							<label for="1">sur la tablon.</label><br />
+							<input type="radio" name="a" value="2" class="spravne">
+							<label for="2">sur la tablo.</label>
+						</form>
+					</div>
+					<div class="option">
+						Matene
+						<form>
+							<input type="radio" name="a" value="1">
+							<label for="1">mi lavas sin.</label><br />
+							<input type="radio" name="a" value="2" class="spravne">
+							<label for="2">mi lavas min.</label>
+						</form>
+					</div>
+					<div class="option">
+						Patro kaj patrino
+						<form>
+							<input type="radio" name="a" value="1">
+							<label for="1">estas bopatroj.</label><br />
+							<input type="radio" name="a" value="2" class="spravne">
+							<label for="2">estas gepatroj.</label>
+						</form>
+					</div>
+					<div class="option">
+						Ŝi
+						<form>
+							<input type="radio" name="a" value="1" class="spravne">
+							<label for="1">pezas 67 kilogramojn.</label><br />
+							<input type="radio" name="a" value="2">
+							<label for="2">pesas 67 kilogramojn.</label>
+						</form>
+					</div>
+					<div class="option">
+						Tio estas
+						<form>
+							<input type="radio" name="a" value="1">
+							<label for="1">aparta konduto.</label><br />
+							<input type="radio" name="a" value="2" class="spravne">
+							<label for="2">stranga konduto.</label>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

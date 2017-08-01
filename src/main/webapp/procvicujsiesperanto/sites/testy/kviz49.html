@@ -1,0 +1,181 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 49 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeVyber = [
+			"2",
+			"1",
+			"3",
+			"2",
+			"2",
+		];
+		var odpovedeOption = [
+			"1",
+			"2",
+			"2",
+			"1",
+			"2",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 49</h3>
+			<a href="../testy/kviz48.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz50.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte věty.</h4>
+
+			<div class="zadanie">
+				<div class="podsebou">
+					<div class="vyber">
+						Graciaj
+						<select>
+						<option value=""></option>
+						<option value="1">tajloroj</option>
+						<option value="2">manekenoj</option>
+						<option value="3">vendistoj</option>
+						</select> prezentas novajn kreaĵojn de la tajlorarto.
+					</div>
+					<div class="vyber">
+						Butonojn kaj kudraĵojn oni povas aĉeti en
+						<select>
+						<option value=""></option>
+						<option value="1">galanterivendejo</option>
+						<option value="2">poŝtoficejo</option>
+						<option value="3">urbodomo</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Virinoj kutime havas en siaj mansaketoj
+						<select>
+						<option value=""></option>
+						<option value="1">bankostumon</option>
+						<option value="2">litotukon</option>
+						<option value="3">speguleton</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						
+						<select>
+						<option value=""></option>
+						<option value="1">Sporta kompleto</option>
+						<option value="2">Vespera robo</option>
+						<option value="3">Ĝinzo kaj T-ĉemizo</option>
+						</select> estas taŭga vesto por virinoj, se ili vizitas balon.
+					</div>
+					<div class="vyber">
+						En publikan naĝejon oni kunprenu
+						<select>
+						<option value=""></option>
+						<option value="1">smokingon</option>
+						<option value="2">bankostumon</option>
+						<option value="3">vesperan veston</option>
+						</select>.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>2 Která definice je správná?</h4>
+				<div class="option">
+					Manekeno estas
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">homo, kies metio estas surmeti kaj prezenti novajn kreaĵojn de la tajlorarto.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">homo, kiu helpas al tajloro kudri manikojn de viraj jakoj.</label>
+					</form>
+				</div>
+				<div class="option">
+					Tajloro estas
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">homo, kiu informas en radio pri la novaj kreaĵoj de la tajlorarto.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">metiisto, kiu tajlas kaj kudras vestojn.</label>
+					</form>
+				</div>
+				<div class="option">
+					Kudristino estas
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">virino, kies metio estas kuirado en restoracioj.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">virino, kies metio estas diversspeca kudrado.</label>
+					</form>
+				</div>
+				<div class="option">
+					Mantelo estas
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">longa vesto kun manikoj por kovri kaj protekti aliajn vestojn.</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">multkolora tuko, per kiu virinoj kovras la kapon.</label>
+					</form>
+				</div>
+				<div class="option">
+					Smokingo estas
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">vesto, kiun oni surmetas fumonte.</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">eŭropa vespera vesto por viroj.</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

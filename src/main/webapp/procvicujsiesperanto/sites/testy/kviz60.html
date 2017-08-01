@@ -1,0 +1,162 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 60 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Universala",
+			"Ĉeĥa",
+			"ĉiujare",
+			"pli facile",
+			"celas",
+			"pluraj",
+			"multe da",
+			"interkompreniĝi kun la tuta mondo",
+			"",
+			"labori en la pedagogia sekcio",
+			"prezenti novan komitaton",
+			"apliki Esperanton en scienco kaj komerco",
+			"",
+			"informi pri la Universala Kongreso de Esperanto",
+			"",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 60</h3>
+			<a href="../testy/kviz59.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="testy.html"><button class="tlacidlo" id="nasledujuci">Seznam testů</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte správné slovo v správném tvaru.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety podsebou">
+					<div>
+						<span>Ĝenerala tutmonda Esperanto-organizaĵo nomiĝas <input type="text" class="stredny"> Esperanto-Asocio.</span>
+						<ul>
+							<li>Tutmonda</li>
+							<li>Internacia</li>
+							<li>Universala</li>
+						</ul>
+					</div>
+					<div>
+						<span>Ĝenerala tutŝtata Esperanto-organizaĵo en Ĉeĥio nomiĝas <input type="text" class="stredny"> Esperanto-Asocio.</span>
+						<ul>
+							<li>Bohema</li>
+							<li>Ĉeĥa</li>
+							<li>Enlanda</li>
+						</ul>
+					</div>
+					<div>
+						<span>Universala Esperanto-Asocio okazigas <input type="text" class="stredny"> Universalan Kongreson de Esperanto.</span>
+						<ul>
+							<li>ĉiun kvinan jaron</li>
+							<li>duan jaron</li>
+							<li>ĉiujare</li>
+						</ul>
+					</div>
+					<div>
+						<span>Esperanto estas <input type="text" class="stredny"> lernebla ol naciaj lingvoj.</span>
+						<ul>
+							<li>pli malfacile</li>
+							<li>pli facile</li>
+							<li>same facile</li>
+						</ul>
+					</div>
+					<div>
+						<span>Esperanto <input type="text" class="stredny"> lingvan egalrajtecon inter nacioj.</span>
+						<ul>
+							<li>fuŝi</li>
+							<li>celi</li>
+							<li>malhelpi</li>
+						</ul>
+					</div>
+					<div>
+						<span>En <input type="text" class="stredny"> ĉeĥaj urboj funkcias Esperanto-kluboj.</span>
+						<ul>
+							<li>du</li>
+							<li>tri</li>
+							<li>pluraj</li>
+						</ul>
+					</div>
+					<div>
+						<span>En Esperanto estas ankaŭ <input type="text" class="stredny"> sciencaj tekstoj.</span>
+						<ul>
+							<li>multe da</li>
+							<li>kelke da</li>
+							<li>sep</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Jsou následující věty gramaticky správně? Jestli ne, opravte je. Jestli je věta podle vás správně, nechte pole prázdné.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>interkompreniĝi kun la tutan mondon</div> <div><input type="text"></div></div>
+					<div><div>krei internacian lingvon</div> <div><input type="text"></div></div>
+					<div><div>labori en la pedagogian sekcion</div> <div><input type="text"></div></div>
+					<div><div>prezenti novan komitato</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>apliki Esperanto en scienco kaj komerco</div> <div><input type="text"></div></div>
+					<div><div>Esperanto celas egalrajtan komunikeblon</div> <div><input type="text"></div></div>
+					<div><div>informi pri la Universalan Kongreson de Esperanto</div> <div><input type="text"></div></div>
+					<div><div>gustumi la ecojn kaj la eblojn de Esperanto</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Úspěšně jste zvládl(a) poslední test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

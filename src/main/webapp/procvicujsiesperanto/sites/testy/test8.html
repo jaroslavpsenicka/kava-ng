@@ -1,0 +1,143 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Test č. 8 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"j",
+			"",
+			"",
+			"j",
+			"j",
+			"",
+			"j",
+			"e",
+			"n",
+			"",
+			"as",
+			"n",
+			"n",
+			"a",
+			"o",
+			"n",
+			"",
+			"",
+			"n",
+			"",
+			["Morgaŭ ni iros en la ĝardenon.","Morgaŭ ni iros en ĝardenon."],
+			"Kien vi iras?",
+			["Mi iras al patro.","Mi iras al mia patro."],
+			"Sub la benko estas kato.",
+			"Hodiaŭ estas bele.",
+			["Birdoj flugas suden.","Birdoj flugas al la sudo."],
+			["Ni metis benkon sub la lampon.","Ni metis benkon sub lampon."],
+			["Nia instruistino forflugis trans la maron.","Nia instruistino forflugis malantaŭ la maron."],
+			["Krajono falis sur plankon.","Krajono falis sur la plankon.","Krajono falis planken."],
+			["Mi metis libron sur la tablon.","Mi metis la libron sur la tablon."],
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Test č. 8</h3>
+			<a href="../testy/test7.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test9.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Přidejte koncovku, kde je třeba. Tam, kde podle vás koncovka nepatří, nechte pole prázdné.</h4>
+
+			<div class="zadanie">
+				<div class="doplndovety">
+					<div><div>bona<input type="text" class="maly"> amikoj;</div></div>
+					<div><div>nova<input type="text" class="maly"> domo;</div></div>
+					<div><div>bona<input type="text" class="maly"> lernanto;</div></div>
+					<div><div>bona<input type="text" class="maly"> lernantinoj;</div></div>
+					<div><div>diligentaj amikino<input type="text" class="maly">;</div></div>
+					<div><div>moderna<input type="text" class="maly"> lernolibro;</div></div>
+					<div><div>nova<input type="text" class="maly"> lingvoj;</div></div>
+					<div><div>Lernantoj bel<input type="text" class="maly"> kantas.</div></div>
+					<div><div>Bona<input type="text" class="maly"> tagon, sinjorino.</div></div>
+					<div><div>Ili estas en la lernejo<input type="text" class="maly">.</div></div>
+					<div><div>Ĉu vi nun labor<input type="text" class="maly"> en la fabriko?</div></div>
+					<div><div>Eva lernas Esperanto<input type="text" class="maly">.</div></div>
+					<div><div>Ĉu vi konas edzo<input type="text" class="maly"> de Maria?</div></div>
+					<div><div>La lingvo estas facil<input type="text" class="maly">.</div></div>
+					<div><div>Ŝi estas fratin<input type="text" class="maly"> de Karlo.</div></div>
+					<div><div>Ĉu vi ne ŝatas li<input type="text" class="maly">?</div></div>
+					<div><div>Manjo volas esti<input type="text" class="maly"> instruistino.</div></div>
+					<div><div>Li restis hejme<input type="text" class="maly">.</div></div>
+					<div><div>Sur la tabulo<input type="text" class="maly"> li skribis informon.</div></div>
+					<div><div>Mi iris ĝis la arbaro<input type="text" class="maly">.</div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Přeložte.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Zítra půjdeme do zahrady.</div> <div><input type="text"></div></div>
+					<div><div>Kam jdeš?</div> <div><input type="text"></div></div>
+					<div><div>Jdu k otci.</div> <div><input type="text"></div></div>
+					<div><div>Pod lavicí je kočka.</div> <div><input type="text"></div></div>
+					<div><div>Dnes je krásně.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Ptáci letí na jih.</div> <div><input type="text"></div></div>
+					<div><div>Dali jsme lavici pod lampu.</div> <div><input type="text"></div></div>
+					<div><div>Naše učitelka odletěla za moře.</div> <div><input type="text"></div></div>
+					<div><div>Tužka spadla na podlahu.</div> <div><input type="text"></div></div>
+					<div><div>Položil jsem knihu na stůl.</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

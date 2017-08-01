@@ -1,0 +1,188 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 57 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeVyber = [
+			"2",
+			"1",
+			"1",
+			"4",
+			"4",
+		];
+		var odpovedeOption = [
+			"1",
+			"2",
+			"1",
+			"2",
+			"2",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 57</h3>
+			<a href="../testy/kviz56.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz58.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+			<h4>1 Se kterou definicí souhlasíte?</h4>
+				<div class="option">
+					sterki
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">plibonigi grundon per tiucela ĥemiaĵo</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">prepari nutraĵon por tre junaj bestidoj</label>
+					</form>
+				</div>
+				<div class="option">
+					ĝardeno
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">kampo, plurajn jarojn nekultivata, malproksime de urbo</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">terpeco, ofte proksime de domo, kie oni kultivas legomojn, fruktplantojn kaj florojn</label>
+					</form>
+				</div>
+				<div class="option">
+					agro
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">daŭre plugata kaj kulturata kampo</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">speciala sterkaĵo por florplantoj</label>
+					</form>
+				</div>
+				<div class="option">
+					ŝafo
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">besto uzata por rajdado</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">besto bredata pricipe pro la bonkvalita lano</label>
+					</form>
+				</div>
+				<div class="option">
+					ĝardenisto
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">homo, kiu produktas sterkaĵojn por ĝardenoj</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">homo, kiu daŭre zorgas pri ĝardenoj</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Které slovo významově nepatří do skupiny?</h4>
+
+			<div class="zadanie">
+				<div class="stlpec doplndovety podsebou">
+					<div class="vyber">
+						<em>tritiko – piceo – hordeo – aveno</em> 
+						<select>
+						<option value=""></option>
+						<option value="1">tritiko</option>
+						<option value="2">piceo</option>
+						<option value="3">hordeo</option>
+						<option value="4">aveno</option>
+						</select>
+					</div>
+					<div class="vyber">
+						<em>piro – karoto – cepo – ajlo</em> 
+						<select>
+						<option value=""></option>
+						<option value="1">piro</option>
+						<option value="2">karoto</option>
+						<option value="3">cepo</option>
+						<option value="4">ajlo</option>
+						</select>
+					</div>
+					<div class="vyber">
+						<em>hordeo – tulipo – dianto – rozo</em>
+						<select>
+						<option value=""></option>
+						<option value="1">hordeo</option>
+						<option value="2">tulipo</option>
+						<option value="3">dianto</option>
+						<option value="4">rozo</option>
+						</select>
+					</div>
+				</div>
+				<div class="stlpec doplndovety podsebou">
+					<div class="vyber">
+						<em>bedo – agro – kampo – vojo</em> 
+						<select>
+						<option value=""></option>
+						<option value="1">bedo</option>
+						<option value="2">agro</option>
+						<option value="3">kampo</option>
+						<option value="4">vojo</option>
+						</select>
+					</div>
+					<div class="vyber">
+						<em>kulturi – kultivi – bredi – revi</em> 
+						<select>
+						<option value=""></option>
+						<option value="1">kulturi</option>
+						<option value="2">kultivi</option>
+						<option value="3">bredi</option>
+						<option value="4">revi</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

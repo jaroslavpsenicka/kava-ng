@@ -1,0 +1,421 @@
+/* STRUKTURA */
+
+body {
+	background-image: url('../img/light_toast.png');
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#obsah {
+	background-color: white;
+ 	-webkit-box-shadow: 0px 0px 3px black;
+ 	-moz-box-shadow: 0px 0px 3px black;
+ 	box-shadow: 0px 0px 3px black;
+	max-width: 1000px;
+	margin: 0px auto;
+	padding: 70px 10px 20px 10px;
+}
+
+#obsah h1,
+#obsah h2,
+#obsah h3,l
+#obsah p {
+	padding-left: 20px;
+}
+
+#hlavicka {
+	background-color: rgba(203,250,203,0.9);
+	border-bottom: 2px solid black;
+	position:fixed;
+	top: 0;
+	height: 70px;
+	width: 95%;
+	max-width: 1000px;
+}
+
+#hlavicka h1,
+#hlavicka h2,
+#hlavicka h3 {
+	text-align: center;
+	padding: 5px 0px 0px 0px;
+}
+
+h4 {
+	clear: both;
+}
+
+#testy {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.textinfo {
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.textinfo a,
+.textinfo a:hover,
+.textinfo a:visited {
+	color: black;
+}
+
+.center {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+audio {
+	padding-left: 20px;
+}
+
+.disabled {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	border: 2px dotted red;
+	color: red;
+}
+
+.disabled a,
+.disabled a:hover,
+.disabled a:visited {
+	color: red;
+}
+
+/* HLAVNE MENU */
+
+#menu {
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#menu div {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	min-height: 235px;
+	margin: 10px;
+	padding: 10 5 5 5px;
+	background-color: #E9E9E9;
+	color: black;
+}
+
+#menu div:hover {
+	background-color: rgba(208,251,208,0.9);
+	color: black;
+}
+
+#menu div:visited {
+	color: black;
+}
+
+#menu div p {
+	font-size: 90%;
+	padding-left: 0px;
+}
+
+#menu div h4 {
+	margin-bottom: 0px;
+}
+
+#menu div img {
+	margin-top: 10px;
+}
+
+/* ZOZNAMY ODKAZOV */
+
+.zoznam {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.zoznam a {
+	color: black;
+	display: block;
+	text-decoration: none;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 16px;
+	background-color: #E9E9E9;
+}
+
+.zoznam a:hover {
+	background-color: rgba(208,251,208,0.9);
+	color: black;
+	text-decoration: none;
+}
+
+.kviz {
+	color: black;
+	font-style: italic;
+}
+
+/* TLACIDLA */
+
+.tlacidlo {
+    display: inline-block;
+	margin: 0px 10px 10px 10px;
+    background-color: #FBE682;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+	cursor: pointer;
+}
+
+.tlacidlo:hover {
+    background-color: #FFF9A5;
+}
+
+#nasledujuci, #predchadzajuci {
+	position: relative;
+	top: -53px;
+}
+
+#nasledujuci {
+	display: none;
+	float: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: auto;
+}
+
+#predchadzajuci {
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: auto;
+}
+
+/* CVICENIA */
+
+.cvicenie {
+	width: 97.5%;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vzor {
+	background-color: #D0FBD0;
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+.vzor div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 47%;
+	min-height: 25px;
+	padding: 2px 1px 0px;
+	margin: 2px;
+}
+
+.stlpec {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	width: 49%;
+	vertical-align: top;
+}
+
+.stlpec div {
+	min-height: 25px;
+	padding: 2px 1px 0px;
+	margin: 2px;
+}
+
+.stlpec div div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 47%;
+}
+
+@media (max-width: 720px) {
+  .stlpec div div {
+	width: 95%;
+  }
+}
+
+.stlpec.maly {
+	display: inline-block;
+	width: 22%;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+.stlpec.maly div {
+	min-height: 20px;
+	padding: 2px 1px 0px;
+	margin: 2px;
+}
+
+.stlpec.maly div div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+.doplndovety div {
+	display: inline-block;
+	margin: 3px 1px;
+}
+
+.podsebou div {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.doplndovety div span,
+.doplndovety.podsebou div div {
+	line-height: 1.8;
+}
+
+input[type="textarea"] {
+	background-color: #F3F3F3;
+	border: 1px inset #E0E0E0;
+	border-radius: 2px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+input.maly {
+	width: 30px;
+}
+
+input.stredny {
+	width: 90px;
+}
+
+input.velky {
+	width: 180px;
+}
+
+.vyber {
+	display: inline-block;
+	margin: 1px 0px;
+	padding: 2px;
+}
+
+form {
+	margin-top: 5px;
+}
+
+input[type="radio"] {
+	width: 30px;
+}
+
+input[type="radio"] + label {
+	vertical-align: top;
+}
+
+
+.cvicenie table {
+	margin-top: 20px;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.cvicenie table td {
+	padding: 4px 8px;
+}
+
+.cvicenie table td.okraj {
+	border-right: 2px solid black;
+}
+
+.option {
+	margin-bottom: 5px;
+	padding: 3px;
+}
+
+ul {
+	margin: 2px;
+}
+
+ul li {
+	list-style-image: url('../img/list-item.png');
+}
+
+.skryty {
+	display: none;
+}
+
+#prehodviditelnost {
+	margin-left: 0px;
+}
+
+.zadanie audio {
+	padding-left: 0px;
+}
+
+#napoveda {
+	margin-bottom: 5px;
+	padding: 3px 10px;
+	background-color: #FFF9A5;
+}
+
+/* VYHODNOCOVANIE ODPOVEDI V CVICENIACH */
+
+.vysledky {
+	border-top: 1px solid black;
+}
+
+.vysledky h4 {
+	text-align: center;
+}
+
+.vysledky p {
+	margin-left: 20px;
+}
+
+#hotovo {
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+
+#nad70, #do70 {
+	display: none;
+	font-size: 140%;
+}
+
+#pomoc {
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+
+/* FOOTNOTE */
+
+#paticka {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 80%;
+	color: #6C6C6C;
+}
+
+#paticka p {
+	padding-left: 0px;
+}
+
+#paticka a {
+	color: #6C6C6C;
+}
+

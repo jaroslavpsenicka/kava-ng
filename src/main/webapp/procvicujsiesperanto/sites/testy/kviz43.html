@@ -1,0 +1,146 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 43 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeDopln = [
+			"Mi aĉetos vojaĝbileton en la stacidomo.",
+			"",
+			"Li portas pezan dorsosakon kaj tendon.",
+			"",
+			["Ŝi restis en eksterlando la tutan jaron.","Ŝi restis en eksterlando dum la tuta jaro."],
+			"Li preferas unulitan ĉambron kun propra duŝejo.",
+			"",
+			"",
+		];
+		var odpovedeVyber = [
+			"2",
+			"1",
+			"2",
+			"2",
+			"1",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 43</h3>
+			<a href="../testy/kviz42.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/kviz44.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte věty.</h4>
+
+			<div class="zadanie">
+				<div class="podsebou">
+					<div class="vyber">
+						Trajnoj veturas laŭ la
+						<select>
+						<option value=""></option>
+						<option value="1">peto de urbestroj</option>
+						<option value="2">horaroj</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Nigra pasaĝero estas tiu, kiu vojaĝas
+						<select>
+						<option value=""></option>
+						<option value="1">ne paginte</option>
+						<option value="2">havante nigran</option>
+						</select> vojaĝbileton.
+					</div>
+					<div class="vyber">
+						Aŭtobusan konekson oni povas trovi en
+						<select>
+						<option value=""></option>
+						<option value="1">polica deĵorejo</option>
+						<option value="2">horaro</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Parki aŭtomobilon eblas en la hotela
+						<select>
+						<option value=""></option>
+						<option value="1">akceptejo</option>
+						<option value="2">parkejo</option>
+						</select>.
+					</div>
+					<div class="vyber">
+						Por ĉeesti en koncerto oni bezonas aĉeti
+						<select>
+						<option value=""></option>
+						<option value="1">bileton</option>
+						<option value="2">ruĝan ĉemizon</option>
+						</select>.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>2 Jsou následující věty gramaticky správně? Jestli ne, opravte je. Jestli je věta podle vás správně, nechte pole prázdné.</h4>
+
+			<div class="zadanie">
+				<div class="stlpec">
+					<div><div>Mi aĉetos vojaĝbileto en la stacidomon.</div> <div><input type="text"></div></div>
+					<div><div>Ni renkontiĝos sur la tria perono post alveno de la trajno.</div> <div><input type="text"></div></div>
+					<div><div>Li portas peza dorsosako kaj tendon.</div> <div><input type="text"></div></div>
+					<div><div>Ili rapidas al la proksima flughaveno.</div> <div><input type="text"></div></div>
+				</div>
+				<div class="stlpec">
+					<div><div>Ŝi restis en eksterlando la tuta jaro.</div> <div><input type="text"></div></div>
+					<div><div>Li preferas unulita ĉambro kun propra duŝejo.</div> <div><input type="text"></div></div>
+					<div><div>Ni iras manĝi en la hotelan restoracion.</div> <div><input type="text"></div></div>
+					<div><div>Ĉu vi povas al mi klarigi, kiel mi veturu al la kastelo?</div> <div><input type="text"></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Kvíz k lekci 5 / Testy - Procvičuj si esperanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">	
+	<script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/skript.js"></script>
+	<script type="text/javascript">
+		var odpovedeVyber = [
+			"blanka",
+			"besto",
+			"lingvo",
+			"lakton",
+			"kvar",
+			"du",
+		];
+		var odpovedeOption = [
+			"1",
+			"2",
+			"1",
+		];
+	</script>
+</head>
+<body>
+
+	<div id="obsah">
+
+		<div id="hlavicka">
+			<h3>Kvíz k lekci 5</h3>
+			<a href="../testy/test5.html"><button class="tlacidlo" id="predchadzajuci">« Předchozí</button></a>
+			<a href="../testy/test6.html"><button class="tlacidlo" id="nasledujuci">Následující »</button></a>
+		</div>
+
+		<div class="cvicenie">
+
+			<h4>1 Doplňte správné slovo.</h4>
+
+			<div class="zadanie">
+				<div class="vyber">
+					Lakto estas 
+					<select>
+					<option value=""></option>
+					<option value="flava">flava</option>
+					<option value="blanka">blanka</option>
+					<option value="nigra">nigra</option>
+					</select>.
+				</div><br />
+				<div class="vyber">
+					Hundo estas 
+					<select>
+					<option value=""></option>
+					<option value="besto">besto</option>
+					<option value="birdo">birdo</option>
+					<option value="ŝtono">ŝtono</option>
+					</select>.
+				</div><br />
+				<div class="vyber">
+					Esperanto estas 
+					<select>
+					<option value=""></option>
+					<option value="lango">lango</option>
+					<option value="lingvo">lingvo</option>
+					<option value="vento">vento</option>
+					</select>.
+				</div><br />
+				<div class="vyber">
+					Ili trinkas 
+					<select>
+					<option value=""></option>
+					<option value="bulkon">bulkon</option>
+					<option value="lakton">lakton</option>
+					<option value="paperon">paperon</option>
+					</select>.
+				</div><br />
+				<div class="vyber">
+					Katoj havas 
+					<select>
+					<option value=""></option>
+					<option value="ses">ses</option>
+					<option value="kvar">kvar</option>
+					<option value="du">du</option>
+					</select> piedojn.
+				</div><br />
+				<div class="vyber">
+					Homo havas 
+					<select>
+					<option value=""></option>
+					<option value="kvar">kvar</option>
+					<option value="du">du</option>
+					<option value="tri">tri</option>
+					</select> manojn.
+				</div>
+			</div>
+		</div>
+
+		<div class="cvicenie">
+
+			<div class="zadanie">
+
+				<h4>2 Poslechněte a odpovězte otázky podle textu.</h4>
+
+				<audio controls>
+					<source src="../../doc/testy/lekce 05.mp3" type="audio/mpeg">
+					Your browser does not support the audio tag.
+				</audio>
+
+				<p><button type="submit" class="tlacidlo" id="prehodviditelnost">Ukaž / skryj pomocný text</button></p>
+
+				<div id="napoveda">
+					<p>Li estas mia nova amiko. Li lernas Esperanton. Li estas simpatia viro.</p>
+					<p>Bonan tagon, sinjoro Novák. Saluton, Pepík.</p>
+					<p>La suno bele brilas, mi havas bonan humoron.</p>
+					<p>Pepík estas malsata. Li manĝas bulkon kaj trinkas lakton.</p>
+					<p>Bonan apetiton. </p>
+					<p>Ni parolas pri steloj, aŭtomobiloj kaj virinoj.</p>
+					<p>Ĉu vi havas novan aŭtomobilon? Ne, mia aŭtomobilo estas malnova, sed ĝi estas utila. Ĝi estas ruĝa.</p>
+					<p>Ni rigardas bildojn. La bildoj estas tre belaj. En la domo estas kvardek du bildoj.</p>
+					<p>Venas mia amikino Eva. Ŝi amas hundojn kaj malamas katojn.</p>
+					<p>Bonan tagon, Eva. Ĉu vi lernas Esperanton? Jes, ĝi estas tre utila.</p>
+					<p>Estas vespero. Ni trinkas blankan vinon.</p>
+					<p>Je via sano.</p>
+					<p>Ĝis revido.</p>
+					<p>* * *</p>
+					<p>Respondu libere per tuta frazo (jese kaj nee):</p>
+					<ul>
+						<li>Ĉu vi lernas Esperanton?</li>
+						<li>Ĉu li rigardas bildojn?</li>
+						<li>Ĉu vi salutas knabon kaj knabinon?</li>
+						<li>Ĉu la suno estas nigra?</li>
+						<li>Ĉu la knabo estas malsana?</li>
+						<li>Ĉu la virino kantas?</li>
+						<li>Ĉu vi havas en la domo lifton?</li>
+						<li>Ĉu la hundo bojas?</li>
+						<li>Ĉu vi observas birdojn?</li>
+						<li>Ĉu vi malsatas?</li>
+						<li>Ĉu vi aĉetas novan domon?</li>
+						<li>Ĉu via patro rakontas al vi fabelojn?</li>
+						<li>Ĉu vi trinkas bieron?</li>
+					</ul>
+				</div>
+
+				<div class="option">
+					Ĉu Pepík estas malsata?
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">jes</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">ne</label>
+					</form>
+				</div>
+				<div class="option">
+					Ĉu li trinkas bieron?
+					<form>
+						<input type="radio" name="a" value="1">
+						<label for="1">jes</label><br />
+						<input type="radio" name="a" value="2" class="spravne">
+						<label for="2">ne</label>
+					</form>
+				</div>
+				<div class="option">
+					Ĉu Esperanto estas tre utila?
+					<form>
+						<input type="radio" name="a" value="1" class="spravne">
+						<label for="1">jes</label><br />
+						<input type="radio" name="a" value="2">
+						<label for="2">ne</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="vysledky">
+			<div id="hotovo">
+				<h4>Dokončeno?</h4>
+				<p>Klikněte na tlačítko Zkontroluj, tím si ověříte správnost odpovědi.</p>
+				<center><button type="submit" class="tlacidlo" id="submit">Zkontroluj</button>
+				<table>
+					<tr>
+						<td>Správně:</td> <td><span id="spravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Chybně:</td> <td><span id="nespravneVysledky">0</span></td>
+					</tr>
+					<tr>
+						<td>Váš výsledek:</td> <td><span id="kolkoPercent">0</span> %</td>
+					</tr>
+				</table>
+				<p id="nad70">Výborně! Můžete přejít na další test.</p>
+				<p id="do70">Zkuste to znovu.</p></center>
+			</div>
+			<div id="pomoc">
+				<h4>Potřebujete pomoci?</h4>
+				<p>Můžete si nechat zobrazit správné odpovědi. Pozor, tato funkce přepíše všechny odpovědi, které jste vložili.</p>
+				<center><button type="submit" class="tlacidlo" id="show">Zobraz odpovědi</button></center>
+				<p>Pokud se některá z odpovědí obarví nažluto, podržte nad ní myš. Zobrazí se vám další možné odpovědi.</p>
+				<p>Vymazáním odpovědí budete moci začít znovu.</p>
+				<center><button type="submit" class="tlacidlo" id="clear">Vymaž vše</button></center>
+			</div>
+			<center><a href="testy.html"><button class="tlacidlo" id="uvod">« Seznam testů</button></a></center>
+		</div>
+	</div>
+	<div id="paticka">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="../../img/licence.png" /></a><br />Pokud není uvedeno výslovně jinak, toto dílo i jeho jednotlivé části podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Uveďte původ-Neužívejte komerčně-Nezpracovávejte 4.0 Mezinárodní License</a>.</p>
+		<p>Created by <a href="mailto:noskova.katarina&#064;gmail.com">Katjo</a></p>
+	</div>
+
+</body>
+</html>
