@@ -81,7 +81,7 @@
   "Subscribe to the online newsletter": "Objednejte si informační občasník",
   "Subscribe": "Přihlásit",
   "This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.":
-    "Vychází nepravidelně (a nikdy neobsahuje přílohy). Přináší informace o nově vycházejících knihách, dočasných slevách, pozvání na křty novinek a podobně. Častěji vycházejí v češitě a esperantu, řídce i německy a anglicky, a jazykové verze nejsou identické, protože jsou určeny jiné cílové skupině. Pokud si přejete dostávat občasník ve více jazycích, přihlašte se, prosíme, opakovaně vždy pro daný jazyk.",
+    "Vychází nepravidelně (a nikdy neobsahuje přílohy). Přináší informace o nově vycházejících knihách, dočasných slevách, pozvání na křty novinek a podobně. Kromě toho si zaregistrováním zajišťujete trvalou slevu při všech online objednávkách ve výši 10 %.",
   "OK, got it": "Rozumím",
   "NEWSLETTER-SUBSCRIBED": "Registrace Vaší adresy {{email}} byla úspěšná.",
   "Thank you for subscribing the newsletter.": "Děkujeme, že jste se registrovali jako odběratelé občasníku.",
@@ -96,6 +96,7 @@
   "Email address": "Emailová adresa",
   "Notes:": "Poznámka:",
   "Subscribe Newsletter": "Registrace občasníku",
+  "Name": "Jméno",
 
   "Services": "Služby",
   "About": "O firmě",

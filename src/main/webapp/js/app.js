@@ -475,10 +475,6 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 .controller('BlogCtrl', function($scope, $routeParams, $window, $location, $translate, $uibModal, Prismic, Newsletter) {
 
     $scope.tran = $translate.use();
-	$scope.blogLang = $translate.use();
-	$scope.chooseBlogLang = function(lang) {
-		$scope.blogLang = lang;
-	};
 
 	$scope.loadPage = function(page) {
 		var type = '[:d = at(document.type, "article")]';
@@ -493,6 +489,7 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					$scope.results.push({
 						uid: value.uid,
 						title: value.getText('article.title'),
+						timestamp: value.getDate('article.published').getTime(),
 						published: $scope.formatDate(value.getDate('article.published'), $scope.blogLang),
 						abstract: value.getStructuredText('article.abstract').asHtml()
 					});
@@ -501,8 +498,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 		});
 	};
 
-	$scope.subscribe = function(email) {
-		var options = { email: email, lang: $scope.blogLang };
+	$scope.subscribe = function(name, email) {
+		var options = { name: name, email: email, lang: $translate.use() };
 		Newsletter.subscribe({ options: options }, {}, function() {
 			$uibModal.open({
 				templateUrl: 'comp/subscribed.tpl.html',
@@ -578,8 +575,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 					price: $scope.price(item)
 				});
 			});
-			});
-			for (var i = 0; i < items.length; i += chunkSize) {
+
+            for (var i = 0; i < items.length; i += chunkSize) {
 				var chunk = items.slice(i, i + chunkSize);
 				Order.submit({items: JSON.stringify(chunk), options: JSON.stringify(options)}, {}, function() {
 					Cart.removeAll();

@@ -1,14 +1,11 @@
 <div class="row">
-    <div>
-        <h2 class="list-title" translate>Blog</h2>
-    </div>
-    <div ng-repeat="doc in results">
+    <div ng-repeat="doc in results | orderBy:'timestamp':true">
         <a href="#/{{tran}}/c/{{doc.uid}}">
             <h4 class="blog-title" ng-bind-html="doc.title | trusted"></h4>
         </a>
         <p><small>{{doc.published}}</small></p>
         <p ng-bind-html="doc.abstract | trusted"></p>
-        <hr/>
+        <hr ng-show="!$last"/>
     </div>
     <div class="bit-spaced col-sm-12" ng-show="nextPage">
         <button class="btn btn-default center-block" ng-click="loadPage(nextPage)" translate>Load more...</button>

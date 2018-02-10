@@ -47,7 +47,7 @@
   "Subscribe to the online newsletter": "Abonu la ret-informilon",
   "Subscribe": "Aboni",
   "This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.":
-    "Ĝi estas distribuata neregule (kaj neniam kun aldonaĵoj). Ĝi enhavas informojn pri nove eldonitaj libroj, pri dumtempaj prez-malaltigoj, invitojn al lanĉoj de novaĵoj, ktp. Ili aperas pli ofte en la ĉeĥa kaj en Esperanto, malpli ofte en la angla kaj germana kaj ili ne estas identaj, ĉar ili celas alian celgrupon. Tial se vi deziras ricevadi la ret-informilon en pluraj lingvoj, bv. registriĝi plurfoje, ĉiam elektante la koncernan lingvon.",
+    "Ĝi estas distribuata neregule, maksimume kvarfoje jare (kaj neniam kun aldonaĵoj). Ĝi enhavas informojn pri nove eldonataj libroj, pri dumtempaj prez-malaltigoj, invitojn al lanĉoj de novaĵoj, ktp. Per registriĝo vi ekhavos daŭran rabaton de la menditaj libroj 10 % (tamen la sendokostoj restas kalkulataj laŭ <a href='http://kava-pech.cz/#/eo/c/terms-and-conditions'>komercaj kondiĉoj</a> el kompleta prezo, ĉar la aktualaj poŝttarifoj estas eĉ pli altaj).",
   "OK, got it": "OK",
   "Error subscribing the newsletter": "Eraro abonanta la informilo",
   "The newsletter cannot be subscribed. You may try again later or use email. Sorry about that.":
@@ -94,6 +94,7 @@
   "in Deutsch": "en la germana",
   "Email address": "Retpoŝta adreso",
   "Notes:": "Rimarko:",
+  "Name": "Nomo",
 
   "Services": "Servoj",
   "About": "Pri la eldonejo",

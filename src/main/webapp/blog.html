@@ -8,34 +8,23 @@
             </div>
             <categories></categories>
         </div>
-        <blog-list results="results" nextPage="nextPage" class="col-sm-9"></blog-list>
-        <div class="subscribe col-sm-9">
-            <a name="subscribe"></a>
+        <a name="subscribe"></a>
+        <h2 class="list-title" translate>Blog</h2>
+        <div class="subscribe col-sm-9" ng-show="tran == 'cz' || tran == 'eo'">
             <h4 translate>Subscribe to the online newsletter</h4>
             <p translate>This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.</p>
-            <form name="searchForm" ng-submit="subscribe(email)">
-                <div class="input-group">
-                    <div class="input-group-btn" uib-dropdown>
-                        <button type="button" class="btn btn-primary" uib-dropdown-toggle>
-                            <span ng-if="blogLang == 'cz'" translate>in Czech</span>
-                            <span ng-if="blogLang == 'eo'" translate>in Esperanto</span>
-                            <span ng-if="blogLang == 'en'" translate>in English</span>
-                            <span ng-if="blogLang == 'de'" translate>in Deutsch</span> <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                            <li role="menuitem"><a href ng-click="chooseBlogLang('cz')" translate>in Czech</a></li>
-                            <li role="menuitem"><a href ng-click="chooseBlogLang('eo')" translate>in Esperanto</a></li>
-                            <li role="menuitem"><a href ng-click="chooseBlogLang('en')" translate>in English</a></li>
-                            <li role="menuitem"><a href ng-click="chooseBlogLang('de')" translate>in Deutsch</a></li>
-                        </ul>
-                    </div>
+            <form name="searchForm" class="form-inline" ng-submit="subscribe(name, email)">
+                <div class="form-group">
+                    <label class="sr-only" for="name">Email address</label>
+                    <input id="name" ng-model="name" type="text" class="form-control" placeholder="{{'Name' | translate}}" required>
+                </div>
+                <div class="form-group">
                     <input ng-model="email" type="email" class="form-control" placeholder="{{'Email address' | translate}}" required>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit" translate>Subscribe</button>
-                    </div>
+                    <button class="btn btn-primary" type="submit" translate>Subscribe</button>
                 </div>
             </form>
         </div>
+        <blog-list results="results" nextPage="nextPage" class="col-sm-9"></blog-list>
     </div>
 </div>
 
