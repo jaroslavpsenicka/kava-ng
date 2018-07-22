@@ -498,8 +498,8 @@ angular.module('kava', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngCookies', 'p
 		});
 	};
 
-	$scope.subscribe = function(name, email) {
-		var options = { name: name, email: email, lang: $translate.use() };
+	$scope.subscribe = function(name, email, address) {
+		var options = { name: name, email: email, address: address, lang: $translate.use() };
 		Newsletter.subscribe({ options: options }, {}, function() {
 			$uibModal.open({
 				templateUrl: 'comp/subscribed.tpl.html',

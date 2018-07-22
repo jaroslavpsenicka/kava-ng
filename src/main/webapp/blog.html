@@ -13,13 +13,17 @@
         <div class="subscribe col-sm-9" ng-show="tran == 'cz' || tran == 'eo'">
             <h4 translate>Subscribe to the online newsletter</h4>
             <p translate>This is being distributed irregularly (never with additions) and contains information about newly published books, about time limited offers on lower prices of certain books, etc. Theyare in the Czech language, in Esperanto, English and German, and they are not identical because each linguistic variation has a different objective. So if for example you would like to receive news in the Czech language, in Esperanto and in German, you need to register three times, each time indicating the concerned language.</p>
-            <form name="searchForm" class="form-inline" ng-submit="subscribe(name, email)">
-                <div class="form-group">
-                    <label class="sr-only" for="name">Email address</label>
+            <form name="searchForm" class="row blog-form" ng-submit="subscribe(name, email, address)">
+                <div class="col-sm-6 form-divider">
                     <input id="name" ng-model="name" type="text" class="form-control" placeholder="{{'Name' | translate}}" required>
                 </div>
-                <div class="form-group">
+                <div class="col-sm-6 form-divider">
                     <input ng-model="email" type="email" class="form-control" placeholder="{{'Email address' | translate}}" required>
+                </div>
+                <div class="col-sm-10">
+                    <input ng-model="address" type="text" class="form-control" placeholder="{{'Post address' | translate}}" required>
+                </div>
+                <div class="col-sm-2">
                     <button class="btn btn-primary" type="submit" translate>Subscribe</button>
                 </div>
             </form>

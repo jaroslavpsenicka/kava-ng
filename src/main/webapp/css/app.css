@@ -239,6 +239,10 @@ html, body {
 	margin-bottom: 0px;
 }
 
+.form-divider {
+	margin-bottom: 15px;
+}
+
 /* Cart */
 
 .right-align {
