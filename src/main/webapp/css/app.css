@@ -91,6 +91,10 @@ html, body {
 	display: block;
 }
 
+.content-text .book-info {
+	padding-right: 100px;
+}
+
 .list-title {
 	margin-top: 8px;
 	margin-bottom: 25px;
